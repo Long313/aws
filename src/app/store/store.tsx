@@ -11,7 +11,7 @@ interface BearState {
 const useBearStore = create<BearState>((set) => ({
   id: 0,
   menuId: 0,
-  setId: () => set((state : any) => ({ id: state })),  setId: () => set((state : any) => ({ id: state })),
+  setId: () => set((state : any) => ({ id: state })),
   setMenuId: () => set((state : any) => ({ menuId: state })),
   clearId: () => set({ id: 0 }),
 }))
