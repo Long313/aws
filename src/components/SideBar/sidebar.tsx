@@ -106,6 +106,16 @@ function SideBar({ id }: { id: ID }) {
             }
           >
             <ul>
+            <li
+                onClick={() => handleSelect("vpc")}
+                className={
+                  selectedId === "vpc" || subMenuId === "vpc"
+                    ? "bg-white text-black"
+                    : "black"
+                }
+              >
+                <Link href={`/work_shop/${id}/vpc`}>1.1 VPC</Link>
+              </li>
               <li
                 onClick={() => handleSelect("subnets")}
                 className={
@@ -114,7 +124,7 @@ function SideBar({ id }: { id: ID }) {
                     : "black"
                 }
               >
-                <Link href={`/work_shop/${id}/subnets`}>1.1 Subnets</Link>
+                <Link href={`/work_shop/${id}/subnets`}>1.2 Subnets</Link>
               </li>
               <li
                 onClick={() => handleSelect("route-table")}
@@ -125,7 +135,7 @@ function SideBar({ id }: { id: ID }) {
                 }
               >
                 <Link href={`/work_shop/${id}/route-table`}>
-                  1.2 Route Table
+                  1.3 Route Table
                 </Link>
               </li>
               <li
@@ -138,7 +148,7 @@ function SideBar({ id }: { id: ID }) {
                 }
               >
                 <Link href={`/work_shop/${id}/internet-gateway`}>
-                  1.3 Internet Gateway
+                  1.4 Internet Gateway
                 </Link>
               </li>
               <li
@@ -150,7 +160,7 @@ function SideBar({ id }: { id: ID }) {
                 }
               >
                 <Link href={`/work_shop/${id}/nat-gateway`}>
-                  1.4 NAT Gateway
+                  1.5 NAT Gateway
                 </Link>
               </li>
             </ul>
