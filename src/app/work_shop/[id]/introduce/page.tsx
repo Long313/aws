@@ -21,7 +21,7 @@ function Introduce({ params }: { params: PageProps }) {
   return (
     <Layout id={params.id}>
       <div className="">
-        <div className="flex items-center flex-col">
+        <div className="items-center">
           <h1 className="text-center font-bold my-[20px] text-[20px] text-[#22a6df]">
             High Availability Architecture
           </h1>
@@ -76,11 +76,13 @@ function Introduce({ params }: { params: PageProps }) {
               </li>
             </ul>
           </div>
-          <Image
-            src={work_shop}
-            alt="work_shop_1"
-            className="w-2/3 inline-block mt-[20px]"
-          />
+          <div className="flex justify-center">
+            <Image
+              src={work_shop}
+              alt="work_shop_1"
+              className="w-2/3 inline-block mt-[20px]"
+            />
+          </div>
           <div className="">
             <p className="mt-[20px] mb-[10px]">
               Đây là mô hình kiến trúc phổ biến cho ứng dụng web hoặc ứng dụng
