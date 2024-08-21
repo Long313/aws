@@ -6,7 +6,7 @@ function Layout({ children, id }: { children: any; id: any }) {
       <div className="w-1/5 h-screen">
         <SideBar id={id} />
       </div>
-      <div className="w-4/5">{children}</div>
+      <div className="w-4/5 ml-[100px]">{children}</div>
     </div>
   );
 }
