@@ -50,7 +50,7 @@ function NateGateway({ params }: { params: PageProps }) {
             target="_blank"
             className="inline-block my-[40px] italic text-[#22a6df]"
           >
-            Tìm hiểu thêm về Route Table
+            Tìm hiểu thêm về NAT Gateway
           </a>
         </div>
       </div>

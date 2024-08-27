@@ -17,7 +17,7 @@ function ELB({ params }: { params: PageProps }) {
         <h1 className="my-[20px] text-[#22a6df] text-[24px] font-bold text-center">
           What is Elastic Load Balancing (ELB) ?
         </h1>
-        <div>
+        <div >
           <p>
             - Cân bằng tải đàn hồi (ELB) tự động phân phối lưu lượng ứng dụng
             đến nhiều mục tiêu và thiết bị ảo trong một hoặc nhiều Availability
@@ -27,7 +27,7 @@ function ELB({ params }: { params: PageProps }) {
             - Elastic Load Balancing (ELB) bao gồm Application Load Balancer
             (ALB), Gateway Load Balancer (GLB) và Network Load Balancer (NLB)
           </p>
-          <div className="border-[2px] border-[#d5dbdb] w-4/5 my-[20px]">
+          <div className="border-[2px] border-[#d5dbdb] w-4/5 my-[20px] mx-auto">
             <div className="mt-[-2px] flex justify-between bg-[#f7f4f4]">
               <span
                 className={`${

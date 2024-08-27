@@ -69,7 +69,7 @@ function SideBar({ id }: { id: ID }) {
           )}
         </div>
       </div>
-      <div className="p-[10px]">
+      <div className="py-[10px]">
         <div className="text-white">
           <Link href={`/`}>
             <div className="group parent flex items-center space-between w-full mb-[10px] cursor-pointer height-[20px] p-[4px] hover:bg-white hover:text-black">
@@ -95,88 +95,103 @@ function SideBar({ id }: { id: ID }) {
                 : "black"
             } flex justify-between items-center`}
           >
-            <span className="text-[18px] p-[4px]">
-              <Link href={`/work_shop/${id}/introduce`}>1. Giới thiệu</Link>
-            </span>
-            <span>&#9660;</span>
+            <Link
+              href={`/work_shop/${id}/introduce`}
+              className="flex justify-between text-[18px] p-[4px] w-full"
+            >
+              <span>1. Giới thiệu</span>
+              <span className="inline-block mr-[4px]">&#9660;</span>
+            </Link>
           </div>
           <div
             className={
               (open && numberOpen === 1) ||
               (menuId === 1 && open) ||
               (openMenu && menuId === 1)
-                ? "block pl-[10px]"
+                ? "block"
                 : "hidden"
             }
           >
             <ul>
               <li
                 onClick={() => handleSelect("ec2-and-auto-scaling-group")}
-                className={
+                className={`${
                   selectedId === "ec2-and-auto-scaling-group" ||
                   subMenuId === "ec2-and-auto-scaling-group"
                     ? "bg-white text-black"
                     : "black"
-                }
+                } px-[5px]`}
               >
                 <Link href={`/work_shop/${id}/ec2-and-auto-scaling-group`}>
-                  1.0 EC2 và Auto Scaling Group
+                  1.1 EC2 và Auto Scaling Group
                 </Link>
               </li>
               <li
                 onClick={() => handleSelect("vpc")}
-                className={
+                className={`${
                   selectedId === "vpc" || subMenuId === "vpc"
                     ? "bg-white text-black"
                     : "black"
-                }
+                } px-[5px]`}
               >
-                <Link href={`/work_shop/${id}/vpc`}>1.1 VPC</Link>
+                <Link href={`/work_shop/${id}/vpc`}>1.2 VPC</Link>
               </li>
               <li
                 onClick={() => handleSelect("subnets")}
-                className={
+                className={`${
                   selectedId === "subnets" || subMenuId === "subnets"
                     ? "bg-white text-black"
                     : "black"
-                }
+                } px-[5px]`}
               >
-                <Link href={`/work_shop/${id}/subnets`}>1.2 Subnets</Link>
+                <Link href={`/work_shop/${id}/subnets`}>1.3 Subnets</Link>
               </li>
               <li
                 onClick={() => handleSelect("route-table")}
-                className={
+                className={`${
                   selectedId === "route-table" || subMenuId === "route-table"
                     ? "bg-white text-black"
                     : "black"
-                }
+                } px-[5px]`}
               >
                 <Link href={`/work_shop/${id}/route-table`}>
-                  1.3 Route Table
+                  1.4 Route Table
                 </Link>
               </li>
               <li
                 onClick={() => handleSelect("elb")}
-                className={
+                className={`${
                   selectedId === "elb" || subMenuId === "elb"
                     ? "bg-white text-black"
                     : "black"
-                }
+                } px-[5px]`}
               >
                 <Link href={`/work_shop/${id}/elb`}>
-                  1.4 Elastic Load Balancing (ELB)
+                  1.5 Elastic Load Balancing (ELB)
                 </Link>
               </li>
               <li
                 onClick={() => handleSelect("nat-gateway")}
-                className={
+                className={`${
                   selectedId === "nat-gateway" || subMenuId === "nat-gateway"
                     ? "bg-white text-black"
                     : "black"
-                }
+                } px-[5px]`}
               >
                 <Link href={`/work_shop/${id}/nat-gateway`}>
-                  1.5 NAT Gateway
+                  1.6 NAT Gateway
+                </Link>
+              </li>
+              <li
+                onClick={() => handleSelect("rds")}
+                className={`${
+                  selectedId === "rds" || subMenuId === "rds"
+                    ? "bg-white text-black"
+                    : "black"
+                } px-[5px]`}
+              >
+                <Link href={`/work_shop/${id}/rds`}>
+                  1.7 Relational Database Service (RDS)
                 </Link>
               </li>
             </ul>
