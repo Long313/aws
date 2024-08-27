@@ -18,7 +18,7 @@ function VPC({ params }: { params: PageProps }) {
             - VPC là một dịch vụ cung cấp môi trường mạng ảo riêng tư được cô
             lập về mặt logic khỏi các mạng khác trên AWS Cloud
           </p>
-          <p>
+          <p className="my-[10px]">
             - VPC cho phép chúng ta khởi tạo các tài nguyên của AWS như máy chủ
             ảo (Amazon EC2), cơ sở dữ liệu (RDS), các thiết bị cân bằng tải (ELB
             ) trong một môi trường mạng ảo riêng mà chúng ta có quyền kiểm soát
@@ -43,10 +43,10 @@ function VPC({ params }: { params: PageProps }) {
             trong lớp mạng ảo này. Và lớp mạng ảo này có mối liên hệ gì với
             Availability Zone ?
           </p>
-          <div className="flex justify-center my-[10px]">
+          <div className="flex justify-center my-[20px]">
             <Image src={vpc_az} alt="vpc_za" className="w-3/5 inline-block" />
           </div>
-          <p>
+          <p className="my-[10px]">
             - Đầu tiên chúng ta tạo ra một account AWS có id 12 số là
             3322-4564-7325
           </p>
@@ -63,12 +63,12 @@ function VPC({ params }: { params: PageProps }) {
             trễ để phục vụ khách hàng tại Việt Nam. Khi sử dụng Region Singapore
             thì độ trễ khoảng dưới 50ms.
           </p>
-          <p>
+          <p className="my-[10px]">
             - Bên dưới Region sẽ có Availability Zone. Tối thiểu một Region sẽ
             có 3 Availability Zone (AZ). Tuy nhiên để đơn giản hoá mô hình mình
             trong ví dụ này thì chỉnh chỉ để 2 AZ.
           </p>
-          <p className="mt-[10px]">- Vậy Virtual Private Cloud sẽ nằm ở đâu?</p>
+          <p className="mb-[10px]">- Vậy Virtual Private Cloud sẽ nằm ở đâu?</p>
           <p>
             - VPC sẽ bao quát nhiều AZ. Ý nghĩa của kiến trúc khi vẽ như vậy.
             Khi chúng ta tạo ra 1 VPC, thì chúng ta có thể chạy các máy chủ ảo

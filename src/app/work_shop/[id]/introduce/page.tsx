@@ -22,7 +22,7 @@ function Introduce({ params }: { params: PageProps }) {
     <Layout id={params.id}>
       <div className="">
         <div className="items-center">
-          <h1 className="text-center font-bold my-[20px] text-[20px] text-[#22a6df]">
+          <h1 className="text-[#22a6df] font-bold text-[24px] my-[20px] text-center">
             High Availability Architecture
           </h1>
           <div className="">
@@ -339,7 +339,7 @@ function Introduce({ params }: { params: PageProps }) {
               </li>
             </ol>
           </div>
-          <div className="mr-auto mt-[20px]">
+          <div className="mr-auto my-[20px]">
             <p className="italic font-bold">Xem thêm</p>
             <ul className="list-disc ml-[20px]">
               <li className="text-[#22a6df] cursor-pointer">
@@ -356,7 +356,7 @@ function Introduce({ params }: { params: PageProps }) {
                 </Link>
               </li>
               <li className="text-[#22a6df] cursor-pointer">
-                <Link href="http://localhost:3000/work_shop/1/nate-gateway">
+                <Link href="http://localhost:3000/work_shop/1/nat-gateway">
                   NAT Gateway
                 </Link>
               </li>

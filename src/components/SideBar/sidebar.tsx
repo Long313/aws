@@ -79,7 +79,9 @@ function SideBar({ id }: { id: ID }) {
                 width={20}
                 className="filter invert inline-block group-hover:filter-none"
               />
-              <span className="inline-block ml-[10px] text-[18px] leading-[18px]">Home</span>
+              <span className="inline-block ml-[10px] text-[18px] leading-[18px]">
+                Home
+              </span>
             </div>
           </Link>
           <div
@@ -100,13 +102,28 @@ function SideBar({ id }: { id: ID }) {
           </div>
           <div
             className={
-              open && numberOpen === 1 || menuId === 1 && open || openMenu && menuId === 1
+              (open && numberOpen === 1) ||
+              (menuId === 1 && open) ||
+              (openMenu && menuId === 1)
                 ? "block pl-[10px]"
                 : "hidden"
             }
           >
             <ul>
-            <li
+              <li
+                onClick={() => handleSelect("ec2-and-auto-scaling-group")}
+                className={
+                  selectedId === "ec2-and-auto-scaling-group" ||
+                  subMenuId === "ec2-and-auto-scaling-group"
+                    ? "bg-white text-black"
+                    : "black"
+                }
+              >
+                <Link href={`/work_shop/${id}/ec2-and-auto-scaling-group`}>
+                  1.0 EC2 và Auto Scaling Group
+                </Link>
+              </li>
+              <li
                 onClick={() => handleSelect("vpc")}
                 className={
                   selectedId === "vpc" || subMenuId === "vpc"
