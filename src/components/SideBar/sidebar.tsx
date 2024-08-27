@@ -156,16 +156,15 @@ function SideBar({ id }: { id: ID }) {
                 </Link>
               </li>
               <li
-                onClick={() => handleSelect("internet-gateway")}
+                onClick={() => handleSelect("elb")}
                 className={
-                  selectedId === "internet-gateway" ||
-                  subMenuId === "internet-gateway"
+                  selectedId === "elb" || subMenuId === "elb"
                     ? "bg-white text-black"
                     : "black"
                 }
               >
-                <Link href={`/work_shop/${id}/internet-gateway`}>
-                  1.4 Internet Gateway
+                <Link href={`/work_shop/${id}/elb`}>
+                  1.4 Elastic Load Balancing (ELB)
                 </Link>
               </li>
               <li
