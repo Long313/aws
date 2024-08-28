@@ -32,7 +32,7 @@ function Introduce({ params }: { params: PageProps }) {
             <ul>
               <li>
                 - Tính sẵn sàng cao (High Availability) nhờ việc sử dụng nhiều
-                AZs.
+                Availability Zone (AZ).
               </li>
               <li>
                 - Khả năng mở rộng (Scalability) thông qua{" "}
