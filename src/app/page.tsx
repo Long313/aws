@@ -21,7 +21,7 @@ function Home() {
         </h1>
         <div className="w-full flex justify-center">
           <div className="p-4 cursor-pointer flex items-center justify-center flex-col w-[600px] border-[2px] rounded-[5px] h-[450px] transform scale-95 hover:scale-100 transition-transform duration-300 shadow-2xl" onClick={() => router.push("/work_shop/1/introduce")}>
-            <h2 className="mt-[10px] font-bold opacity-80">Workshop 1</h2>
+            <h2 className="mt-[10px] font-bold opacity-80">Workshops 1</h2>
             <Image
               src={work_shop}
               alt="work_shop_1"

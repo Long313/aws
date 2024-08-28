@@ -264,7 +264,7 @@ function SideBar({ id }: { id: ID }) {
               >
                 <Link href={`/work_shop/${id}/nacls`}>
                   <span className="min-w-[24px] inline-block">2.2</span> Network
-                  Access Control List
+                  Access Control List (NACLs)
                 </Link>
               </li>
               <li
@@ -279,6 +279,79 @@ function SideBar({ id }: { id: ID }) {
                 <Link href={`/work_shop/${id}/vpc-resource-map`}>
                   <span className="min-w-[24px] inline-block">2.3</span> VPC
                   Resource Map
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div
+            onClick={() => {
+              handleToggleMenu(3);
+              handleSelect("prepare");
+            }}
+            className={`${
+              selectedId === "prepare" || subMenuId === "prepare"
+                ? "bg-white text-black"
+                : "black"
+            } flex justify-between items-center`}
+          >
+            <Link
+              href={`/work_shop/${id}/prepare`}
+              className="flex justify-between text-[18px] p-[4px] w-full"
+            >
+              <span className="min-w-[30px] inline-block">
+                <span className="min-w-[24px] inline-block">3.</span>Các bước
+                chuẩn bị
+              </span>
+              <span className="inline-block mr-[4px]">&#9660;</span>
+            </Link>
+          </div>
+          <div
+            className={
+              (open && numberOpen === 3) ||
+              (menuId === 3 && open) ||
+              (openMenu && menuId === 3)
+                ? "block"
+                : "hidden"
+            }
+          >
+            <ul>
+              <li
+                onClick={() => handleSelect("create-vpc")}
+                className={`${
+                  selectedId === "create-vpc" ||
+                  subMenuId === "create-vpc"
+                    ? "bg-white text-black"
+                    : "black"
+                } px-[5px]`}
+              >
+                <Link href={`/work_shop/${id}/create-vpc`}>
+                  <span className="min-w-[30px] inline-block">3.1</span>
+                  Tạo VPC
+                </Link>
+              </li>
+              <li
+                onClick={() => handleSelect("create-subnet")}
+                className={`${
+                  selectedId === "create-subnet" || subMenuId === "create-subnet"
+                    ? "bg-white text-black"
+                    : "black"
+                } px-[5px]`}
+              >
+                <Link href={`/work_shop/${id}/create-subnet`}>
+                  <span className="min-w-[24px] inline-block">3.2</span> Tạo subnet
+                </Link>
+              </li>
+              <li
+                onClick={() => handleSelect("vpc-resource-map")}
+                className={`${
+                  selectedId === "vpc-resource-map" ||
+                  subMenuId === "vpc-resource-map"
+                    ? "bg-white text-black"
+                    : "black"
+                } px-[5px]`}
+              >
+                <Link href={`/work_shop/${id}/vpc-resource-map`}>
+                  <span className="min-w-[24px] inline-block">3.3</span> Create
                 </Link>
               </li>
             </ul>
