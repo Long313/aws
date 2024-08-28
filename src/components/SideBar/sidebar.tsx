@@ -40,7 +40,7 @@ function SideBar({ id }: { id: ID }) {
     localStorage.setItem("subMenuId", JSON.stringify(id));
   };
   return (
-    <div className="bg-[#283e5b] h-full fixed z-10 top-0 left-0 bottom-0">
+    <div className="bg-[#283e5b] h-full fixed z-10 top-0 left-0 bottom-0 max-w-[300px]">
       <div className="flex items-center justify-center p-[20px] flex-col border border-b-[6px] border-[#435c7c]">
         <Link href="/">
           <Image src={logo} alt="logo" width={100} className="cursor-pointer" />
@@ -251,7 +251,7 @@ function SideBar({ id }: { id: ID }) {
               >
                 <Link href={`/work_shop/${id}/security-group`}>
                   <span className="min-w-[30px] inline-block">2.1</span>
-                  Security-Group
+                  Security Group
                 </Link>
               </li>
               <li
@@ -264,7 +264,7 @@ function SideBar({ id }: { id: ID }) {
               >
                 <Link href={`/work_shop/${id}/nacls`}>
                   <span className="min-w-[24px] inline-block">2.2</span> Network
-                  Access Control List (NACLs)
+                  Access Control List
                 </Link>
               </li>
               <li

@@ -3,10 +3,14 @@ import SideBar from "../SideBar/sidebar";
 function Layout({ children, id }: { children: any; id: any }) {
   return (
     <div className="flex h-full">
-      <div className="w-1/5 h-screen">
+      <div className="h-screen">
         <SideBar id={id} />
       </div>
-      <div className="w-4/5 mx-[100px]">{children}</div>
+      <div className="ml-[300px]">
+        <div className="mx-[40px]">
+        {children}
+        </div>
+      </div>
     </div>
   );
 }
