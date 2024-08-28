@@ -97,16 +97,46 @@ function EC2({ params }: { params: PageProps }) {
               &nbsp;Xem thêm về Chọn phương pháp mở rộng quy mô của bạn
             </a>
           </p>
-          <p>Khi tạo một Auto Scaling Group, bạn có thể chọn khởi chạy On-Demand Instances, Spot Instance hoặc cả. Bạn có thể chỉ định nhiều tùy chọn cho Auto Scaling Group khi sử dụng template khởi chạy</p>
-          <p>- Spot Instances cung cấp cho bạn quyền truy cập vào dung lượng EC2 chưa sử dụng với mức chiết khấu lớn so với giá theo yêu cầu. Để biết thêm thông tin, hãy xem <a className="text-[#22a6df]" href="https://aws.amazon.com/ec2/spot/pricing/" target="_blank">Amazon EC2 Spot Instance</a>. Có những điểm khác biệt chính giữa Spot Instances và On-Demand Instances:</p>
+          <p>
+            Khi tạo một Auto Scaling Group, bạn có thể chọn khởi chạy On-Demand
+            Instances, Spot Instance hoặc cả. Bạn có thể chỉ định nhiều tùy chọn
+            cho Auto Scaling Group khi sử dụng template khởi chạy
+          </p>
+          <p>
+            - Spot Instances cung cấp cho bạn quyền truy cập vào dung lượng EC2
+            chưa sử dụng với mức chiết khấu lớn so với giá theo yêu cầu. Để biết
+            thêm thông tin, hãy xem{" "}
+            <a
+              className="text-[#22a6df]"
+              href="https://aws.amazon.com/ec2/spot/pricing/"
+              target="_blank"
+            >
+              Amazon EC2 Spot Instance
+            </a>
+            . Có những điểm khác biệt chính giữa Spot Instances và On-Demand
+            Instances:
+          </p>
           <p>+ Giá của Spot Instances thay đổi tùy theo yêu cầu</p>
-          <p>+ Amazon EC2 có thể terminates một Spot Instance riêng lẻ khi tính khả dụng hoặc giá của Spot Instances thay đổi</p>
-          <p>+ Khi một Spot Instance bị terminates, Auco Scaling Group sẽ cố gắng khởi chạy một instance thay thế để duy trì số lượng mong muốn cho nhóm</p>
-          <p>Khi các instance được khởi chạy (launched), nếu bạn chỉ định nhiều AZ (Availability Zones), dung lượng (capacity) mong muốn sẽ được phân phối trên các AZ. Nếu hành động mở rộng quy mô xảy ra, Amazon EC2 Auto Scaling sẽ tự động duy trì sự cân bằng trên tất cả các AZ mà bạn chỉ định</p>
+          <p>
+            + Amazon EC2 có thể terminates một Spot Instance riêng lẻ khi tính
+            khả dụng hoặc giá của Spot Instances thay đổi
+          </p>
+          <p>
+            + Khi một Spot Instance bị terminates, Auco Scaling Group sẽ cố gắng
+            khởi chạy một instance thay thế để duy trì số lượng mong muốn cho
+            nhóm
+          </p>
+          <p>
+            Khi các instance được khởi chạy (launched), nếu bạn chỉ định nhiều
+            AZ (Availability Zones), dung lượng (capacity) mong muốn sẽ được
+            phân phối trên các AZ. Nếu hành động mở rộng quy mô xảy ra, Amazon
+            EC2 Auto Scaling sẽ tự động duy trì sự cân bằng trên tất cả các AZ
+            mà bạn chỉ định
+          </p>
         </div>
       </div>
       <p className="font-bold mt-[20px]">Xem thêm</p>
-      <ul className="list-disc ml-[20px] text-[#22a6df] italic">
+      <ul className="list-disc ml-[20px] text-[#22a6df] italic mb-[20px]">
         <li>
           <a
             href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html"

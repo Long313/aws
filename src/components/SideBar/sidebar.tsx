@@ -72,7 +72,7 @@ function SideBar({ id }: { id: ID }) {
       <div className="py-[10px]">
         <div className="text-white">
           <Link href={`/`}>
-            <div className="group parent flex items-center space-between w-full mb-[10px] cursor-pointer height-[20px] p-[4px] hover:bg-white hover:text-black">
+            <div className="group parent flex items-end space-between w-full mb-[10px] cursor-pointer height-[20px] p-[4px] hover:bg-white hover:text-black">
               <Image
                 src={home}
                 alt="home-icon"
@@ -99,7 +99,9 @@ function SideBar({ id }: { id: ID }) {
               href={`/work_shop/${id}/introduce`}
               className="flex justify-between text-[18px] p-[4px] w-full"
             >
-              <span>1. Giới thiệu</span>
+              <span className="min-w-[30px] inline-block">
+                <span className="min-w-[24px] inline-block">1.</span> Giới thiệu
+              </span>
               <span className="inline-block mr-[4px]">&#9660;</span>
             </Link>
           </div>
@@ -123,7 +125,8 @@ function SideBar({ id }: { id: ID }) {
                 } px-[5px]`}
               >
                 <Link href={`/work_shop/${id}/ec2-and-auto-scaling-group`}>
-                  1.1 EC2 và Auto Scaling Group
+                  <span className="min-w-[24px] inline-block">1.1</span> EC2 và
+                  Auto Scaling Group
                 </Link>
               </li>
               <li
@@ -134,7 +137,10 @@ function SideBar({ id }: { id: ID }) {
                     : "black"
                 } px-[5px]`}
               >
-                <Link href={`/work_shop/${id}/vpc`}>1.2 VPC</Link>
+                <Link href={`/work_shop/${id}/vpc`}>
+                  <span className="min-w-[24px] inline-block">1.2</span> Virtual
+                  Private Cloud (VPC)
+                </Link>
               </li>
               <li
                 onClick={() => handleSelect("subnets")}
@@ -144,7 +150,9 @@ function SideBar({ id }: { id: ID }) {
                     : "black"
                 } px-[5px]`}
               >
-                <Link href={`/work_shop/${id}/subnets`}>1.3 Subnets</Link>
+                <Link href={`/work_shop/${id}/subnets`}>
+                  <span className="min-w-[24px] inline-block">1.3</span> Subnets
+                </Link>
               </li>
               <li
                 onClick={() => handleSelect("route-table")}
@@ -155,7 +163,8 @@ function SideBar({ id }: { id: ID }) {
                 } px-[5px]`}
               >
                 <Link href={`/work_shop/${id}/route-table`}>
-                  1.4 Route Table
+                  <span className="min-w-[24px] inline-block">1.4</span> Route
+                  Table
                 </Link>
               </li>
               <li
@@ -167,7 +176,8 @@ function SideBar({ id }: { id: ID }) {
                 } px-[5px]`}
               >
                 <Link href={`/work_shop/${id}/elb`}>
-                  1.5 Elastic Load Balancing (ELB)
+                  <span className="min-w-[24px] inline-block">1.5</span> Elastic
+                  Load Balancing (ELB)
                 </Link>
               </li>
               <li
@@ -179,7 +189,8 @@ function SideBar({ id }: { id: ID }) {
                 } px-[5px]`}
               >
                 <Link href={`/work_shop/${id}/nat-gateway`}>
-                  1.6 NAT Gateway
+                  <span className="min-w-[24px] inline-block">1.6</span> NAT
+                  Gateway
                 </Link>
               </li>
               <li
@@ -191,7 +202,83 @@ function SideBar({ id }: { id: ID }) {
                 } px-[5px]`}
               >
                 <Link href={`/work_shop/${id}/rds`}>
-                  1.7 Relational Database Service (RDS)
+                  <span className="min-w-[24px] inline-block">1.7</span>{" "}
+                  Relational Database Service (RDS)
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div
+            onClick={() => {
+              handleToggleMenu(2);
+              handleSelect("firewall");
+            }}
+            className={`${
+              selectedId === "firewall" || subMenuId === "firewall"
+                ? "bg-white text-black"
+                : "black"
+            } flex justify-between items-center`}
+          >
+            <Link
+              href={`/work_shop/${id}/firewall`}
+              className="flex justify-between text-[18px] p-[4px] w-full"
+            >
+              <span className="min-w-[30px] inline-block">
+                <span className="min-w-[24px] inline-block">2.</span> Tường lửa
+                trong VPC
+              </span>
+              <span className="inline-block mr-[4px]">&#9660;</span>
+            </Link>
+          </div>
+          <div
+            className={
+              (open && numberOpen === 2) ||
+              (menuId === 2 && open) ||
+              (openMenu && menuId === 2)
+                ? "block"
+                : "hidden"
+            }
+          >
+            <ul>
+              <li
+                onClick={() => handleSelect("security-group")}
+                className={`${
+                  selectedId === "security-group" ||
+                  subMenuId === "security-group"
+                    ? "bg-white text-black"
+                    : "black"
+                } px-[5px]`}
+              >
+                <Link href={`/work_shop/${id}/security-group`}>
+                  <span className="min-w-[30px] inline-block">2.1</span>
+                  Security-Group
+                </Link>
+              </li>
+              <li
+                onClick={() => handleSelect("NACLs")}
+                className={`${
+                  selectedId === "NACLs" || subMenuId === "NACLs"
+                    ? "bg-white text-black"
+                    : "black"
+                } px-[5px]`}
+              >
+                <Link href={`/work_shop/${id}/nacls`}>
+                  <span className="min-w-[24px] inline-block">2.2</span> Network
+                  Access Control List (NACLs)
+                </Link>
+              </li>
+              <li
+                onClick={() => handleSelect("vpc-resource-map")}
+                className={`${
+                  selectedId === "vpc-resource-map" ||
+                  subMenuId === "vpc-resource-map"
+                    ? "bg-white text-black"
+                    : "black"
+                } px-[5px]`}
+              >
+                <Link href={`/work_shop/${id}/vpc-resource-map`}>
+                  <span className="min-w-[24px] inline-block">2.3</span> VPC
+                  Resource Map
                 </Link>
               </li>
             </ul>
