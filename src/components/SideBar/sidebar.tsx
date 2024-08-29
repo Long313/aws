@@ -318,8 +318,7 @@ function SideBar({ id }: { id: ID }) {
               <li
                 onClick={() => handleSelect("create-vpc")}
                 className={`${
-                  selectedId === "create-vpc" ||
-                  subMenuId === "create-vpc"
+                  selectedId === "create-vpc" || subMenuId === "create-vpc"
                     ? "bg-white text-black"
                     : "black"
                 } px-[5px]`}
@@ -332,26 +331,57 @@ function SideBar({ id }: { id: ID }) {
               <li
                 onClick={() => handleSelect("create-subnet")}
                 className={`${
-                  selectedId === "create-subnet" || subMenuId === "create-subnet"
+                  selectedId === "create-subnet" ||
+                  subMenuId === "create-subnet"
                     ? "bg-white text-black"
                     : "black"
                 } px-[5px]`}
               >
                 <Link href={`/work_shop/${id}/create-subnet`}>
-                  <span className="min-w-[24px] inline-block">3.2</span> Tạo subnet
+                  <span className="min-w-[24px] inline-block">3.2</span> Tạo
+                  subnet
                 </Link>
               </li>
               <li
-                onClick={() => handleSelect("vpc-resource-map")}
+                onClick={() => handleSelect("create-internet-gateway")}
                 className={`${
-                  selectedId === "vpc-resource-map" ||
-                  subMenuId === "vpc-resource-map"
+                  selectedId === "create-internet-gateway" ||
+                  subMenuId === "create-internet-gateway"
                     ? "bg-white text-black"
                     : "black"
                 } px-[5px]`}
               >
-                <Link href={`/work_shop/${id}/vpc-resource-map`}>
-                  <span className="min-w-[24px] inline-block">3.3</span> Create
+                <Link href={`/work_shop/${id}/create-internet-gateway`}>
+                  <span className="min-w-[24px] inline-block">3.3</span> Tạo
+                  Internet Gateway
+                </Link>
+              </li>
+              <li
+                onClick={() => handleSelect("create-route-table")}
+                className={`${
+                  selectedId === "create-route-table" ||
+                  subMenuId === "create-route-table"
+                    ? "bg-white text-black"
+                    : "black"
+                } px-[5px]`}
+              >
+                <Link href={`/work_shop/${id}/create-route-table`}>
+                  <span className="min-w-[24px] inline-block">3.4</span> Tạo
+                  Route table
+                </Link>
+              </li>
+              <li
+                onClick={() => handleSelect("create-security-group")}
+                className={`${
+                  selectedId === "create-security-group" ||
+                  subMenuId === "create-security-group"
+                    ? "bg-white text-black"
+                    : "black"
+                } px-[5px]`}
+              >
+                <Link href={`/work_shop/${id}/create-security-group`}>
+                  <span className="min-w-[24px] inline-block">3.5</span> Tạo
+                  Security Group
                 </Link>
               </li>
             </ul>
