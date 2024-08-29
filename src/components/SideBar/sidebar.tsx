@@ -299,7 +299,7 @@ function SideBar({ id }: { id: ID }) {
               className="flex justify-between text-[18px] p-[4px] w-full"
             >
               <span className="min-w-[30px] inline-block">
-                <span className="min-w-[24px] inline-block">3.</span>Các bước
+                <span className="min-w-[30px] inline-block">3.</span>Các bước
                 chuẩn bị
               </span>
               <span className="inline-block mr-[4px]">&#9660;</span>
@@ -382,6 +382,105 @@ function SideBar({ id }: { id: ID }) {
                 <Link href={`/work_shop/${id}/create-security-group`}>
                   <span className="min-w-[24px] inline-block">3.5</span> Tạo
                   Security Group
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div
+            onClick={() => {
+              handleToggleMenu(3);
+              handleSelect("prepare");
+            }}
+            className={`${
+              selectedId === "prepare" || subMenuId === "prepare"
+                ? "bg-white text-black"
+                : "black"
+            } flex justify-between items-center`}
+          >
+            <Link
+              href={`/work_shop/${id}/create-ec2`}
+              className="flex justify-between text-[18px] p-[4px] w-full"
+            >
+              <span className="min-w-[30px] inline-block">
+                <span className="min-w-[30px] inline-block">4.</span>Tạo máy chủ EC2
+              </span>
+              <span className="inline-block mr-[4px]">&#9660;</span>
+            </Link>
+          </div>
+          <div
+            className={
+              (open && numberOpen === 4) ||
+              (menuId === 4 && open) ||
+              (openMenu && menuId === 4)
+                ? "block"
+                : "hidden"
+            }
+          >
+            <ul>
+              <li
+                onClick={() => handleSelect("create-ec2-instance")}
+                className={`${
+                  selectedId === "create-ec2-instance" || subMenuId === "create-ec2-instance"
+                    ? "bg-white text-black"
+                    : "black"
+                } px-[5px]`}
+              >
+                <Link href={`/work_shop/${id}/create-ec2-instance`}>
+                  <span className="min-w-[30px] inline-block">4.1</span>
+                  Tạo máy chủ EC2
+                </Link>
+              </li>
+              <li
+                onClick={() => handleSelect("check-connect")}
+                className={`${
+                  selectedId === "check-connect" ||
+                  subMenuId === "check-connect"
+                    ? "bg-white text-black"
+                    : "black"
+                } px-[5px]`}
+              >
+                <Link href={`/work_shop/${id}/check-connect`}>
+                  <span className="min-w-[24px] inline-block">4.2</span>Kiểm tra kết nối
+                </Link>
+              </li>
+              <li
+                onClick={() => handleSelect("create-nat-gateway")}
+                className={`${
+                  selectedId === "create-nat-gateway" ||
+                  subMenuId === "create-nat-gateway"
+                    ? "bg-white text-black"
+                    : "black"
+                } px-[5px]`}
+              >
+                <Link href={`/work_shop/${id}/create-nat-gateway`}>
+                  <span className="min-w-[24px] inline-block">4.3</span> Tạo
+                  NAT Gateway
+                </Link>
+              </li>
+              <li
+                onClick={() => handleSelect("use-reachability-analyzer")}
+                className={`${
+                  selectedId === "use-reachability-analyzer" ||
+                  subMenuId === "use-reachability-analyzer"
+                    ? "bg-white text-black"
+                    : "black"
+                } px-[5px]`}
+              >
+                <Link href={`/work_shop/${id}/use-reachability-analyzer`}>
+                  <span className="min-w-[24px] inline-block">4.4</span>Sử dụng Reachability Analyzer
+                </Link>
+              </li>
+              <li
+                onClick={() => handleSelect("create-ec2-connect-endpoint")}
+                className={`${
+                  selectedId === "create-ec2-connect-endpoint" ||
+                  subMenuId === "create-ec2-connect-endpoint"
+                    ? "bg-white text-black"
+                    : "black"
+                } px-[5px]`}
+              >
+                <Link href={`/work_shop/${id}/create-ec2-connect-endpoint`}>
+                  <span className="min-w-[24px] inline-block">4.5</span> Tạo EC2 Instance Connect Endpoint (Optional)
                 </Link>
               </li>
             </ul>

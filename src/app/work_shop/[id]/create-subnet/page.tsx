@@ -52,14 +52,14 @@ function CreateSubnet({ params }: { params: PageProps }) {
           <p className="font-bold text-[18px] my-[10px] text-[#22a6df]">
             Các bước tạo subnet
           </p>
-          <p className="font-bold text-[18px]">
+          <p className="text-[18px]">
             1. Trong giao diện của VPC Dashboard
           </p>
           <p>
-            1.1 Chọn <b>Subnets</b>
+            - Chọn <b>Subnets</b>
           </p>
           <p>
-            1.2 Click chọn <b>Create subnet</b>
+            - Click chọn <b>Create subnet</b>
           </p>
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[80%]">
@@ -95,11 +95,11 @@ function CreateSubnet({ params }: { params: PageProps }) {
               </div>
             </div>
           </div>
-          <p className="font-bold text-[18px]">
+          <p className="text-[18px]">
             2. Trong giao diện <b>Create subnet</b>
           </p>
           <p>
-            2.1 Chọn <b>ASG VPC</b> mà chúng ta vừa mới tạo.
+            - Chọn <b>ASG VPC</b> mà chúng ta vừa mới tạo.
           </p>
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[80%]">
@@ -135,22 +135,22 @@ function CreateSubnet({ params }: { params: PageProps }) {
               </div>
             </div>
           </div>
-          <p className="font-bold text-[18px]">
+          <p className="text-[18px]">
             3. Ở mục <b>Subnet settings</b> thực hiện setting
           </p>
           <ul className="list-disc ml-[20px]">
             <li>
-              3.1 ở mục <b>Subnet name</b> nhập Public Subnet 1.
+              Bước 1: Ở mục <b>Subnet name</b> nhập Public Subnet 1.
             </li>
             <li>
-              3.2 Ở mục <b>Availability Zone</b> chọn AZ <b>ap-southeast-1a</b>.
+              Bước 2: Ở mục <b>Availability Zone</b> chọn AZ <b>ap-southeast-1a</b>.
             </li>
             <li>
-              3.3 Ở mục IPv4 CIDR block, nhập <b>10.10.1.0/24</b> theo kiến trúc
+              Bước 3: Ở mục IPv4 CIDR block, nhập <b>10.10.1.0/24</b> theo kiến trúc
               đã mô tả
             </li>
             <li>
-              3.4 Click vào <b>Create subnet</b>.
+              Bước 4: Click vào <b>Create subnet</b>.
             </li>
           </ul>
           <div className="flex justify-center my-[20px]">
@@ -187,7 +187,7 @@ function CreateSubnet({ params }: { params: PageProps }) {
               </div>
             </div>
           </div>
-          <p className="font-bold text-[18px]">4. Hoàn thành tạo subnet</p>
+          <p className="text-[18px]">4. Hoàn thành tạo subnet</p>
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[80%]">
               <Image src={screen_shot_subnet_4} alt="vpc" className="w-full" />
@@ -222,7 +222,7 @@ function CreateSubnet({ params }: { params: PageProps }) {
               </div>
             </div>
           </div>
-          <p className="font-bold text-[18px]">
+          <p className="text-[18px]">
             5. Thực hiện các bước tương tự trên để tạo thêm các subnet
           </p>
           <p>
@@ -361,7 +361,7 @@ function CreateSubnet({ params }: { params: PageProps }) {
             colorFirst="#5cb85ccc"
             colorSecond="#E6F9E6"
           />
-          <p>6. Trong giao diện VPC</p>
+          <p className="text-[18px]">6. Trong giao diện VPC</p>
           <ul>
             <li>
               Chọn <b>Subnets</b>
@@ -383,7 +383,7 @@ function CreateSubnet({ params }: { params: PageProps }) {
               className="w-[90%] inline-block"
             />
           </div>
-          <p>
+          <p className="text-[18px]">
             7. Trong mục <b>Auto-assign IP settings</b>
           </p>
           <ul className="list-disc ml-[20px]">
@@ -401,7 +401,7 @@ function CreateSubnet({ params }: { params: PageProps }) {
               className="w-[90%] inline-block"
             />
           </div>
-          <p>
+          <p className="text-[18px]">
             8. Sau đó thực hiện tương tự với <b>Public subnet 2</b>
           </p>
           <div className="flex justify-center my-[10px]">

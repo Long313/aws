@@ -56,10 +56,10 @@ function CreateSubnet({ params }: { params: PageProps }) {
             1. Trong giao diện của VPC Dashboard
           </p>
           <p>
-            1.1 Chọn <b>Internet gateways</b>
+            - Chọn <b>Internet gateways</b>
           </p>
           <p>
-            1.2 Click chọn <b>Create internet gateway</b>
+            - Click chọn <b>Create internet gateway</b>
           </p>
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[80%]">

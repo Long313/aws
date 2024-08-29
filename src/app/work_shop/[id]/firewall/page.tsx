@@ -41,7 +41,7 @@ function Firewall({ params }: { params: PageProps }) {
               <span className="text-[16px] p-[4px] flex justify-center items-center text-[#6AB0DE] bg-white w-[20px] h-[20px] rounded-full border border-[white]">
                 &#33;
               </span>
-              <span className="text-white inline-block ml-[10px] font-bold text-[18px] italic">
+              <span className="text-white inline-block ml-[10px] font-bold text-[18px]">
                 Lưu ý
               </span>
             </div>

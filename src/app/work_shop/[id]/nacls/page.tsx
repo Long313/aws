@@ -17,7 +17,7 @@ function NACLs({ params }: { params: PageProps }) {
         <p>
           - <b>Network Access Control List (Network ACL)</b> cho phép hoặc từ
           chối lưu lượng truy cập (traffic) vào hoặc ra cụ thể ở cấp độ mạng con
-          (subnet). Bạn có thể sư dụng network ACL mặc định cho VPC hoặc có thể
+          (subnet). Bạn có thể sử dụng network ACL mặc định cho VPC hoặc có thể
           tạo network ACL tùy chỉnh cho VPC bằng các quy tắc (rules) tương tự
           như các quy tắc cho Security Group của bạn để thêm một lớp bảo mật bổ
           sung vào VPC

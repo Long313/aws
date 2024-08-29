@@ -10,9 +10,7 @@ import screen_shot_security_group_5 from "../../../../images/screen_shot_securit
 import screen_shot_security_group_6 from "../../../../images/screen_shot_security_group_6.png";
 import screen_shot_security_group_7 from "../../../../images/screen_shot_security_group_7.png";
 import screen_shot_security_group_8 from "../../../../images/screen_shot_security_group_8.png";
-import screen_shot_subnet_9 from "../../../../images/screen_shot_subnet_9.png";
-import screen_shot_subnet_10 from "../../../../images/screen_shot_subnet_10.png";
-import screen_shot_subnet_11 from "../../../../images/screen_shot_subnet_11.png";
+
 import coppy_icon from "../../../../images/coppy_icon.png";
 import zoom_in from "../../../../images/zoom_in_icon.png";
 import close from "../../../../images/close.png";
@@ -52,14 +50,14 @@ function CreateSecurityGroup({ params }: { params: PageProps }) {
           <p className="font-bold text-[18px] my-[10px] text-[#22a6df]">
             Các bước tạo Security Group
           </p>
-          <p className="font-bold text-[18px]">
+          <p className="text-[18px]">
             1. Trong giao diện của VPC Dashboard
           </p>
           <p>
-            1.1 Trong mục Security groups, chọn <b>Security groups</b>
+            - Trong mục Security groups, chọn <b>Security groups</b>
           </p>
           <p>
-            1.2 Click chọn <b>Create security group</b>
+            - Click chọn <b>Create security group</b>
           </p>
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[80%]">
@@ -150,7 +148,7 @@ function CreateSecurityGroup({ params }: { params: PageProps }) {
               Chọn <b>ASG</b>VPC
             </li>
           </ul>
-          <p className="text-[18px]">3. Thực hiện cấu hình Inbound rules</p>
+          <p className="text-[18px] my-[10px]">3. Thực hiện cấu hình Inbound rules</p>
           <ul className="list-disc ml-[20px]">
             <li>
               Trong mục <b>Inbound rules</b>, click <b>Add rule</b>
@@ -206,7 +204,7 @@ function CreateSecurityGroup({ params }: { params: PageProps }) {
               </div>
             </div>
           </div>
-          <p>4. Kiểm tra Outbound rule và chọn Create security group</p>
+          <p className="text-[18px]">4. Kiểm tra Outbound rule và chọn Create security group</p>
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[80%]">
               <Image
@@ -245,7 +243,7 @@ function CreateSecurityGroup({ params }: { params: PageProps }) {
               </div>
             </div>
           </div>
-          <p>
+          <p className="text-[18px]">
             5. Hoàn thành tạo Security group cho máy chủ nằm trong Public subnet
           </p>
           <div className="flex justify-center my-[20px]">
@@ -289,7 +287,7 @@ function CreateSecurityGroup({ params }: { params: PageProps }) {
           <p className="font-bold text-[#22a6df]">
             Tạo Security Group cho máy chủ nằm trong Private subnet
           </p>
-          <p>6. Trong giao diện VPC Dashboard</p>
+          <p className="text-[18px]">6. Trong giao diện VPC Dashboard</p>
           <ul className="list-disc ml-[20px]">
             <li>
               Chọn <b>Security Groups</b>
@@ -336,7 +334,7 @@ function CreateSecurityGroup({ params }: { params: PageProps }) {
               </div>
             </div>
           </div>
-          <p>7. Thực hiện cấu hình Security Group</p>
+          <p className="text-[18px]">7. Thực hiện cấu hình Security Group</p>
           <ul className="list-disc ml-[20px]">
             <li>
               Trong mục <b>Security group name</b> diền{" "}
@@ -388,7 +386,7 @@ function CreateSecurityGroup({ params }: { params: PageProps }) {
               </div>
             </div>
           </div>
-          <p>8. Thực hiện cấu hình Inbound rules</p>
+          <p className="text-[18px]">8. Thực hiện cấu hình Inbound rules</p>
           <ul className="list-disc ml-[20px]">
             <li>
               Trong mục <b>Inbound rule</b> chọn
@@ -443,7 +441,7 @@ function CreateSecurityGroup({ params }: { params: PageProps }) {
               </div>
             </div>
           </div>
-          <p>9. Chọn Add rule để thêm 1 rule mới</p>
+          <p className="text-[18px]">9. Chọn Add rule để thêm 1 rule mới</p>
           <ul className="list-disc ml-[20px]">
             <li>
               Chọn <b>Type: All ICMP - IPv4</b> và <b>Source: Anywhere</b>. Cho
