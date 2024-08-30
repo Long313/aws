@@ -25,7 +25,7 @@ interface PageProps {
   id: string;
 }
 function CheckConnect({ params }: { params: PageProps }) {
-  const textRef = useRef<HTMLSpanElement>(null);
+  const textRef = useRef<HTMLElement>(null);
   const [zoom, setZoom] = useState(0);
   const handleCoppy = () => {
     if (textRef.current) {
