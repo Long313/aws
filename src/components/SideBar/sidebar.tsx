@@ -461,15 +461,15 @@ function SideBar({ id }: { id: ID }) {
                 </Link>
               </li>
               <li
-                onClick={() => handleSelect("use-reachability-analyzer")}
+                onClick={() => handleSelect("reachability-analyzer")}
                 className={`${
-                  selectedId === "use-reachability-analyzer" ||
-                  subMenuId === "use-reachability-analyzer"
+                  selectedId === "reachability-analyzer" ||
+                  subMenuId === "reachability-analyzer"
                     ? "bg-white text-black"
                     : "black"
                 } px-[5px]`}
               >
-                <Link href={`/work_shop/${id}/use-reachability-analyzer`}>
+                <Link href={`/work_shop/${id}/reachability-analyzer`}>
                   <span className="min-w-[30px] inline-block">4.4</span>Sử dụng
                   Reachability Analyzer
                 </Link>
