@@ -97,7 +97,7 @@ function CreateNatGateway({ params }: { params: PageProps }) {
           <p>2. Trong giao diện Allocate Elastic IP address</p>
           <ul className="list-disc ml-[20px]">
             <li>
-              Trong mục <b>Public IPv4 address pool</b>, chọn Amazon's pool of
+              Trong mục <b>Public IPv4 address pool</b>, chọn Amazons pool of
               IPv4 addresses
             </li>
             <li>

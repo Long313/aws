@@ -139,7 +139,7 @@ function CreateSecurityGroup({ params }: { params: PageProps }) {
           </div>
           <ul className="list-disc ml-[20px]">
             <li>
-              Trong mục <b>Security group name</b>, nhập "Public subnet - SG"
+              Trong mục <b>Security group name</b>, nhập {`"Public subnet - SG"`}
             </li>
             <li>
               Trong mục <b>Description</b>, nhập "Allow SSH and Ping for servers
