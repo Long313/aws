@@ -41,7 +41,7 @@ function CheckConnect({ params }: { params: PageProps }) {
 
       document.body.removeChild(tempTextarea);
     } else {
-      console.error("textRef.current is null")
+      console.error("textRef.current is null");
     }
   };
   return (
@@ -58,15 +58,14 @@ function CheckConnect({ params }: { params: PageProps }) {
         />
         <div>
           <p>
-            1. Thực hiện tải{" "}
+            1. Thực hiện tải MobaXterm &nbsp;
             <a
               href="https://mobaxterm.mobatek.net/download.html"
               target="_blank"
               className="text-[#22a6df]"
             >
-              MobaXtem
-            </a>{" "}
-            tại đây
+               tại đây
+            </a>
           </p>
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[80%]">
@@ -344,9 +343,12 @@ function CheckConnect({ params }: { params: PageProps }) {
             bằng cách
           </p>
           <p>
-            - Gõ lệnh <b>ping {`&lt;`}IP Private EC2 Private{`&gt;`} -c5</b>. Câu lệnh
-            này sẽ kiểm tra kết nối từ máy chủ EC2 Public sang máy chủ EC2
-            Private
+            - Gõ lệnh &nbsp;
+            <b>
+              ping &lt; IP Private EC2 Private &gt; -c5
+            </b>
+            . Câu lệnh này sẽ kiểm tra kết nối từ máy chủ EC2 Public sang máy
+            chủ EC2 Private
           </p>
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[80%]">
@@ -524,11 +526,11 @@ function CheckConnect({ params }: { params: PageProps }) {
               className="text-[#abb2bf] bg-[#282c34] py-[4px] px-[8px] rounded-[4px] font-bold"
               ref={textRef}
             >
-              pscp -i aws-keypair.ppk aws-keypair.pem ec2-user@{"&lt;"}
+              pscp -i aws-keypair.ppk aws-keypair.pem ec2-user@&lt;
               <span className="text-red-500 font-bold">
                 EC2 PUBLIC public IP address
               </span>
-              {"&gt;"}:/home/ec2-user/
+              &gt;:/home/ec2-user/
             </p>
             <Image
               src={coppy_icon}
