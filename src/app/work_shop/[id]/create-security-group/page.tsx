@@ -142,8 +142,8 @@ function CreateSecurityGroup({ params }: { params: PageProps }) {
               Trong mục <b>Security group name</b>, nhập {`"Public subnet - SG"`}
             </li>
             <li>
-              Trong mục <b>Description</b>, nhập "Allow SSH and Ping for servers
-              in public subnet"
+              Trong mục <b>Description</b>, nhập {`"Allow SSH and Ping for servers
+              in public subnet"`}
             </li>
             <li>
               Chọn <b>ASG</b>VPC
