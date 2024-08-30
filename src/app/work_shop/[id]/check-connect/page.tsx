@@ -41,7 +41,7 @@ function CheckConnect({ params }: { params: PageProps }) {
 
       document.body.removeChild(tempTextarea);
     } else {
-      console.error("textRef.current is null");
+      console.error("textRef.current is null")
     }
   };
   return (
