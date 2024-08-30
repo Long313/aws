@@ -344,7 +344,7 @@ function CheckConnect({ params }: { params: PageProps }) {
             bằng cách
           </p>
           <p>
-            - Gõ lệnh <b>ping {"&lt;"}IP Private EC2 Private{"&gt"}; -c5</b>. Câu lệnh
+            - Gõ lệnh <b>ping {`&lt;`}IP Private EC2 Private{`&gt;`} -c5</b>. Câu lệnh
             này sẽ kiểm tra kết nối từ máy chủ EC2 Public sang máy chủ EC2
             Private
           </p>
