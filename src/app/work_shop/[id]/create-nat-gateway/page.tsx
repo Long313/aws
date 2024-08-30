@@ -7,14 +7,7 @@ import screen_shot_nat_gateway_2 from "../../../../images/screen_shot_nat_gatewa
 import screen_shot_nat_gateway_3 from "../../../../images/screen_shot_nat_gateway_3.png";
 import screen_shot_nat_gateway_4 from "../../../../images/screen_shot_nat_gateway_4.png";
 import screen_shot_nat_gateway_5 from "../../../../images/screen_shot_nat_gateway_5.png";
-import screen_shot_nat_gateway_6 from "../../../../images/screen_shot_nat_gateway_6.png";
-import screen_shot_ec2_7 from "../../../../images/screen_shot_ec2_7.png";
-import screen_shot_ec2_8 from "../../../../images/screen_shot_ec2_8.png";
-import screen_shot_ec2_9 from "../../../../images/screen_shot_ec2_9.png";
-import screen_shot_ec2_10 from "../../../../images/screen_shot_ec2_10.png";
-import screen_shot_ec2_11 from "../../../../images/screen_shot_ec2_11.png";
-import screen_shot_ec2_12 from "../../../../images/screen_shot_ec2_12.png";
-
+import screen_shot_nat_gateway_6 from "../../../../images/screen_shot_nat_gateway_6.png"
 import coppy_icon from "../../../../images/coppy_icon.png";
 import zoom_in from "../../../../images/zoom_in_icon.png";
 import close from "../../../../images/close.png";
