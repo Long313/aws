@@ -2,17 +2,18 @@
 import Layout from "@/components/Layout/page";
 import Image from "next/image";
 import { useState } from "react";
-import screen_shot_security_group_1 from "../../../../images/screen_shot_security_group_1.png";
-import screen_shot_security_group_2 from "../../../../images/screen_shot_security_group_2.png";
-import screen_shot_security_group_3 from "../../../../images/screen_shot_security_group_3.png";
-import screen_shot_security_group_4 from "../../../../images/screen_shot_security_group_4.png";
-import screen_shot_security_group_5 from "../../../../images/screen_shot_security_group_5.png";
-import screen_shot_security_group_6 from "../../../../images/screen_shot_security_group_6.png";
-import screen_shot_security_group_7 from "../../../../images/screen_shot_security_group_7.png";
-import screen_shot_security_group_8 from "../../../../images/screen_shot_security_group_8.png";
-import screen_shot_security_group_9 from "../../../../images/screen_shot_security_group_9.png";
-import screen_shot_security_group_10 from "../../../../images/screen_shot_security_group_10.png";
-import screen_shot_security_group_11 from "../../../../images/screen_shot_security_group_11.png";
+import screen_shot_ec2_1 from "../../../../images/screen_shot_ec2_1.png";
+import screen_shot_ec2_2 from "../../../../images/screen_shot_ec2_2.png";
+import screen_shot_ec2_3 from "../../../../images/screen_shot_ec2_3.png";
+import screen_shot_ec2_4 from "../../../../images/screen_shot_ec2_4.png";
+import screen_shot_ec2_5 from "../../../../images/screen_shot_ec2_5.png";
+import screen_shot_ec2_6 from "../../../../images/screen_shot_ec2_6.png";
+import screen_shot_ec2_7 from "../../../../images/screen_shot_ec2_7.png";
+import screen_shot_ec2_8 from "../../../../images/screen_shot_ec2_8.png";
+import screen_shot_ec2_9 from "../../../../images/screen_shot_ec2_9.png";
+import screen_shot_ec2_10 from "../../../../images/screen_shot_ec2_10.png";
+import screen_shot_ec2_11 from "../../../../images/screen_shot_ec2_11.png";
+import screen_shot_ec2_12 from "../../../../images/screen_shot_ec2_12.png";
 
 import coppy_icon from "../../../../images/coppy_icon.png";
 import zoom_in from "../../../../images/zoom_in_icon.png";
@@ -47,26 +48,24 @@ function CreateSecurityGroup({ params }: { params: PageProps }) {
     <Layout id={params.id}>
       <div>
         <h1 className="my-[20px] text-[#22a6df] text-[24px] font-bold text-center">
-          Tạo Security Group
+          Tạo máy chủ EC2 Instance
         </h1>
         <div>
           <p className="font-bold text-[18px] my-[10px] text-[#22a6df]">
-            Các bước tạo Security Group cho máy chủ nằm trong Public subnet
+            Tạo máy chủ EC2 nằm trong Public subnet
           </p>
-          <p className="text-[18px]">1. Trong giao diện của VPC Dashboard</p>
-          <p>
-            - Trong mục Security groups, chọn <b>Security groups</b>
+          <p className="text-[18px]">
+            1. Truy cập <b>AWS Management Console</b>
           </p>
           <p>
-            - Click chọn <b>Create security group</b>
+            - Tìm <b>EC2 </b>
+          </p>
+          <p>
+            - Click chọn <b>EC2</b>
           </p>
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[80%]">
-              <Image
-                src={screen_shot_security_group_1}
-                alt="vpc"
-                className="w-full"
-              />
+              <Image src={screen_shot_ec2_1} alt="vpc" className="w-full" />
               <Image
                 src={zoom_in}
                 alt="zoom_in"
@@ -81,12 +80,8 @@ function CreateSecurityGroup({ params }: { params: PageProps }) {
                   zoom === 1 ? "block" : "hidden"
                 } fixed top-0 right-0 bottom-0 left-0 z-10 bg-[#0000004d] flex justify-center items-center`}
               >
-                <div className="w-[90%] relative z-10">
-                  <Image
-                    src={screen_shot_security_group_1}
-                    alt="vpc"
-                    className="w-full"
-                  />
+                <div className="w-[80%] relative z-10">
+                  <Image src={screen_shot_ec2_1} alt="vpc" className="w-full" />
                   <Image
                     src={close}
                     alt="close"
@@ -98,14 +93,18 @@ function CreateSecurityGroup({ params }: { params: PageProps }) {
               </div>
             </div>
           </div>
-          <p className="text-[18px]">2. Thực hiện cấu hình Security Group</p>
+          <p className="text-[18px]">2. Trong giao diện EC2 Dashboard</p>
+          <ul className="list-disc ml-[20px]">
+            <li>
+              Chọn <b>Instances</b>
+            </li>
+            <li>
+              Chọn <b>Launch instance</b>
+            </li>
+          </ul>
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[80%]">
-              <Image
-                src={screen_shot_security_group_2}
-                alt="vpc"
-                className="w-full"
-              />
+              <Image src={screen_shot_ec2_2} alt="vpc" className="w-full" />
               <Image
                 src={zoom_in}
                 alt="zoom_in"
@@ -120,12 +119,8 @@ function CreateSecurityGroup({ params }: { params: PageProps }) {
                   zoom === 2 ? "block" : "hidden"
                 } fixed top-0 right-0 bottom-0 left-0 z-10 bg-[#0000004d] flex justify-center items-center`}
               >
-                <div className="w-[90%] relative z-10">
-                  <Image
-                    src={screen_shot_security_group_2}
-                    alt="vpc"
-                    className="w-full"
-                  />
+                <div className="w-[80%] relative z-10">
+                  <Image src={screen_shot_ec2_2} alt="vpc" className="w-full" />
                   <Image
                     src={close}
                     alt="close"
@@ -137,45 +132,23 @@ function CreateSecurityGroup({ params }: { params: PageProps }) {
               </div>
             </div>
           </div>
-          <ul className="list-disc ml-[20px]">
-            <li>
-              Trong mục <b>Security group name</b>, nhập "Public subnet - SG"
-            </li>
-            <li>
-              Trong mục <b>Description</b>, nhập "Allow SSH and Ping for servers
-              in public subnet"
-            </li>
-            <li>
-              Chọn <b>ASG</b>VPC
-            </li>
-          </ul>
-          <p className="text-[18px] my-[10px]">
-            3. Thực hiện cấu hình Inbound rules
+          <p className="text-[18px]">
+            3. Trong giao diện Launch an in instance
           </p>
           <ul className="list-disc ml-[20px]">
             <li>
-              Trong mục <b>Inbound rules</b>, click <b>Add rule</b>
+              Trong mục <b>Name and tags</b> nhập tên <b>EC2 Public 1</b>
             </li>
             <li>
-              Chọn <b>Type: SSH</b>và<b> Source: My IP</b>. <b>My IP</b> đại
-              diện cho 1 địa chỉ IPv4 bạn đang sử dụng (sẽ thay đổi khi bạn đổi
-              mạng)
+              Trong mục <b>Application and OS Images (AMI)</b> chọn Amazon Linux
             </li>
             <li>
-              Click chọn <b>Add rule</b> để thêm 1 rule mới
-            </li>
-            <li>
-              Chọn <b>Type: All ICMP - IPv4</b>và<b> Source: Anywhere</b>. Cho
-              phép ping từ bất kỳ địa chỉ IP nào
+              Chọn <b>Amazon Linux 2023 AMI</b>
             </li>
           </ul>
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[80%]">
-              <Image
-                src={screen_shot_security_group_3}
-                alt="vpc"
-                className="w-full"
-              />
+              <Image src={screen_shot_ec2_3} alt="vpc" className="w-full" />
               <Image
                 src={zoom_in}
                 alt="zoom_in"
@@ -190,12 +163,8 @@ function CreateSecurityGroup({ params }: { params: PageProps }) {
                   zoom === 3 ? "block" : "hidden"
                 } fixed top-0 right-0 bottom-0 left-0 z-10 bg-[#0000004d] flex justify-center items-center`}
               >
-                <div className="w-[90%] relative z-10">
-                  <Image
-                    src={screen_shot_security_group_3}
-                    alt="vpc"
-                    className="w-full"
-                  />
+                <div className="w-[80%] relative z-10">
+                  <Image src={screen_shot_ec2_3} alt="vpc" className="w-full" />
                   <Image
                     src={close}
                     alt="close"
@@ -208,15 +177,11 @@ function CreateSecurityGroup({ params }: { params: PageProps }) {
             </div>
           </div>
           <p className="text-[18px]">
-            4. Kiểm tra Outbound rule và chọn Create security group
+            4. Thực hiện chọn Instance type và chọn Create new key pair
           </p>
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[80%]">
-              <Image
-                src={screen_shot_security_group_4}
-                alt="vpc"
-                className="w-full"
-              />
+              <Image src={screen_shot_ec2_4} alt="vpc" className="w-full" />
               <Image
                 src={zoom_in}
                 alt="zoom_in"
@@ -231,12 +196,8 @@ function CreateSecurityGroup({ params }: { params: PageProps }) {
                   zoom === 4 ? "block" : "hidden"
                 } fixed top-0 right-0 bottom-0 left-0 z-10 bg-[#0000004d] flex justify-center items-center`}
               >
-                <div className="w-[90%] relative z-10">
-                  <Image
-                    src={screen_shot_security_group_4}
-                    alt="vpc"
-                    className="w-full"
-                  />
+                <div className="w-[80%] relative z-10">
+                  <Image src={screen_shot_ec2_4} alt="vpc" className="w-full" />
                   <Image
                     src={close}
                     alt="close"
@@ -248,16 +209,25 @@ function CreateSecurityGroup({ params }: { params: PageProps }) {
               </div>
             </div>
           </div>
-          <p className="text-[18px]">
-            5. Hoàn thành tạo Security group cho máy chủ nằm trong Public subnet
-          </p>
+          <p className="text-[18px]">5. Trong giao diện Create new key pair</p>
+          <ul className="list-disc ml-[20px]">
+            <li>
+              Trong mục <b>Key pair name</b> nhập awslab-keypair (tên có thể đặt
+              theo tùy ý)
+            </li>
+            <li>
+              Trong mục <b>Key pair type</b>, chọn RSA
+            </li>
+            <li>
+              Trong mục <b>Private key file format</b> chọn <b>.pem</b>
+            </li>
+            <li>
+              Click chọn <b>Create key pair</b>
+            </li>
+          </ul>
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[80%]">
-              <Image
-                src={screen_shot_security_group_5}
-                alt="vpc"
-                className="w-full"
-              />
+              <Image src={screen_shot_ec2_5} alt="vpc" className="w-full" />
               <Image
                 src={zoom_in}
                 alt="zoom_in"
@@ -272,12 +242,8 @@ function CreateSecurityGroup({ params }: { params: PageProps }) {
                   zoom === 5 ? "block" : "hidden"
                 } fixed top-0 right-0 bottom-0 left-0 z-10 bg-[#0000004d] flex justify-center items-center`}
               >
-                <div className="w-[90%] relative z-10">
-                  <Image
-                    src={screen_shot_security_group_5}
-                    alt="vpc"
-                    className="w-full"
-                  />
+                <div className="w-[80%] relative z-10">
+                  <Image src={screen_shot_ec2_5} alt="vpc" className="w-full" />
                   <Image
                     src={close}
                     alt="close"
@@ -289,25 +255,35 @@ function CreateSecurityGroup({ params }: { params: PageProps }) {
               </div>
             </div>
           </div>
-          <p className="font-bold text-[#22a6df]">
-            Tạo Security Group cho máy chủ nằm trong Private subnet
+          <p className="text-[18px]">
+            6. Thực hiện cấu hình Network cho EC2 trong mục{" "}
+            <b>Network settings</b>
           </p>
-          <p className="text-[18px]">6. Trong giao diện VPC Dashboard</p>
           <ul className="list-disc ml-[20px]">
             <li>
-              Chọn <b>Security Groups</b>
+              Trong mục <b>VPC</b> chọn ASG
             </li>
             <li>
-              Chọn <b>Create security group</b>
+              Trong mục <b>Subnet</b>, chọn Public subnet 1
+            </li>
+            <li>
+              Trong mục <b>Auto-assign public IP</b> chọn <b>Enable</b>
+            </li>
+            <li>
+              Trong mục <b>Firewall</b> chọn{" "}
+              <b>Select existing security group</b>
+            </li>
+            <li>
+              Trong mục <b>Common security groups</b> chọn{" "}
+              <b>Public subnet - SG</b>
+            </li>
+            <li>
+              Click chọn <b>Lauch instance</b>
             </li>
           </ul>
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[80%]">
-              <Image
-                src={screen_shot_security_group_1}
-                alt="vpc"
-                className="w-full"
-              />
+              <Image src={screen_shot_ec2_6} alt="vpc" className="w-full" />
               <Image
                 src={zoom_in}
                 alt="zoom_in"
@@ -322,12 +298,8 @@ function CreateSecurityGroup({ params }: { params: PageProps }) {
                   zoom === 6 ? "block" : "hidden"
                 } fixed top-0 right-0 bottom-0 left-0 z-10 bg-[#0000004d] flex justify-center items-center`}
               >
-                <div className="w-[90%] relative z-10">
-                  <Image
-                    src={screen_shot_security_group_1}
-                    alt="vpc"
-                    className="w-full"
-                  />
+                <div className="w-[80%] relative z-10">
+                  <Image src={screen_shot_ec2_6} alt="vpc" className="w-full" />
                   <Image
                     src={close}
                     alt="close"
@@ -339,82 +311,10 @@ function CreateSecurityGroup({ params }: { params: PageProps }) {
               </div>
             </div>
           </div>
-          <p className="text-[18px]">7. Thực hiện cấu hình Security Group</p>
-          <ul className="list-disc ml-[20px]">
-            <li>
-              Trong mục <b>Security group name</b> diền{" "}
-              <b>Private subnet - SG</b>
-            </li>
-            <li>
-              Trong mục <b>Description</b> nhập{" "}
-              <b>Allow SSH and Ping for servers in private subnet</b>
-            </li>
-            <li>
-              Trong mục <b>VPC</b>, chọn<b> ASG </b>VPC đã tạo trước đó
-            </li>
-          </ul>
+          <p className="text-[18px]">7. Hoàn thành tạo instance</p>
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[80%]">
-              <Image
-                src={screen_shot_security_group_6}
-                alt="vpc"
-                className="w-full"
-              />
-              <Image
-                src={zoom_in}
-                alt="zoom_in"
-                width={40}
-                className="bg-[#dbd2d21a] absolute top-0 right-0 cursor-pointer"
-                onClick={() => {
-                  setZoom(6);
-                }}
-              />
-              <div
-                className={`${
-                  zoom === 6 ? "block" : "hidden"
-                } fixed top-0 right-0 bottom-0 left-0 z-10 bg-[#0000004d] flex justify-center items-center`}
-              >
-                <div className="w-[90%] relative z-10">
-                  <Image
-                    src={screen_shot_security_group_6}
-                    alt="vpc"
-                    className="w-full"
-                  />
-                  <Image
-                    src={close}
-                    alt="close"
-                    width={40}
-                    className="absolute top-0 right-0 cursor-pointer bg-[#dbd2d21a] p-1"
-                    onClick={() => setZoom(0)}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <p className="text-[18px]">8. Thực hiện cấu hình Inbound rules</p>
-          <ul className="list-disc ml-[20px]">
-            <li>
-              Trong mục <b>Inbound rule</b> chọn
-              <b> Add rule</b> và để nguyên <b>Source: Custom</b>. Chọn vào
-              search box và chọn <b>Public subnet SG</b>. Lựa chọn này cho phép
-              tất cả những máy chủ được gán Public subnet SG được SSH vào các
-              máy chủ được gán <b>Private subnet SG</b>
-            </li>
-            <li>
-              Chọn <b>Type: SSH</b> nhập{" "}
-              <b>Allow SSH and Ping for servers in private subnet</b>
-            </li>
-            <li>
-              Trong mục <b>VPC</b>, chọn<b> ASG </b>VPC đã tạo trước đó
-            </li>
-          </ul>
-          <div className="flex justify-center my-[20px]">
-            <div className="relative w-[80%]">
-              <Image
-                src={screen_shot_security_group_7}
-                alt="vpc"
-                className="w-full"
-              />
+              <Image src={screen_shot_ec2_7} alt="vpc" className="w-full" />
               <Image
                 src={zoom_in}
                 alt="zoom_in"
@@ -429,12 +329,8 @@ function CreateSecurityGroup({ params }: { params: PageProps }) {
                   zoom === 7 ? "block" : "hidden"
                 } fixed top-0 right-0 bottom-0 left-0 z-10 bg-[#0000004d] flex justify-center items-center`}
               >
-                <div className="w-[90%] relative z-10">
-                  <Image
-                    src={screen_shot_security_group_7}
-                    alt="vpc"
-                    className="w-full"
-                  />
+                <div className="w-[80%] relative z-10">
+                  <Image src={screen_shot_ec2_7} alt="vpc" className="w-full" />
                   <Image
                     src={close}
                     alt="close"
@@ -446,23 +342,13 @@ function CreateSecurityGroup({ params }: { params: PageProps }) {
               </div>
             </div>
           </div>
-          <p className="text-[18px]">9. Chọn Add rule để thêm 1 rule mới</p>
-          <ul className="list-disc ml-[20px]">
-            <li>
-              Chọn <b>Type: All ICMP - IPv4</b> và <b>Source: Anywhere</b>. Cho
-              phép ping từ bất kỳ địa chỉ IP nào.
-            </li>
-            <li>
-              Click chọn <b>Create Security Group</b>
-            </li>
-          </ul>
+          <p className="text-[18px]">
+            8. Đợi khoảng 5 phút, ở cột <b>Status check</b> của Instance vừa tạo
+            sẽ chuyển sang 2/2 checks passed
+          </p>
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[80%]">
-              <Image
-                src={screen_shot_security_group_8}
-                alt="vpc"
-                className="w-full"
-              />
+              <Image src={screen_shot_ec2_8} alt="vpc" className="w-full" />
               <Image
                 src={zoom_in}
                 alt="zoom_in"
@@ -477,12 +363,8 @@ function CreateSecurityGroup({ params }: { params: PageProps }) {
                   zoom === 8 ? "block" : "hidden"
                 } fixed top-0 right-0 bottom-0 left-0 z-10 bg-[#0000004d] flex justify-center items-center`}
               >
-                <div className="w-[90%] relative z-10">
-                  <Image
-                    src={screen_shot_security_group_8}
-                    alt="vpc"
-                    className="w-full"
-                  />
+                <div className="w-[80%] relative z-10">
+                  <Image src={screen_shot_ec2_8} alt="vpc" className="w-full" />
                   <Image
                     src={close}
                     alt="close"
@@ -494,19 +376,31 @@ function CreateSecurityGroup({ params }: { params: PageProps }) {
               </div>
             </div>
           </div>
-          <p className="text-[18px]">
-            10. Hy vọng bạn kiên nhẫn xem đến đây, và như vậy chúng ta đã tạo
-            được 2 Security Group cho các máy chủ nằm trong public subnet và
-            private subnet
+          <p className="font-bold text-[18px] my-[10px] text-[#22a6df]">
+            Tạo máy chủ EC2 nằm trong Private subnet
           </p>
-
+          <p>10. Trong giao diện EC2 Dashboard</p>
+          <ul>
+            <li>
+              Chọn <b>Instances</b>
+            </li>
+            <li>
+              Chọn <b>Launch Instances</b> cửa sổ Launch an instance sẽ xuất
+              hiện
+            </li>
+          </ul>
+          <p>11. Trong giao diện Launch an instance</p>
+          <ul className="list-disc ml-[20px]">
+            <li>
+              Trong mục Name and tags, nhập <b>EC2 Private 2</b>
+            </li>
+            <li>
+              Trong mục AMI chọn <b> Amazon Linux</b>
+            </li>
+          </ul>
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[80%]">
-              <Image
-                src={screen_shot_security_group_9}
-                alt="vpc"
-                className="w-full"
-              />
+              <Image src={screen_shot_ec2_9} alt="vpc" className="w-full" />
               <Image
                 src={zoom_in}
                 alt="zoom_in"
@@ -521,9 +415,136 @@ function CreateSecurityGroup({ params }: { params: PageProps }) {
                   zoom === 9 ? "block" : "hidden"
                 } fixed top-0 right-0 bottom-0 left-0 z-10 bg-[#0000004d] flex justify-center items-center`}
               >
-                <div className="w-[90%] relative z-10">
+                <div className="w-[80%] relative z-10">
+                  <Image src={screen_shot_ec2_9} alt="vpc" className="w-full" />
                   <Image
-                    src={screen_shot_security_group_9}
+                    src={close}
+                    alt="close"
+                    width={40}
+                    className="absolute top-0 right-0 cursor-pointer bg-[#dbd2d21a] p-1"
+                    onClick={() => setZoom(0)}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <ul className="list-disc ml-[20px]">
+            <li>
+              Trong mục <b>Instance type</b>, chọn <b>t2.micro</b>
+            </li>
+            <li>
+              Trong mục <b>Key pair</b> nhập <b>awslab-keypair</b>
+            </li>
+          </ul>
+          <div className="flex justify-center my-[20px]">
+            <div className="relative w-[80%]">
+              <Image src={screen_shot_ec2_10} alt="vpc" className="w-full" />
+              <Image
+                src={zoom_in}
+                alt="zoom_in"
+                width={40}
+                className="bg-[#dbd2d21a] absolute top-0 right-0 cursor-pointer"
+                onClick={() => {
+                  setZoom(10);
+                }}
+              />
+              <div
+                className={`${
+                  zoom === 10 ? "block" : "hidden"
+                } fixed top-0 right-0 bottom-0 left-0 z-10 bg-[#0000004d] flex justify-center items-center`}
+              >
+                <div className="w-[80%] relative z-10">
+                  <Image
+                    src={screen_shot_ec2_10}
+                    alt="vpc"
+                    className="w-full"
+                  />
+                  <Image
+                    src={close}
+                    alt="close"
+                    width={40}
+                    className="absolute top-0 right-0 cursor-pointer bg-[#dbd2d21a] p-1"
+                    onClick={() => setZoom(0)}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>11. Cấu hình cho EC2 Instance ở mục Network settings</p>
+          <ul className="list-disc ml-[20px]">
+            <li>
+              Trong mục <b>VPC</b>, chọn <b> ASG</b>
+            </li>
+            <li>
+              Trong mục <b>Subnet</b> nhập <b>Private subnet 2</b>
+            </li>
+            <li>
+              Trong mục <b>Auto-assign public IP</b> nhập <b>Disable</b>
+            </li>
+            <li>
+              Trong mục <b>Firewall</b> nhập{" "}
+              <b>Select existing security group</b>
+            </li>
+            <li>
+              Trong mục <b>Common security groups</b> nhập{" "}
+              <b>Chọn Private subnet - SG</b>
+            </li>
+          </ul>
+          <div className="flex justify-center my-[20px]">
+            <div className="relative w-[80%]">
+              <Image src={screen_shot_ec2_11} alt="vpc" className="w-full" />
+              <Image
+                src={zoom_in}
+                alt="zoom_in"
+                width={40}
+                className="bg-[#dbd2d21a] absolute top-0 right-0 cursor-pointer"
+                onClick={() => {
+                  setZoom(11);
+                }}
+              />
+              <div
+                className={`${
+                  zoom === 11 ? "block" : "hidden"
+                } fixed top-0 right-0 bottom-0 left-0 z-10 bg-[#0000004d] flex justify-center items-center`}
+              >
+                <div className="w-[80%] relative z-10">
+                  <Image
+                    src={screen_shot_ec2_11}
+                    alt="vpc"
+                    className="w-full"
+                  />
+                  <Image
+                    src={close}
+                    alt="close"
+                    width={40}
+                    className="absolute top-0 right-0 cursor-pointer bg-[#dbd2d21a] p-1"
+                    onClick={() => setZoom(0)}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>12. Hoàn thành tạo Instance thứ 2</p>
+          <div className="flex justify-center my-[20px]">
+            <div className="relative w-[80%]">
+              <Image src={screen_shot_ec2_12} alt="vpc" className="w-full" />
+              <Image
+                src={zoom_in}
+                alt="zoom_in"
+                width={40}
+                className="bg-[#dbd2d21a] absolute top-0 right-0 cursor-pointer"
+                onClick={() => {
+                  setZoom(12);
+                }}
+              />
+              <div
+                className={`${
+                  zoom === 12 ? "block" : "hidden"
+                } fixed top-0 right-0 bottom-0 left-0 z-10 bg-[#0000004d] flex justify-center items-center`}
+              >
+                <div className="w-[80%] relative z-10">
+                  <Image
+                    src={screen_shot_ec2_12}
                     alt="vpc"
                     className="w-full"
                   />

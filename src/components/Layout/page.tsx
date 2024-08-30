@@ -6,10 +6,8 @@ function Layout({ children, id }: { children: any; id: any }) {
       <div className="h-screen">
         <SideBar id={id} />
       </div>
-      <div className="ml-[300px]">
-        <div className="mx-[40px]">
-        {children}
-        </div>
+      <div className="ml-[300px] items-center flex-col w-full">
+        <div className="mx-[40px]">{children}</div>
       </div>
     </div>
   );

@@ -388,11 +388,11 @@ function SideBar({ id }: { id: ID }) {
           </div>
           <div
             onClick={() => {
-              handleToggleMenu(3);
-              handleSelect("prepare");
+              handleToggleMenu(4);
+              handleSelect("create-ec2");
             }}
             className={`${
-              selectedId === "prepare" || subMenuId === "prepare"
+              selectedId === "create-ec2" || subMenuId === "create-ec2"
                 ? "bg-white text-black"
                 : "black"
             } flex justify-between items-center`}
@@ -402,7 +402,8 @@ function SideBar({ id }: { id: ID }) {
               className="flex justify-between text-[18px] p-[4px] w-full"
             >
               <span className="min-w-[30px] inline-block">
-                <span className="min-w-[30px] inline-block">4.</span>Tạo máy chủ EC2
+                <span className="min-w-[30px] inline-block">4.</span>Tạo máy chủ
+                EC2
               </span>
               <span className="inline-block mr-[4px]">&#9660;</span>
             </Link>
@@ -420,7 +421,8 @@ function SideBar({ id }: { id: ID }) {
               <li
                 onClick={() => handleSelect("create-ec2-instance")}
                 className={`${
-                  selectedId === "create-ec2-instance" || subMenuId === "create-ec2-instance"
+                  selectedId === "create-ec2-instance" ||
+                  subMenuId === "create-ec2-instance"
                     ? "bg-white text-black"
                     : "black"
                 } px-[5px]`}
@@ -440,7 +442,8 @@ function SideBar({ id }: { id: ID }) {
                 } px-[5px]`}
               >
                 <Link href={`/work_shop/${id}/check-connect`}>
-                  <span className="min-w-[24px] inline-block">4.2</span>Kiểm tra kết nối
+                  <span className="min-w-[30px] inline-block">4.2</span>Kiểm tra
+                  kết nối
                 </Link>
               </li>
               <li
@@ -453,8 +456,8 @@ function SideBar({ id }: { id: ID }) {
                 } px-[5px]`}
               >
                 <Link href={`/work_shop/${id}/create-nat-gateway`}>
-                  <span className="min-w-[24px] inline-block">4.3</span> Tạo
-                  NAT Gateway
+                  <span className="min-w-[30px] inline-block">4.3</span> Tạo NAT
+                  Gateway
                 </Link>
               </li>
               <li
@@ -467,7 +470,8 @@ function SideBar({ id }: { id: ID }) {
                 } px-[5px]`}
               >
                 <Link href={`/work_shop/${id}/use-reachability-analyzer`}>
-                  <span className="min-w-[24px] inline-block">4.4</span>Sử dụng Reachability Analyzer
+                  <span className="min-w-[30px] inline-block">4.4</span>Sử dụng
+                  Reachability Analyzer
                 </Link>
               </li>
               <li
@@ -480,7 +484,8 @@ function SideBar({ id }: { id: ID }) {
                 } px-[5px]`}
               >
                 <Link href={`/work_shop/${id}/create-ec2-connect-endpoint`}>
-                  <span className="min-w-[24px] inline-block">4.5</span> Tạo EC2 Instance Connect Endpoint (Optional)
+                  <span className="min-w-[30px] inline-block">4.5</span> Tạo EC2
+                  Instance Connect Endpoint (Optional)
                 </Link>
               </li>
             </ul>
