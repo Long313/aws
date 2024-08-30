@@ -14,6 +14,8 @@ import screen_shot_check_connect_9 from "../../../../images/screen_shot_check_co
 import screen_shot_check_connect_10 from "../../../../images/screen_shot_check_connect_10.png";
 import screen_shot_check_connect_11 from "../../../../images/screen_shot_check_connect_11.png";
 import screen_shot_check_connect_12 from "../../../../images/screen_shot_check_connect_12.png";
+import screen_shot_check_connect_13 from "../../../../images/screen_shot_check_connect_13.png";
+import screen_shot_check_connect_14 from "../../../../images/screen_shot_check_connect_14.png";
 
 import coppy_icon from "../../../../images/coppy_icon.png";
 import zoom_in from "../../../../images/zoom_in_icon.png";
@@ -64,7 +66,7 @@ function CheckConnect({ params }: { params: PageProps }) {
               target="_blank"
               className="text-[#22a6df]"
             >
-               tại đây
+              tại đây
             </a>
           </p>
           <div className="flex justify-center my-[20px]">
@@ -344,11 +346,8 @@ function CheckConnect({ params }: { params: PageProps }) {
           </p>
           <p>
             - Gõ lệnh &nbsp;
-            <b>
-              ping &lt; IP Private EC2 Private &gt; -c5
-            </b>
-            . Câu lệnh này sẽ kiểm tra kết nối từ máy chủ EC2 Public sang máy
-            chủ EC2 Private
+            <b>ping &lt; IP Private EC2 Private &gt; -c5</b>. Câu lệnh này sẽ
+            kiểm tra kết nối từ máy chủ EC2 Public sang máy chủ EC2 Private
           </p>
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[80%]">
@@ -658,6 +657,128 @@ function CheckConnect({ params }: { params: PageProps }) {
               className="invert filter absolute top-[2px] right-[2px] cursor-pointer"
               onClick={handleCoppy}
             />
+          </div>
+          <p>14. SSH tới máy chủ EC2 Private</p>
+          <div className="bg-[#1c222a] p-[12px] relative mb-[20px]">
+            <p
+              className="text-[#abb2bf] bg-[#282c34] py-[4px] px-[8px] rounded-[4px] font-bold"
+              ref={textRef}
+            >
+              <p className="text-[#abb2bf]">
+                ssh -i aws-keypair.pem ec2-user@&lt;EC2{" "}
+                <span className="text-[#F92672]">Private </span>
+                <span className="text-[#e6c07b]">server's</span> private IP
+                address&gt;
+              </p>
+            </p>
+            <Image
+              src={coppy_icon}
+              alt="coppy-icon"
+              width={20}
+              className="invert filter absolute top-[2px] right-[2px] cursor-pointer"
+              onClick={handleCoppy}
+            />
+          </div>
+          <div className="flex justify-center my-[20px]">
+            <div className="relative w-[80%]">
+              <Image
+                src={screen_shot_check_connect_13}
+                alt="vpc"
+                className="w-full"
+              />
+              <Image
+                src={zoom_in}
+                alt="zoom_in"
+                width={40}
+                className="bg-[#dbd2d21a] absolute top-0 right-0 cursor-pointer"
+                onClick={() => {
+                  setZoom(13);
+                }}
+              />
+              <div
+                className={`${
+                  zoom === 13 ? "block" : "hidden"
+                } fixed top-0 right-0 bottom-0 left-0 z-10 bg-[#0000004d] flex justify-center items-center`}
+              >
+                <div className="w-[80%] relative z-10">
+                  <Image
+                    src={screen_shot_check_connect_13}
+                    alt="vpc"
+                    className="w-full"
+                  />
+                  <Image
+                    src={close}
+                    alt="close"
+                    width={40}
+                    className="absolute top-0 right-0 cursor-pointer bg-[#dbd2d21a] p-1"
+                    onClick={() => setZoom(0)}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>15. Thực hiện ping tới amazon.com</p>
+          <div className="bg-[#1c222a] p-[12px] relative mb-[20px]">
+            <p
+              className="text-[#abb2bf] bg-[#282c34] py-[4px] px-[8px] rounded-[4px] font-bold"
+              ref={textRef}
+            >
+              <span className="text-[#d19a66]">ping</span>{" "}
+              <span className="text-[#98c379]">amazon.com</span>
+            </p>
+            <Image
+              src={coppy_icon}
+              alt="coppy-icon"
+              width={20}
+              className="invert filter absolute top-[2px] right-[2px] cursor-pointer"
+              onClick={handleCoppy}
+            />
+          </div>
+          <p>
+            - Như có thể thấy, chúng ta không thể kết nối internet từ EC2
+            private. Trong bước tiếp theo chúng ta sẽ tạo NAT Gateway để cho
+            phép máy chủ EC2 Private kết nối internet theo chiều từ nội bộ đi
+            ra. Giữ nguyên kết nối tới EC2 private để chúng ta có thể kiểm tra
+            kết nối tới internet sau khi hoàn tất tạo và cấu hình NAT gateway
+          </p>
+
+          <div className="flex justify-center my-[20px]">
+            <div className="relative w-[80%]">
+              <Image
+                src={screen_shot_check_connect_14}
+                alt="vpc"
+                className="w-full"
+              />
+              <Image
+                src={zoom_in}
+                alt="zoom_in"
+                width={40}
+                className="bg-[#dbd2d21a] absolute top-0 right-0 cursor-pointer"
+                onClick={() => {
+                  setZoom(14);
+                }}
+              />
+              <div
+                className={`${
+                  zoom === 14 ? "block" : "hidden"
+                } fixed top-0 right-0 bottom-0 left-0 z-10 bg-[#0000004d] flex justify-center items-center`}
+              >
+                <div className="w-[80%] relative z-10">
+                  <Image
+                    src={screen_shot_check_connect_14}
+                    alt="vpc"
+                    className="w-full"
+                  />
+                  <Image
+                    src={close}
+                    alt="close"
+                    width={40}
+                    className="absolute top-0 right-0 cursor-pointer bg-[#dbd2d21a] p-1"
+                    onClick={() => setZoom(0)}
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
