@@ -267,7 +267,7 @@ function SideBar({ id }: { id: ID }) {
                   Access Control List (NACLs)
                 </Link>
               </li>
-              <li
+              {/* <li
                 onClick={() => handleSelect("vpc-resource-map")}
                 className={`${
                   selectedId === "vpc-resource-map" ||
@@ -280,7 +280,7 @@ function SideBar({ id }: { id: ID }) {
                   <span className="min-w-[24px] inline-block">2.3</span> VPC
                   Resource Map
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
           <div
@@ -456,7 +456,7 @@ function SideBar({ id }: { id: ID }) {
                 } px-[5px]`}
               >
                 <Link href={`/work_shop/${id}/create-nat-gateway`}>
-                  <span className="min-w-[30px] inline-block">4.3</span> Tạo NAT
+                  <span className="min-w-[20px] inline-block">4.3</span> Tạo NAT
                   Gateway
                 </Link>
               </li>
@@ -484,7 +484,7 @@ function SideBar({ id }: { id: ID }) {
                 } px-[5px]`}
               >
                 <Link href={`/work_shop/${id}/create-elastic-ip`}>
-                  <span className="min-w-[30px] inline-block">4.5</span> Tạo Elasic IP
+                  <span className="min-w-[20px] inline-block">4.5</span> Tạo Elasic IP
                 </Link>
               </li>
             </ul>

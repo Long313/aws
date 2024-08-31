@@ -12,7 +12,7 @@ function WorkShopOne({params} : {params : PageProps}) {
     setId(Number(params.id));
   }, [params.id, setId]);
   return (<Layout id={params.id}>
-     abc
+     VPC Resource map
   </Layout>)
 }
 

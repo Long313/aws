@@ -11,9 +11,9 @@ function VpcResourceMap({ params }: { params: PageProps }) {
     <Layout id={params.id}>
       <div>
         <h1 className="my-[20px] text-[#22a6df] text-[24px] font-bold text-center">
-          VPC Resource Map ?
+          VPC Resource Map
         </h1>
-        <p>- Để </p>
+        <p></p>
       </div>
       <a
         className="text-[#22a6df] italic"
