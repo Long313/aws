@@ -30,7 +30,7 @@ import Tip from "../../../../components/Tip/page";
 interface PageProps {
   id: string;
 }
-function CreateEc2Instance({ params }: { params: PageProps }) {
+function CreateElasticIP({ params }: { params: PageProps }) {
   const textRef = useRef<HTMLSpanElement>(null);
   const [zoom, setZoom] = useState(0);
   const handleCoppy = () => {
@@ -773,11 +773,10 @@ function CreateEc2Instance({ params }: { params: PageProps }) {
               </div>
             </div>
           </div>
-          <p>Cuối cùng, chúng ta cũng đã tạo thành công 4 EC2 Instance. Cùng mình chuyển sang bước tiếp theo nhé</p>
         </div>
       </div>
     </Layout>
   );
 }
 
-export default CreateEc2Instance;
+export default CreateElasticIP;

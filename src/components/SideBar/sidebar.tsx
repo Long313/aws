@@ -483,9 +483,8 @@ function SideBar({ id }: { id: ID }) {
                     : "black"
                 } px-[5px]`}
               >
-                <Link href={`/work_shop/${id}/create-ec2-connect-endpoint`}>
-                  <span className="min-w-[30px] inline-block">4.5</span> Tạo EC2
-                  Instance Connect Endpoint (Optional)
+                <Link href={`/work_shop/${id}/create-elastic-ip`}>
+                  <span className="min-w-[30px] inline-block">4.5</span> Tạo Elasic IP
                 </Link>
               </li>
             </ul>
