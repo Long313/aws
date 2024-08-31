@@ -667,7 +667,7 @@ function CheckConnect({ params }: { params: PageProps }) {
               <p className="text-[#abb2bf]">
                 ssh -i aws-keypair.pem ec2-user@&lt;EC2
                 <span className="text-[#F92672]">Private </span>
-                <span className="text-[#e6c07b]">server&rsquo;s</span> private IP
+                <span className="text-[#e6c07b]">server&lsquo;s</span> private IP
                 address&gt;
               </p>
             </p>
