@@ -12,7 +12,7 @@ function RDS({ params }: { params: PageProps }) {
     <Layout id={params.id}>
       <div>
         <h1 className="my-[20px] text-[#22a6df] text-[24px] font-bold text-center">
-          What is Relational Databse Service (RDS) ?
+          What is Relational Database Service (RDS) ?
         </h1>
         <div>
           <p>
