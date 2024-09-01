@@ -43,8 +43,7 @@ function CreateSecurityGroup({ params }: { params: PageProps }) {
           <p className="font-bold text-[18px] my-[10px] text-[#22a6df]">
             Tạo máy chủ EC2 Instance
           </p>
-          <p className="text-[18px]">Tạo máy chủ EC2</p>
-          <p>Ở bước này chúng ta sẽ tạo 4 máy chủ EC2 (EC2 instance như kiến trúc sau đây)</p>
+          <p>- Ở bước này chúng ta sẽ tạo 4 máy chủ EC2 instance như kiến trúc sau đây.</p>
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[50%]">
               <Image

@@ -487,6 +487,32 @@ function SideBar({ id }: { id: ID }) {
                   <span className="min-w-[20px] inline-block">4.5</span> Tạo Elasic IP
                 </Link>
               </li>
+              <li
+                onClick={() => handleSelect("create-auto-scaling-group")}
+                className={`${
+                  selectedId === "create-auto-scaling-group" ||
+                  subMenuId === "create-auto-scaling-group"
+                    ? "bg-white text-black"
+                    : "black"
+                } px-[5px]`}
+              >
+                <Link href={`/work_shop/${id}/create-auto-scaling-group`}>
+                  <span className="min-w-[20px] inline-block">4.6</span> Tạo Auto Scaling Group
+                </Link>
+              </li>
+              <li
+                onClick={() => handleSelect("create-application-load-balancer")}
+                className={`${
+                  selectedId === "create-application-load-balancer" ||
+                  subMenuId === "create-application-load-balancer"
+                    ? "bg-white text-black"
+                    : "black"
+                } px-[5px]`}
+              >
+                <Link href={`/work_shop/${id}/create-application-load-balancer`}>
+                  <span className="min-w-[20px] inline-block">4.7</span> Tạo Application Load Balancer (ALB)
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
