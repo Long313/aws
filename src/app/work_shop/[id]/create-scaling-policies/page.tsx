@@ -12,13 +12,13 @@ import screen_shot_auto_scaling_group_7 from "../../../../images/screen_shot_aut
 import screen_shot_auto_scaling_group_8 from "../../../../images/screen_shot_auto_scaling_group_8.png";
 import screen_shot_auto_scaling_group_9 from "../../../../images/screen_shot_auto_scaling_group_9.png";
 import screen_shot_auto_scaling_group_10 from "../../../../images/screen_shot_auto_scaling_group_10.png";
-import screen_shot_auto_scaling_group_11 from "../../../../images/screen_shot_auto_scaling_group_11.png";
-import screen_shot_auto_scaling_group_12 from "../../../../images/screen_shot_auto_scaling_group_12.png";
-import screen_shot_auto_scaling_group_13 from "../../../../images/screen_shot_auto_scaling_group_13.png";
-import screen_shot_auto_scaling_group_14 from "../../../../images/screen_shot_auto_scaling_group_14.png";
-import screen_shot_auto_scaling_group_15 from "../../../../images/screen_shot_auto_scaling_group_15.png";
-import screen_shot_auto_scaling_group_16 from "../../../../images/screen_shot_auto_scaling_group_16.png";
-import screen_shot_auto_scaling_group_17 from "../../../../images/screen_shot_auto_scaling_group_17.png";
+import screen_shot_ec2_12 from "../../../../images/screen_shot_ec2_12.png";
+import screen_shot_ec2_13 from "../../../../images/screen_shot_ec2_13.png";
+import screen_shot_ec2_14 from "../../../../images/screen_shot_ec2_14.png";
+import screen_shot_ec2_15 from "../../../../images/screen_shot_ec2_15.png";
+import screen_shot_ec2_16 from "../../../../images/screen_shot_ec2_15.png";
+import screen_shot_ec2_17 from "../../../../images/screen_shot_ec2_15.png";
+import screen_shot_ec2_18 from "../../../../images/screen_shot_ec2_15.png";
 
 import coppy_icon from "../../../../images/coppy_icon.png";
 import zoom_in from "../../../../images/zoom_in_icon.png";
@@ -613,7 +613,7 @@ function CreateAutoScalingGroup({ params }: { params: PageProps }) {
           </div>
           <p>- Step 4: Configure group size and scaling</p>
           <p>
-            - Ở mục <b>Group size. Phần này mình sẽ cài đặt thủ công số lượng Instance mà mình mong muốn khi tải tăng, giảm hoặc trong điều kiện bình thường. Và phần sau mình sẽ giới thiệu kỹ hơn về tạo <a href="" target="_blank">Scaling Policies</a> cho <b>ASG</b></b>
+            - Ở mục <b>Group size. Phần này mình sẽ cài đặt thủ công số lượng Instance mà mình mong muốn khi tải tăng, giảm hoặc trong điều kiện bình thường. Và phần sau mình sẽ giới thiệu kỹ hơn về <a href="" target="_blank">Scaling Policies</a></b>
           </p>
           <ul className="list-disc ml-[20px]">
             <li>
@@ -628,207 +628,12 @@ function CreateAutoScalingGroup({ params }: { params: PageProps }) {
           </p>
           <ul className="list-disc ml-[20px]">
             <li>
-              Ở mục <b>Min desired capacity</b>. Đây là số lượng instance tối thiểu mà Auto Scaling Group sẽ luôn duy trì. Nếu tải trên ứng dụng giảm, nhóm sẽ không giảm số lượng instance xuống dưới số này. Mình để là <b>1</b>.
+              Ở mục <b>Min desired capacity</b>. Đây là số lượng instance tối thiểu mà Auto Scaling Group sẽ luôn duy trì. Nếu tải trên ứng dụng giảm, nhóm sẽ không giảm số lượng instance xuống dưới số này. Mình để là <b>1</b>
             </li>
             <li>
-              Ở mục <b>Max desired capacity</b>. Đây là số lượng instance tối đa mà Auto Scaling Group có thể mở rộng tới. Khi nhu cầu tăng lên, nhóm sẽ không thêm instance vượt quá số này. Mình để là <b>2</b>.
+              Ở mục <b>Max desired capacity</b>. Đây là số lượng instance tối đa mà Auto Scaling Group có thể mở rộng tới. Khi nhu cầu tăng lên, nhóm sẽ không thêm instance vượt quá số này. Mình để là <b>2</b>
             </li>
           </ul>
-          <div className="flex justify-center my-[20px]">
-            <div className="relative w-[80%]">
-              <Image
-                src={screen_shot_auto_scaling_group_11}
-                alt="vpc"
-                className="w-full"
-              />
-              <Image
-                src={zoom_in}
-                alt="zoom_in"
-                width={40}
-                className="bg-[#dbd2d21a] absolute top-0 right-0 cursor-pointer"
-                onClick={() => {
-                  setZoom(11);
-                }}
-              />
-              <div
-                className={`${
-                  zoom === 11 ? "block" : "hidden"
-                } fixed top-0 right-0 bottom-0 left-0 z-10 bg-[#0000004d] flex justify-center items-center`}
-              >
-                <div className="w-[80%] relative z-10">
-                  <Image
-                    src={screen_shot_auto_scaling_group_11}
-                    alt="vpc"
-                    className="w-full"
-                  />
-                  <Image
-                    src={close}
-                    alt="close"
-                    width={40}
-                    className="absolute top-0 right-0 cursor-pointer bg-[#dbd2d21a] p-1"
-                    onClick={() => setZoom(0)}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <p>- Step 5 <b>Add notifications</b> và Step 6 <b>Add tags</b> ở đây mình k thêm gì và bấm <b>Next</b>.</p>
-          <p>- Step 7 <b>Review</b> và chỉnh sửa nếu cần, sau đó click <b>Create Auto Scaling group</b>.</p>
-          <div className="flex justify-center my-[20px]">
-            <div className="relative w-[80%]">
-              <Image
-                src={screen_shot_auto_scaling_group_14}
-                alt="vpc"
-                className="w-full"
-              />
-              <Image
-                src={zoom_in}
-                alt="zoom_in"
-                width={40}
-                className="bg-[#dbd2d21a] absolute top-0 right-0 cursor-pointer"
-                onClick={() => {
-                  setZoom(14);
-                }}
-              />
-              <div
-                className={`${
-                  zoom === 14 ? "block" : "hidden"
-                } fixed top-0 right-0 bottom-0 left-0 z-10 bg-[#0000004d] flex justify-center items-center`}
-              >
-                <div className="w-[80%] relative z-10">
-                  <Image
-                    src={screen_shot_auto_scaling_group_14}
-                    alt="vpc"
-                    className="w-full"
-                  />
-                  <Image
-                    src={close}
-                    alt="close"
-                    width={40}
-                    className="absolute top-0 right-0 cursor-pointer bg-[#dbd2d21a] p-1"
-                    onClick={() => setZoom(0)}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>  
-          <p>Cuối cùng đã tạo thành công <b>Auto Scaling Group</b></p> 
-          <div className="flex justify-center my-[20px]">
-            <div className="relative w-[80%]">
-              <Image
-                src={screen_shot_auto_scaling_group_15}
-                alt="vpc"
-                className="w-full"
-              />
-              <Image
-                src={zoom_in}
-                alt="zoom_in"
-                width={40}
-                className="bg-[#dbd2d21a] absolute top-0 right-0 cursor-pointer"
-                onClick={() => {
-                  setZoom(15);
-                }}
-              />
-              <div
-                className={`${
-                  zoom === 15 ? "block" : "hidden"
-                } fixed top-0 right-0 bottom-0 left-0 z-10 bg-[#0000004d] flex justify-center items-center`}
-              >
-                <div className="w-[80%] relative z-10">
-                  <Image
-                    src={screen_shot_auto_scaling_group_15}
-                    alt="vpc"
-                    className="w-full"
-                  />
-                  <Image
-                    src={close}
-                    alt="close"
-                    width={40}
-                    className="absolute top-0 right-0 cursor-pointer bg-[#dbd2d21a] p-1"
-                    onClick={() => setZoom(0)}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <p>- Khi mình vào mục ALB thì thấy <b>Public 1 EC2</b> có id là<b>i-0ff404a557565baeb</b> đã <span className="text-[#d13212]">unhealthy</span></p>    
-          <div className="flex justify-center my-[20px]">
-            <div className="relative w-[80%]">
-              <Image
-                src={screen_shot_auto_scaling_group_16}
-                alt="vpc"
-                className="w-full"
-              />
-              <Image
-                src={zoom_in}
-                alt="zoom_in"
-                width={40}
-                className="bg-[#dbd2d21a] absolute top-0 right-0 cursor-pointer"
-                onClick={() => {
-                  setZoom(16);
-                }}
-              />
-              <div
-                className={`${
-                  zoom === 16 ? "block" : "hidden"
-                } fixed top-0 right-0 bottom-0 left-0 z-10 bg-[#0000004d] flex justify-center items-center`}
-              >
-                <div className="w-[80%] relative z-10">
-                  <Image
-                    src={screen_shot_auto_scaling_group_16}
-                    alt="vpc"
-                    className="w-full"
-                  />
-                  <Image
-                    src={close}
-                    alt="close"
-                    width={40}
-                    className="absolute top-0 right-0 cursor-pointer bg-[#dbd2d21a] p-1"
-                    onClick={() => setZoom(0)}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <p>- Khi mình quay lại kiểm tra trong mục <b>Instances</b> của <b>EC2 Dasboard</b> thì thấy có một <b>EC2 Instance</b> mới được tạo ra (đánh dấu <span className="text-[#1d8102]">màu xanh lá cây</span>) và <b>Public 1 EC2</b> (đánh dấu <span className="text-[#d13212]">màu đỏ</span> - ở trạng thái <span className="text-[#d13212]">unhealthy</span>)  và không có tên. Đây chính là <b>Instance</b> tự động tạo ra do <b>Auto Scaling Group</b>.</p>    
-          <div className="flex justify-center my-[20px]">
-            <div className="relative w-[80%]">
-              <Image
-                src={screen_shot_auto_scaling_group_17}
-                alt="vpc"
-                className="w-full"
-              />
-              <Image
-                src={zoom_in}
-                alt="zoom_in"
-                width={40}
-                className="bg-[#dbd2d21a] absolute top-0 right-0 cursor-pointer"
-                onClick={() => {
-                  setZoom(17);
-                }}
-              />
-              <div
-                className={`${
-                  zoom === 17 ? "block" : "hidden"
-                } fixed top-0 right-0 bottom-0 left-0 z-10 bg-[#0000004d] flex justify-center items-center`}
-              >
-                <div className="w-[80%] relative z-10">
-                  <Image
-                    src={screen_shot_auto_scaling_group_17}
-                    alt="vpc"
-                    className="w-full"
-                  />
-                  <Image
-                    src={close}
-                    alt="close"
-                    width={40}
-                    className="absolute top-0 right-0 cursor-pointer bg-[#dbd2d21a] p-1"
-                    onClick={() => setZoom(0)}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
       <div></div>

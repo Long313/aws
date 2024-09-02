@@ -484,7 +484,25 @@ function SideBar({ id }: { id: ID }) {
                 } px-[5px]`}
               >
                 <Link href={`/work_shop/${id}/create-elastic-ip`}>
-                  <span className="min-w-[20px] inline-block">4.5</span> Tạo Elasic IP
+                  <span className="min-w-[20px] inline-block">4.5</span> Tạo
+                  Elasic IP
+                </Link>
+              </li>
+
+              <li
+                onClick={() => handleSelect("create-application-load-balancer")}
+                className={`${
+                  selectedId === "create-application-load-balancer" ||
+                  subMenuId === "create-application-load-balancer"
+                    ? "bg-white text-black"
+                    : "black"
+                } px-[5px]`}
+              >
+                <Link
+                  href={`/work_shop/${id}/create-application-load-balancer`}
+                >
+                  <span className="min-w-[20px] inline-block">4.6</span> Tạo
+                  Application Load Balancer (ALB)
                 </Link>
               </li>
               <li
@@ -497,22 +515,24 @@ function SideBar({ id }: { id: ID }) {
                 } px-[5px]`}
               >
                 <Link href={`/work_shop/${id}/create-auto-scaling-group`}>
-                  <span className="min-w-[20px] inline-block">4.6</span> Tạo Auto Scaling Group
+                  <span className="min-w-[20px] inline-block">4.7</span> Tạo
+                  Auto Scaling Group
                 </Link>
               </li>
-              <li
-                onClick={() => handleSelect("create-application-load-balancer")}
+              {/* <li
+                onClick={() => handleSelect("create-scaling-policies")}
                 className={`${
-                  selectedId === "create-application-load-balancer" ||
-                  subMenuId === "create-application-load-balancer"
+                  selectedId === "create-scaling-policies" ||
+                  subMenuId === "create-scaling-policies"
                     ? "bg-white text-black"
                     : "black"
                 } px-[5px]`}
               >
-                <Link href={`/work_shop/${id}/create-application-load-balancer`}>
-                  <span className="min-w-[20px] inline-block">4.7</span> Tạo Application Load Balancer (ALB)
+                <Link href={`/work_shop/${id}/create-scaling-policies`}>
+                  <span className="min-w-[20px] inline-block">4.8</span> Tạo
+                  Scaling Policies cho ASG
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
