@@ -80,7 +80,7 @@ function RDS({ params }: { params: PageProps }) {
                 chúng vào virtual private cloud (VPC)
               </li>
             </ul>
-            <p className="font-bold text-[16px]">
+            {/* <p className="font-bold text-[16px]">
               So sánh giữa Amazon EC2 và triển khai tại chỗ
             </p>
             <p>- Triển khai tại chỗ (On-premises deployment):</p>
@@ -105,7 +105,7 @@ function RDS({ params }: { params: PageProps }) {
               phần mềm cơ sở dữ liệu theo cách thủ công, bạn có thể vô tình
               khiến ứng dụng ngừng hoạt động. Bạn có thể mất hàng giờ để kiểm
               tra mọi thay đổi để xác định và khắc phục sự cố
-            </p>
+            </p> */}
             <p className="font-bold text-[18px]">Mô hình của Amazon RDS</p>
             <p>
               - Amazon RDS chịu trách nhiệm lưu trữ các thành phần phần mềm và

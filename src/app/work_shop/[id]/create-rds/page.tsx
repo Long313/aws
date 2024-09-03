@@ -2,24 +2,24 @@
 import Layout from "@/components/Layout/page";
 import Image from "next/image";
 import { useState } from "react";
-import screen_shot_create_alb_1 from "../../../../images/screen_shot_create_alb_1.png";
-import screen_shot_create_alb_2 from "../../../../images/screen_shot_create_alb_2.png";
-import screen_shot_create_alb_3 from "../../../../images/screen_shot_create_alb_3.png";
-import screen_shot_create_alb_4 from "../../../../images/screen_shot_create_alb_4.png";
-import screen_shot_create_alb_5 from "../../../../images/screen_shot_create_alb_5.png";
-import screen_shot_create_alb_6 from "../../../../images/screen_shot_create_alb_6.png";
-import screen_shot_create_alb_7 from "../../../../images/screen_shot_create_alb_7.png";
-import screen_shot_create_alb_8 from "../../../../images/screen_shot_create_alb_8.png";
-import screen_shot_create_alb_9 from "../../../../images/screen_shot_create_alb_9.png";
-import screen_shot_create_alb_10 from "../../../../images/screen_shot_create_alb_10.png";
-import screen_shot_create_alb_11 from "../../../../images/screen_shot_create_alb_11.png";
-import screen_shot_create_alb_12 from "../../../../images/screen_shot_create_alb_12.png";
-import screen_shot_create_alb_13 from "../../../../images/screen_shot_create_alb_13.png";
-import screen_shot_create_alb_14 from "../../../../images/screen_shot_create_alb_14.png";
-import screen_shot_create_alb_15 from "../../../../images/screen_shot_create_alb_15.png";
-import screen_shot_ec2_16 from "../../../../images/screen_shot_ec2_15.png";
-import screen_shot_ec2_17 from "../../../../images/screen_shot_ec2_15.png";
-import screen_shot_ec2_18 from "../../../../images/screen_shot_ec2_15.png";
+import screen_shot_create_rds_1 from "../../../../images/screen_shot_create_rds_1.png";
+import screen_shot_create_rds_2 from "../../../../images/screen_shot_create_rds_2.png";
+import screen_shot_create_rds_3 from "../../../../images/screen_shot_create_rds_3.png";
+import screen_shot_create_rds_4 from "../../../../images/screen_shot_create_rds_4.png";
+import screen_shot_create_rds_5 from "../../../../images/screen_shot_create_rds_5.png";
+import screen_shot_create_rds_6 from "../../../../images/screen_shot_create_rds_6.png";
+import screen_shot_create_rds_7 from "../../../../images/screen_shot_create_rds_7.png";
+import screen_shot_create_rds_8 from "../../../../images/screen_shot_create_rds_8.png";
+import screen_shot_create_rds_9 from "../../../../images/screen_shot_create_rds_9.png";
+import screen_shot_create_rds_10 from "../../../../images/screen_shot_create_rds_10.png";
+import screen_shot_create_rds_11 from "../../../../images/screen_shot_create_rds_11.png";
+import screen_shot_create_rds_12 from "../../../../images/screen_shot_create_rds_12.png";
+import screen_shot_create_rds_13 from "../../../../images/screen_shot_create_rds_13.png";
+import screen_shot_create_rds_14 from "../../../../images/screen_shot_create_rds_14.png";
+import screen_shot_create_rds_15 from "../../../../images/screen_shot_create_rds_15.png";
+import screen_shot_create_rds_16 from "../../../../images/screen_shot_create_rds_16.png";
+import screen_shot_create_rds_17 from "../../../../images/screen_shot_create_rds_17.png";
+import screen_shot_create_rds_18 from "../../../../images/screen_shot_create_rds_18.png";
 
 import coppy_icon from "../../../../images/coppy_icon.png";
 import zoom_in from "../../../../images/zoom_in_icon.png";
@@ -30,7 +30,7 @@ import Tip from "../../../../components/Tip/page";
 interface PageProps {
   id: string;
 }
-function CreateApplicationLoadBalancer({ params }: { params: PageProps }) {
+function CreateRelationalDatabaseService({ params }: { params: PageProps }) {
   const textRef = useRef<HTMLSpanElement>(null);
   const [zoom, setZoom] = useState(0);
   const handleCoppy = () => {
@@ -54,25 +54,27 @@ function CreateApplicationLoadBalancer({ params }: { params: PageProps }) {
     <Layout id={params.id}>
       <div>
         <h1 className="my-[20px] text-[#22a6df] text-[24px] font-bold text-center">
-          Tạo Application Load Balancer
+          Relational Database Service (RDS)
         </h1>
         <div>
-          <p className="text-[#22a6df]">
-            Các bước tạo một Application Load Balancer
+          <p className="font-bold text-[18px] my-[10px] text-[#22a6df]">
+            Các bước tạo RDS
+          </p>
+          <p>
+            Bước đầu tiên, trong giao diện <b>AWS Management Console</b>
           </p>
           <ul className="list-disc ml-[20px]">
             <li>
-              - Đầu tiên, giao diện của <b>EC2 Dashboard</b>, Click chọn{" "}
-              <b>Load Balancers</b>
+              Nhập <b>RDS</b>{" "}
             </li>
             <li>
-              - Tiếp theo, click chọn <b>Create load balancer</b>
+              Click chọn <b>RDS</b>
             </li>
           </ul>
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[80%]">
               <Image
-                src={screen_shot_create_alb_1}
+                src={screen_shot_create_rds_1}
                 alt="vpc"
                 className="w-full"
               />
@@ -92,7 +94,7 @@ function CreateApplicationLoadBalancer({ params }: { params: PageProps }) {
               >
                 <div className="w-[80%] relative z-10">
                   <Image
-                    src={screen_shot_create_alb_1}
+                    src={screen_shot_create_rds_1}
                     alt="vpc"
                     className="w-full"
                   />
@@ -108,15 +110,20 @@ function CreateApplicationLoadBalancer({ params }: { params: PageProps }) {
             </div>
           </div>
           <p>
-            - Trong giao diện <b>Compare and select load balancer type</b> chúng
-            ta có thể thấy 3 loại <b>Load Balancer</b> tuỳ theo mục đích sử
-            dụng. Trong kiến trúc mà mình giới thiệu chúng ta sẽ sử dụng{" "}
-            <b>Application Load Balancer (ALB)</b>
+            - Trong giao diện <b>AWS RDS</b>
           </p>
+          <ul className="list-disc ml-[20px]">
+            <li>
+              Click chọn <b>Databases</b>
+            </li>
+            <li>
+              Click chọn <b>Create Database</b>
+            </li>
+          </ul>
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[80%]">
               <Image
-                src={screen_shot_create_alb_2}
+                src={screen_shot_create_rds_2}
                 alt="vpc"
                 className="w-full"
               />
@@ -136,7 +143,7 @@ function CreateApplicationLoadBalancer({ params }: { params: PageProps }) {
               >
                 <div className="w-[80%] relative z-10">
                   <Image
-                    src={screen_shot_create_alb_2}
+                    src={screen_shot_create_rds_2}
                     alt="vpc"
                     className="w-full"
                   />
@@ -152,19 +159,21 @@ function CreateApplicationLoadBalancer({ params }: { params: PageProps }) {
             </div>
           </div>
           <p>
-            - Trong giao diện <b>Create Application Load Balancer</b>
+            - Trong giao diện <b>Create RDS</b>
           </p>
           <ul className="list-disc ml-[20px]">
             <li>
-              Trong mục <b>Load balancer name</b>, nhập tên cho ALB, ở đây mình
-              nhập <b>Public-1-ALB</b>
+              Click chọn <b>Standard create</b>
             </li>
-            <li>Các mục khác có thể để mặc định</li>
+            <li>
+              Ở mục <b>Engine options</b> click chọn <b>MySQL</b> (tuỳ vào ứng
+              dụng của bạn để chọn loại CSDL cho phù hợp)
+            </li>
           </ul>
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[80%]">
               <Image
-                src={screen_shot_create_alb_3}
+                src={screen_shot_create_rds_3}
                 alt="vpc"
                 className="w-full"
               />
@@ -184,7 +193,7 @@ function CreateApplicationLoadBalancer({ params }: { params: PageProps }) {
               >
                 <div className="w-[80%] relative z-10">
                   <Image
-                    src={screen_shot_create_alb_3}
+                    src={screen_shot_create_rds_3}
                     alt="vpc"
                     className="w-full"
                   />
@@ -199,69 +208,19 @@ function CreateApplicationLoadBalancer({ params }: { params: PageProps }) {
               </div>
             </div>
           </div>
-          <p>
-            - Đến phần <b>Network Mapping</b>
-          </p>
           <ul className="list-disc ml-[20px]">
             <li>
-              Trong mục <b>VPC</b>, chúng ta chọn <b>ASG VPC</b> mà mình đã tạo
-              trước đó
+              Ở mục <b>Engine version</b>, click chọn{" "}
+              <b>MySQL 8.0.35 (tuỳ vào version mà bạn muốn)</b>
             </li>
             <li>
-              Tick chọn vào 2 AZ là <b>ap-southeast-1a (apse1-az1)</b> và{" "}
-              <b>ap-southeast-1a (apse1-az1)</b>ap-southeast-1b (apse1-az2) chứa
-              2 Public Subnet 1 và 2.
+              Ở mục <b>Templates</b>, click chọn <b>Production</b>
             </li>
           </ul>
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[80%]">
               <Image
-                src={screen_shot_create_alb_3}
-                alt="vpc"
-                className="w-full"
-              />
-              <Image
-                src={zoom_in}
-                alt="zoom_in"
-                width={40}
-                className="bg-[#dbd2d21a] absolute top-0 right-0 cursor-pointer"
-                onClick={() => {
-                  setZoom(3);
-                }}
-              />
-              <div
-                className={`${
-                  zoom === 3 ? "block" : "hidden"
-                } fixed top-0 right-0 bottom-0 left-0 z-10 bg-[#0000004d] flex justify-center items-center`}
-              >
-                <div className="w-[80%] relative z-10">
-                  <Image
-                    src={screen_shot_create_alb_3}
-                    alt="vpc"
-                    className="w-full"
-                  />
-                  <Image
-                    src={close}
-                    alt="close"
-                    width={40}
-                    className="absolute top-0 right-0 cursor-pointer bg-[#dbd2d21a] p-1"
-                    onClick={() => setZoom(0)}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <p>
-            {" "}
-            Ở phần <b>Security Group</b>, mình sẽ tạo mới 1 SG cho ALB này
-          </p>
-          <p>
-            -Click chọn <b>Create a new security group</b>
-          </p>
-          <div className="flex justify-center my-[20px]">
-            <div className="relative w-[80%]">
-              <Image
-                src={screen_shot_create_alb_4}
+                src={screen_shot_create_rds_4}
                 alt="vpc"
                 className="w-full"
               />
@@ -281,7 +240,7 @@ function CreateApplicationLoadBalancer({ params }: { params: PageProps }) {
               >
                 <div className="w-[80%] relative z-10">
                   <Image
-                    src={screen_shot_create_alb_4}
+                    src={screen_shot_create_rds_4}
                     alt="vpc"
                     className="w-full"
                   />
@@ -297,24 +256,34 @@ function CreateApplicationLoadBalancer({ params }: { params: PageProps }) {
             </div>
           </div>
           <p>
-            -Ở phần giao diện của <b>Create Security Group</b>
+            - Ở mục <b>Availability and durability</b>, mình chọn{" "}
+            <b>Multi-AZ DB instance</b>.
           </p>
+          <p className="font-bold">
+            Câu hỏi đặt ra là: Lúc nào thì chọn <b>Multi-AZ DB Cluster</b> và
+            lúc nào chọn <b>Multi-AZ DB instance</b>?
+          </p>
+          <p>- Đầu tiên bạn phải hiểu ý nghĩa của mỗi option này:</p>
           <ul className="list-disc ml-[20px]">
             <li>
-              Trong mục <b> Security group name</b>, nhập{" "}
-              <b>SG-Load-Balancer</b>
+              <b>Multi-AZ Instance</b>: Chỉ có một instance chính và một bản sao
+              dự phòng trong một AZ khác. Chỉ hỗ trợ failover tự động cho một
+              instance.
             </li>
             <li>
-              Ở mục VPC <b> Description</b>, nhập <b>Allow HTTP into ALB</b>
-            </li>
-            <li>
-              Trong mục <b> VPC</b> chọn <b>ASG VPC</b>
+              <b>Multi-AZ Cluster</b>: Có thể có nhiều instance chính và phụ
+              trên nhiều AZ. Hỗ trợ failover tự động trong cùng một cluster, với
+              khả năng mở rộng và hiệu suất cao hơn.
             </li>
           </ul>
+          <p>
+            - Thứ hai, dựa vào kiến trúc mà bạn đưa ra để lựa chọn option tối ưu
+            nhất.
+          </p>
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[80%]">
               <Image
-                src={screen_shot_create_alb_5}
+                src={screen_shot_create_rds_5}
                 alt="vpc"
                 className="w-full"
               />
@@ -334,7 +303,7 @@ function CreateApplicationLoadBalancer({ params }: { params: PageProps }) {
               >
                 <div className="w-[80%] relative z-10">
                   <Image
-                    src={screen_shot_create_alb_5}
+                    src={screen_shot_create_rds_5}
                     alt="vpc"
                     className="w-full"
                   />
@@ -350,29 +319,27 @@ function CreateApplicationLoadBalancer({ params }: { params: PageProps }) {
             </div>
           </div>
           <p>
-            - Trong mục <b>Inbound rules</b>
+            - Trong mục <b>Setting</b>
           </p>
           <ul className="list-disc ml-[20px]">
             <li>
-              Click chọn <b> Add rule</b>
+              Ở mục <b>DB cluster identifier</b>, đặt tên là{" "}
+              <b>DB cluster identifier</b>
             </li>
             <li>
-              Ở mục <b> Type</b>, chọn <b>HTTP</b>
+              Trong mục <b>Master username</b>, đặt tên là <b>admin</b>
             </li>
             <li>
-              Trong mục <b> Source</b> để <b>0.0.0.0/0</b> đại diện cho Internet
+              Ở mục <b>Credentials management</b>, chọn <b>Self managed</b>
+            </li>
+            <li>
+              Đặt <b>Master password</b> cho DB
             </li>
           </ul>
-          <p>
-            - Trong mục <b>Outbound rule</b> để mặc định
-          </p>
-          <p>
-            - Click chọn <b>Create security group</b>
-          </p>
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[80%]">
               <Image
-                src={screen_shot_create_alb_6}
+                src={screen_shot_create_rds_6}
                 alt="vpc"
                 className="w-full"
               />
@@ -392,7 +359,7 @@ function CreateApplicationLoadBalancer({ params }: { params: PageProps }) {
               >
                 <div className="w-[80%] relative z-10">
                   <Image
-                    src={screen_shot_create_alb_6}
+                    src={screen_shot_create_rds_6}
                     alt="vpc"
                     className="w-full"
                   />
@@ -408,13 +375,13 @@ function CreateApplicationLoadBalancer({ params }: { params: PageProps }) {
             </div>
           </div>
           <p>
-            - Sau khi tạo thành công <b>ở mục Security Group</b> sẽ có SG mà
-            chúng ta vừa mới tạo
+            - Trong mục <b>Instance configuration</b>
           </p>
+          <p>Mình sẽ để mặc định</p>
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[80%]">
               <Image
-                src={screen_shot_create_alb_7}
+                src={screen_shot_create_rds_7}
                 alt="vpc"
                 className="w-full"
               />
@@ -434,7 +401,7 @@ function CreateApplicationLoadBalancer({ params }: { params: PageProps }) {
               >
                 <div className="w-[80%] relative z-10">
                   <Image
-                    src={screen_shot_create_alb_7}
+                    src={screen_shot_create_rds_7}
                     alt="vpc"
                     className="w-full"
                   />
@@ -450,13 +417,16 @@ function CreateApplicationLoadBalancer({ params }: { params: PageProps }) {
             </div>
           </div>
           <p>
-            - Trong mục <b>Listener and routing</b> click chọn{" "}
-            <b>Create target group</b>
+            - Trong mục <b>Storage</b>
+          </p>
+          <p>
+            Trong mục <b>Storage type</b>, vì mình ưu tiên độ trễ thấp nên sẽ
+            chọn <b>Provisioned IOPS SSD (io2)</b>
           </p>
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[80%]">
               <Image
-                src={screen_shot_create_alb_8}
+                src={screen_shot_create_rds_8}
                 alt="vpc"
                 className="w-full"
               />
@@ -476,7 +446,7 @@ function CreateApplicationLoadBalancer({ params }: { params: PageProps }) {
               >
                 <div className="w-[80%] relative z-10">
                   <Image
-                    src={screen_shot_create_alb_8}
+                    src={screen_shot_create_rds_8}
                     alt="vpc"
                     className="w-full"
                   />
@@ -492,23 +462,22 @@ function CreateApplicationLoadBalancer({ params }: { params: PageProps }) {
             </div>
           </div>
           <p>
-            - Trong giao diện <b>Specify group details</b>
+            - Trong mục <b>Connectivity</b>
           </p>
           <ul className="list-disc ml-[20px]">
             <li>
-              Trong mục <b>Choose a target type</b> chọn <b>Instances</b>
+              Ở mục <b>Compute resource</b>, mình chọn{" "}
+              <b>Connect to an EC2 compute resource</b>
             </li>
             <li>
-              Ở mục Target group name, nhập<b>TG-ALB</b>
-            </li>
-            <li>
-              Mục <b>Prococol:port</b> để mặc định là <b>HTTP:80</b>
+              Ở mục <b>EC2 instance</b>, mình chọn <b>EC2 Private 1</b>, để đúng
+              với kiến trúc ban đầu mình đã vẽ
             </li>
           </ul>
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[80%]">
               <Image
-                src={screen_shot_create_alb_9}
+                src={screen_shot_create_rds_9}
                 alt="vpc"
                 className="w-full"
               />
@@ -528,7 +497,7 @@ function CreateApplicationLoadBalancer({ params }: { params: PageProps }) {
               >
                 <div className="w-[80%] relative z-10">
                   <Image
-                    src={screen_shot_create_alb_9}
+                    src={screen_shot_create_rds_9}
                     alt="vpc"
                     className="w-full"
                   />
@@ -544,12 +513,22 @@ function CreateApplicationLoadBalancer({ params }: { params: PageProps }) {
             </div>
           </div>
           <p>
-            - Tất cả các mục còn lại hãy để mặc định, click chọn <b>Next</b>
+            - Tiếp theo, vẫn trong mục <b>Connectivity</b>
           </p>
+          <p>Tất cả những mục còn lại để mặc định, ngoại trừ 2 mục:</p>
+          <ul className="list-disc ml-[20px]">
+            <li>
+              Ở mục <b>VPC security group</b>, mình chọn <b>Create new</b>
+            </li>
+            <li>
+              Ở mục <b>New VPC security group name</b>, nhập{" "}
+              <b>database-mysql-sg</b>
+            </li>
+          </ul>
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[80%]">
               <Image
-                src={screen_shot_create_alb_10}
+                src={screen_shot_create_rds_10}
                 alt="vpc"
                 className="w-full"
               />
@@ -569,7 +548,7 @@ function CreateApplicationLoadBalancer({ params }: { params: PageProps }) {
               >
                 <div className="w-[80%] relative z-10">
                   <Image
-                    src={screen_shot_create_alb_10}
+                    src={screen_shot_create_rds_10}
                     alt="vpc"
                     className="w-full"
                   />
@@ -585,27 +564,12 @@ function CreateApplicationLoadBalancer({ params }: { params: PageProps }) {
             </div>
           </div>
           <p>
-            - Phần tiếp theo, trong giao diện <b>Register targets</b>
+            - Ở các mục khác mình để mặc định, và click <b>Create database</b>
           </p>
-          <Tip
-            nameType="Lưu ý"
-            content="- Phải đảm bảo những Instances mà chúng ta muốn có trong Target group ở trạng thái Running"
-            colorFirst="#6AB0DE"
-            colorSecond="#E7F2FA"
-          />
-          <ul className="list-disc ml-[20px]">
-            <li>
-              Trong mục <b>Avalability Instaces</b>, tick chọn những Instances
-              muốn thêm vào <b>Target group</b>
-            </li>
-            <li>
-              Click chọn <b>Include as pending below</b>
-            </li>
-          </ul>
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[80%]">
               <Image
-                src={screen_shot_create_alb_11}
+                src={screen_shot_create_rds_11}
                 alt="vpc"
                 className="w-full"
               />
@@ -625,7 +589,7 @@ function CreateApplicationLoadBalancer({ params }: { params: PageProps }) {
               >
                 <div className="w-[80%] relative z-10">
                   <Image
-                    src={screen_shot_create_alb_11}
+                    src={screen_shot_create_rds_11}
                     alt="vpc"
                     className="w-full"
                   />
@@ -640,14 +604,25 @@ function CreateApplicationLoadBalancer({ params }: { params: PageProps }) {
               </div>
             </div>
           </div>
+          <p>
+            - Sau đó bạn vào trang{" "}
+            <a
+              href="https://sqlectron.github.io/"
+              target="_blank"
+              className="text-[#22a6df]"
+            >
+              https://sqlectron.github.io/
+            </a>
+          </p>
           <ul className="list-disc ml-[20px]">
-            <li>Sau đó, ở mục <b>Review target</b>sẽ xuất hiện những Instance mà mình đã chọn</li>
-            <li>Click chọn <b>Create target group</b></li>
+            <li>
+              Click chọn <b>Download GUI</b>
+            </li>
           </ul>
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[80%]">
               <Image
-                src={screen_shot_create_alb_12}
+                src={screen_shot_create_rds_12}
                 alt="vpc"
                 className="w-full"
               />
@@ -667,7 +642,7 @@ function CreateApplicationLoadBalancer({ params }: { params: PageProps }) {
               >
                 <div className="w-[80%] relative z-10">
                   <Image
-                    src={screen_shot_create_alb_12}
+                    src={screen_shot_create_rds_12}
                     alt="vpc"
                     className="w-full"
                   />
@@ -682,11 +657,16 @@ function CreateApplicationLoadBalancer({ params }: { params: PageProps }) {
               </div>
             </div>
           </div>
-          <p>- Quay trở lại mục <b>Listener and routing</b> đã xuất hiện <b>Target group vừa mới tạo</b>. Click chọn <b>TG-ALB</b></p>
+          <ul className="list-disc ml-[20px]">
+            <li>
+              Click chọn <b>sqlectron-1.38.0.dmg</b>
+            </li>
+            <li>Chờ tải xong và giải nén</li>
+          </ul>
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[80%]">
               <Image
-                src={screen_shot_create_alb_13}
+                src={screen_shot_create_rds_13}
                 alt="vpc"
                 className="w-full"
               />
@@ -706,7 +686,7 @@ function CreateApplicationLoadBalancer({ params }: { params: PageProps }) {
               >
                 <div className="w-[80%] relative z-10">
                   <Image
-                    src={screen_shot_create_alb_13}
+                    src={screen_shot_create_rds_13}
                     alt="vpc"
                     className="w-full"
                   />
@@ -720,12 +700,17 @@ function CreateApplicationLoadBalancer({ params }: { params: PageProps }) {
                 </div>
               </div>
             </div>
-          </div>    
-          <p>- Tất cả các mục còn lại để mặc đinh. Click chọn <b>Create Load Balancer</b></p>
+          </div>
+          <p>- Sau khi tạo DB thành công, đi tới DB vừa tạo</p>
+          <p>Ở mục <b>Connectivity & security</b></p>
+          <ul className="list-disc ml-[20px]">
+            <li>Bạn có thể thấy địa chỉ <b>endpoint</b> chính là thông tin để kết nối với DB thông qua election</li>
+            <li>Coppy địa chỉ <b>enpoint</b> đó</li>    
+          </ul>
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[80%]">
               <Image
-                src={screen_shot_create_alb_14}
+                src={screen_shot_create_rds_14}
                 alt="vpc"
                 className="w-full"
               />
@@ -735,7 +720,7 @@ function CreateApplicationLoadBalancer({ params }: { params: PageProps }) {
                 width={40}
                 className="bg-[#dbd2d21a] absolute top-0 right-0 cursor-pointer"
                 onClick={() => {
-                  setZoom(13);
+                  setZoom(14);
                 }}
               />
               <div
@@ -745,7 +730,7 @@ function CreateApplicationLoadBalancer({ params }: { params: PageProps }) {
               >
                 <div className="w-[80%] relative z-10">
                   <Image
-                    src={screen_shot_create_alb_14}
+                    src={screen_shot_create_rds_14}
                     alt="vpc"
                     className="w-full"
                   />
@@ -759,12 +744,12 @@ function CreateApplicationLoadBalancer({ params }: { params: PageProps }) {
                 </div>
               </div>
             </div>
-          </div>  
-          <p>- Khi xuất hiện giao diện này, thì bạn đã tạo thành công ALB</p>
+          </div>
+          <p>- Ở giao diện electron, click chọn <b>ADD</b></p>
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[80%]">
               <Image
-                src={screen_shot_create_alb_15}
+                src={screen_shot_create_rds_15}
                 alt="vpc"
                 className="w-full"
               />
@@ -784,7 +769,7 @@ function CreateApplicationLoadBalancer({ params }: { params: PageProps }) {
               >
                 <div className="w-[80%] relative z-10">
                   <Image
-                    src={screen_shot_create_alb_15}
+                    src={screen_shot_create_rds_15}
                     alt="vpc"
                     className="w-full"
                   />
@@ -798,11 +783,11 @@ function CreateApplicationLoadBalancer({ params }: { params: PageProps }) {
                 </div>
               </div>
             </div>
-          </div>     
+          </div>
         </div>
       </div>
     </Layout>
   );
 }
 
-export default CreateApplicationLoadBalancer;
+export default CreateRelationalDatabaseService;

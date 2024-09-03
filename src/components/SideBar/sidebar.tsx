@@ -488,7 +488,6 @@ function SideBar({ id }: { id: ID }) {
                   Elasic IP
                 </Link>
               </li>
-
               <li
                 onClick={() => handleSelect("create-application-load-balancer")}
                 className={`${
@@ -533,6 +532,53 @@ function SideBar({ id }: { id: ID }) {
                   Scaling Policies cho ASG
                 </Link>
               </li> */}
+            </ul>
+          </div>
+          <div
+            onClick={() => {
+              handleToggleMenu(5);
+              handleSelect("create-other");
+            }}
+            className={`${
+              selectedId === "create-other" || subMenuId === "create-other"
+                ? "bg-white text-black"
+                : "black"
+            } flex justify-between items-center`}
+          >
+            <Link
+              href={`/work_shop/${id}/create-other`}
+              className="flex justify-between text-[18px] p-[4px] w-full"
+            >
+              <span className="min-w-[30px] inline-block">
+                <span className="min-w-[30px] inline-block">5.</span>Tạo các tài nguyên khác
+              </span>
+              <span className="inline-block mr-[4px]">&#9660;</span>
+            </Link>
+          </div>
+          <div
+            className={
+              (open && numberOpen === 5) ||
+              (menuId === 5 && open) ||
+              (openMenu && menuId === 5)
+                ? "block"
+                : "hidden"
+            }
+          >
+            <ul>
+              <li
+                onClick={() => handleSelect("create-rds")}
+                className={`${
+                  selectedId === "create-rds" ||
+                  subMenuId === "create-rds"
+                    ? "bg-white text-black"
+                    : "black"
+                } px-[5px]`}
+              >
+                <Link href={`/work_shop/${id}/create-rds`}>
+                  <span className="min-w-[30px] inline-block">5.1</span>
+                  Tạo Relational Database Service (RDS)
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
