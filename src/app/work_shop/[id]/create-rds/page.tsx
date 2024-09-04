@@ -20,6 +20,8 @@ import screen_shot_create_rds_15 from "../../../../images/screen_shot_create_rds
 import screen_shot_create_rds_16 from "../../../../images/screen_shot_create_rds_16.png";
 import screen_shot_create_rds_17 from "../../../../images/screen_shot_create_rds_17.png";
 import screen_shot_create_rds_18 from "../../../../images/screen_shot_create_rds_18.png";
+import screen_shot_create_rds_19 from "../../../../images/screen_shot_create_rds_19.png";
+import screen_shot_create_rds_20 from "../../../../images/screen_shot_create_rds_20.png";
 
 import coppy_icon from "../../../../images/coppy_icon.png";
 import zoom_in from "../../../../images/zoom_in_icon.png";
@@ -377,7 +379,13 @@ function CreateRelationalDatabaseService({ params }: { params: PageProps }) {
           <p>
             - Trong mục <b>Instance configuration</b>
           </p>
-          <p>Mình sẽ để mặc định</p>
+          <ul className="list-disc ml-[20px]">
+            <li>
+              Trong mục <b>DB instance class</b> chọn{" "}
+              <b>Burstable classes (includes t classes)</b> và{" "}
+              <b>db.t3.micro</b>
+            </li>
+          </ul>
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[80%]">
               <Image
@@ -419,10 +427,17 @@ function CreateRelationalDatabaseService({ params }: { params: PageProps }) {
           <p>
             - Trong mục <b>Storage</b>
           </p>
-          <p>
-            Trong mục <b>Storage type</b>, vì mình ưu tiên độ trễ thấp nên sẽ
-            chọn <b>Provisioned IOPS SSD (io2)</b>
-          </p>
+          <ul className="list-disc ml-[20px]">
+            <li>
+              Trong mục <b>Storage type</b>, vì chỉ dừng lại ở mức làm lab, nên
+              mình sẽ chỉ chọn cấu hình ở mức thấp, ở đây mình chọn{" "}
+              <b>General Purpose SSD (gp2)</b>
+            </li>
+            <li>
+              Ở mục <b>Allocated storage</b> mình chỉ để là <b>20 GiB</b>
+            </li>
+          </ul>
+
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[80%]">
               <Image
@@ -467,11 +482,20 @@ function CreateRelationalDatabaseService({ params }: { params: PageProps }) {
           <ul className="list-disc ml-[20px]">
             <li>
               Ở mục <b>Compute resource</b>, mình chọn{" "}
-              <b>Connect to an EC2 compute resource</b>
+              <b>Don’t connect to an EC2 compute resource</b> (sau này có thể
+              tuỳ chỉnh)
             </li>
             <li>
-              Ở mục <b>EC2 instance</b>, mình chọn <b>EC2 Private 1</b>, để đúng
-              với kiến trúc ban đầu mình đã vẽ
+              Ở mục <b>Network type</b>, mình chọn <b>IPv4</b>
+            </li>
+            <li>
+              Ở mục <b>Virtual private cloud (VPC)</b>, mình chọn{" "}
+              <b>ASG VPC mình đã tạo trước đó.</b>
+            </li>
+            <li>
+              Ở mục <b>DB subnet group</b>, mình chọn group subnet gồm 4 subnet
+              mình đã tạo trước đó ( sau này mình đã tạo thêm 2 subnet cho AZ
+              ap-southeast-1c, như vậy là 6 subnets )
             </li>
           </ul>
           <div className="flex justify-center my-[20px]">
@@ -515,14 +539,13 @@ function CreateRelationalDatabaseService({ params }: { params: PageProps }) {
           <p>
             - Tiếp theo, vẫn trong mục <b>Connectivity</b>
           </p>
-          <p>Tất cả những mục còn lại để mặc định, ngoại trừ 2 mục:</p>
           <ul className="list-disc ml-[20px]">
             <li>
-              Ở mục <b>VPC security group</b>, mình chọn <b>Create new</b>
+              Ở mục <b>Public access</b>, mình chọn <b>Yes</b>
             </li>
             <li>
-              Ở mục <b>New VPC security group name</b>, nhập{" "}
-              <b>database-mysql-sg</b>
+              Ở mục <b>VPC security group (firewall)</b>, mình chọn
+              <b> Create new</b> để tạo mới Security Group
             </li>
           </ul>
           <div className="flex justify-center my-[20px]">
@@ -564,59 +587,17 @@ function CreateRelationalDatabaseService({ params }: { params: PageProps }) {
             </div>
           </div>
           <p>
-            - Ở các mục khác mình để mặc định, và click <b>Create database</b>
-          </p>
-          <div className="flex justify-center my-[20px]">
-            <div className="relative w-[80%]">
-              <Image
-                src={screen_shot_create_rds_11}
-                alt="vpc"
-                className="w-full"
-              />
-              <Image
-                src={zoom_in}
-                alt="zoom_in"
-                width={40}
-                className="bg-[#dbd2d21a] absolute top-0 right-0 cursor-pointer"
-                onClick={() => {
-                  setZoom(11);
-                }}
-              />
-              <div
-                className={`${
-                  zoom === 11 ? "block" : "hidden"
-                } fixed top-0 right-0 bottom-0 left-0 z-10 bg-[#0000004d] flex justify-center items-center`}
-              >
-                <div className="w-[80%] relative z-10">
-                  <Image
-                    src={screen_shot_create_rds_11}
-                    alt="vpc"
-                    className="w-full"
-                  />
-                  <Image
-                    src={close}
-                    alt="close"
-                    width={40}
-                    className="absolute top-0 right-0 cursor-pointer bg-[#dbd2d21a] p-1"
-                    onClick={() => setZoom(0)}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <p>
-            - Sau đó bạn vào trang{" "}
-            <a
-              href="https://sqlectron.github.io/"
-              target="_blank"
-              className="text-[#22a6df]"
-            >
-              https://sqlectron.github.io/
-            </a>
+            Sau khi tạo xong, bạn vào <b>Dashboard</b>
           </p>
           <ul className="list-disc ml-[20px]">
             <li>
-              Click chọn <b>Download GUI</b>
+              Click chọn <b>Edit inbound rules</b>
+            </li>
+            <li>
+              Trong mục <b>Source</b>, chọn<b> Anywhere IPv4</b>
+            </li>
+            <li>
+              Click <b>Save rules</b>
             </li>
           </ul>
           <div className="flex justify-center my-[20px]">
@@ -657,12 +638,9 @@ function CreateRelationalDatabaseService({ params }: { params: PageProps }) {
               </div>
             </div>
           </div>
-          <ul className="list-disc ml-[20px]">
-            <li>
-              Click chọn <b>sqlectron-1.38.0.dmg</b>
-            </li>
-            <li>Chờ tải xong và giải nén</li>
-          </ul>
+          <p>
+            - Ở mục <b>Certificate authority</b>, chọn <b>default</b>
+          </p>
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[80%]">
               <Image
@@ -701,11 +679,13 @@ function CreateRelationalDatabaseService({ params }: { params: PageProps }) {
               </div>
             </div>
           </div>
-          <p>- Sau khi tạo DB thành công, đi tới DB vừa tạo</p>
-          <p>Ở mục <b>Connectivity & security</b></p>
+          <p>
+            Ở mục <b>Database options</b>
+          </p>
           <ul className="list-disc ml-[20px]">
-            <li>Bạn có thể thấy địa chỉ <b>endpoint</b> chính là thông tin để kết nối với DB thông qua election</li>
-            <li>Coppy địa chỉ <b>enpoint</b> đó</li>    
+            <li>
+              Trong mục <b>Initial database name</b> nhập <b>mydb</b>
+            </li>
           </ul>
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[80%]">
@@ -745,7 +725,14 @@ function CreateRelationalDatabaseService({ params }: { params: PageProps }) {
               </div>
             </div>
           </div>
-          <p>- Ở giao diện electron, click chọn <b>ADD</b></p>
+          <p>
+            - Nếu bạn thấy phần nào mình k nhắc đến ở đây, có nghĩa là mình sẽ để
+            mặc định
+          </p>
+          <p>
+            Xem lại cấu hình và price một lần nữa, click chọn{" "}
+            <b>Create database</b>
+          </p>
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[80%]">
               <Image
@@ -770,6 +757,241 @@ function CreateRelationalDatabaseService({ params }: { params: PageProps }) {
                 <div className="w-[80%] relative z-10">
                   <Image
                     src={screen_shot_create_rds_15}
+                    alt="vpc"
+                    className="w-full"
+                  />
+                  <Image
+                    src={close}
+                    alt="close"
+                    width={40}
+                    className="absolute top-0 right-0 cursor-pointer bg-[#dbd2d21a] p-1"
+                    onClick={() => setZoom(0)}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>
+            - Sau khi tạo thành công database, vào trang{" "}
+            <a
+              href="https://sqlectron.github.io/"
+              target="_blank"
+              className="text-[#22a6df]"
+            >
+              https://sqlectron.github.io/
+            </a> để tải <b>sqlelectron</b> và kết nối tới database vừa mới tạo
+          </p>
+          <ul className="list-disc ml-[20px]">
+            <li>
+              Click chọn <b>Download GUI</b>
+            </li>
+          </ul>
+          <div className="flex justify-center my-[20px]">
+            <div className="relative w-[80%]">
+              <Image
+                src={screen_shot_create_rds_16}
+                alt="vpc"
+                className="w-full"
+              />
+              <Image
+                src={zoom_in}
+                alt="zoom_in"
+                width={40}
+                className="bg-[#dbd2d21a] absolute top-0 right-0 cursor-pointer"
+                onClick={() => {
+                  setZoom(16);
+                }}
+              />
+              <div
+                className={`${
+                  zoom === 16 ? "block" : "hidden"
+                } fixed top-0 right-0 bottom-0 left-0 z-10 bg-[#0000004d] flex justify-center items-center`}
+              >
+                <div className="w-[80%] relative z-10">
+                  <Image
+                    src={screen_shot_create_rds_16}
+                    alt="vpc"
+                    className="w-full"
+                  />
+                  <Image
+                    src={close}
+                    alt="close"
+                    width={40}
+                    className="absolute top-0 right-0 cursor-pointer bg-[#dbd2d21a] p-1"
+                    onClick={() => setZoom(0)}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <ul className="list-disc ml-[20px]">
+            <li>
+              Click chọn <b>sqlectron-1.38.0-win.zip (nếu Window)</b> hoặc{" "}
+              <b>sqlectron-1.38.0-mac.zip (MacOS)</b>
+            </li>
+            <li>Chờ tải xong và giải nén</li>
+          </ul>
+          <div className="flex justify-center my-[20px]">
+            <div className="relative w-[80%]">
+              <Image
+                src={screen_shot_create_rds_17}
+                alt="vpc"
+                className="w-full"
+              />
+              <Image
+                src={zoom_in}
+                alt="zoom_in"
+                width={40}
+                className="bg-[#dbd2d21a] absolute top-0 right-0 cursor-pointer"
+                onClick={() => {
+                  setZoom(17);
+                }}
+              />
+              <div
+                className={`${
+                  zoom === 17 ? "block" : "hidden"
+                } fixed top-0 right-0 bottom-0 left-0 z-10 bg-[#0000004d] flex justify-center items-center`}
+              >
+                <div className="w-[80%] relative z-10">
+                  <Image
+                    src={screen_shot_create_rds_17}
+                    alt="vpc"
+                    className="w-full"
+                  />
+                  <Image
+                    src={close}
+                    alt="close"
+                    width={40}
+                    className="absolute top-0 right-0 cursor-pointer bg-[#dbd2d21a] p-1"
+                    onClick={() => setZoom(0)}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>- Sau khi tạo DB thành công, đi tới DB vừa tạo</p>
+          <p>
+            Ở mục <b>Connectivity & security</b>
+          </p>
+          <ul className="list-disc ml-[20px]">
+            <li>
+              Bạn có thể thấy địa chỉ <b>endpoint</b> chính là thông tin để kết
+              nối với DB thông qua election
+            </li>
+            <li>
+              Coppy địa chỉ <b>enpoint</b> đó
+            </li>
+          </ul>
+          <div className="flex justify-center my-[20px]">
+            <div className="relative w-[80%]">
+              <Image
+                src={screen_shot_create_rds_18}
+                alt="vpc"
+                className="w-full"
+              />
+              <Image
+                src={zoom_in}
+                alt="zoom_in"
+                width={40}
+                className="bg-[#dbd2d21a] absolute top-0 right-0 cursor-pointer"
+                onClick={() => {
+                  setZoom(18);
+                }}
+              />
+              <div
+                className={`${
+                  zoom === 18 ? "block" : "hidden"
+                } fixed top-0 right-0 bottom-0 left-0 z-10 bg-[#0000004d] flex justify-center items-center`}
+              >
+                <div className="w-[80%] relative z-10">
+                  <Image
+                    src={screen_shot_create_rds_18}
+                    alt="vpc"
+                    className="w-full"
+                  />
+                  <Image
+                    src={close}
+                    alt="close"
+                    width={40}
+                    className="absolute top-0 right-0 cursor-pointer bg-[#dbd2d21a] p-1"
+                    onClick={() => setZoom(0)}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>
+            - Ở giao diện electron, click chọn <b>ADD</b>
+          </p>
+          <div className="flex justify-center my-[20px]">
+            <div className="relative w-[80%]">
+              <Image
+                src={screen_shot_create_rds_19}
+                alt="vpc"
+                className="w-full"
+              />
+              <Image
+                src={zoom_in}
+                alt="zoom_in"
+                width={40}
+                className="bg-[#dbd2d21a] absolute top-0 right-0 cursor-pointer"
+                onClick={() => {
+                  setZoom(19);
+                }}
+              />
+              <div
+                className={`${
+                  zoom === 19 ? "block" : "hidden"
+                } fixed top-0 right-0 bottom-0 left-0 z-10 bg-[#0000004d] flex justify-center items-center`}
+              >
+                <div className="w-[80%] relative z-10">
+                  <Image
+                    src={screen_shot_create_rds_19}
+                    alt="vpc"
+                    className="w-full"
+                  />
+                  <Image
+                    src={close}
+                    alt="close"
+                    width={40}
+                    className="absolute top-0 right-0 cursor-pointer bg-[#dbd2d21a] p-1"
+                    onClick={() => setZoom(0)}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Xem lại cấu hình DB và nhập vào các trường như sau</p>
+          <ul className="list-disc ml-[20px]">
+            <li>Trường <b>Name</b> bạn có thể đặt tên tuỳ ý</li>
+            <li>Nhập đúng tất cả các trường, và mật khẩu đã tạo trong database</li>
+            <li>Bấm <b>Test</b> để kiểm tra và click <b>Save</b></li>.
+          </ul>
+          <p>Như vậy bạn đã tạo DB và kết nối tới DB thành công</p>
+          <div className="flex justify-center my-[20px]">
+            <div className="relative w-[80%]">
+              <Image
+                src={screen_shot_create_rds_20}
+                alt="vpc"
+                className="w-full"
+              />
+              <Image
+                src={zoom_in}
+                alt="zoom_in"
+                width={40}
+                className="bg-[#dbd2d21a] absolute top-0 right-0 cursor-pointer"
+                onClick={() => {
+                  setZoom(20);
+                }}
+              />
+              <div
+                className={`${
+                  zoom === 20 ? "block" : "hidden"
+                } fixed top-0 right-0 bottom-0 left-0 z-10 bg-[#0000004d] flex justify-center items-center`}
+              >
+                <div className="w-[80%] relative z-10">
+                  <Image
+                    src={screen_shot_create_rds_20}
                     alt="vpc"
                     className="w-full"
                   />
