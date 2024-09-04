@@ -534,7 +534,7 @@ function SideBar({ id }: { id: ID }) {
               </li> */}
             </ul>
           </div>
-          {/* <div
+          <div
             onClick={() => {
               handleToggleMenu(5);
               handleSelect("create-other");
@@ -580,7 +580,7 @@ function SideBar({ id }: { id: ID }) {
                 </Link>
               </li>
             </ul>
-          </div> */}
+          </div>
         </div>
       </div>
     </div>
