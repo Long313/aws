@@ -12,34 +12,47 @@ import { useEffect, useState } from "react";
 
 function Home() {
   const router = useRouter();
-  const [startAdventure, setStartAdventure] = useState(false);
-  useEffect(() => {
-    // Kích hoạt thông điệp "Let’s begin the adventure" sau 2 giây
-    const timer = setTimeout(() => {
-      setStartAdventure(true);
-    }, 2000);
+  const [welcomeText, setWelcomeText] = useState("");
+  const [adventureText, setAdventureText] = useState("");
 
-    return () => clearTimeout(timer); // Dọn dẹp bộ đếm giờ
+  const welcomeMessage = "Welcome to First Cloud Journey!";
+  const adventureMessage = "Let’s begin the adventure!";
+
+  // Hàm để hiển thị từng chữ cái cho chuỗi
+  const displayText = (message: string, setter: any, delay = 100) => {
+    message.split("").forEach((char, index) => {
+      setTimeout(() => {
+        setter((prev: string) => message.slice(0, index + 1)); // Hiển thị đến ký tự hiện tại
+      }, index * delay);
+    });
+  };
+
+  useEffect(() => {
+    // Hiển thị thông điệp "Welcome to GitHub!" trước
+    displayText(welcomeMessage, setWelcomeText);
+
+    // Hiển thị "Let’s begin the adventure!" sau khi câu đầu hoàn tất
+    setTimeout(() => {
+      displayText(adventureMessage, setAdventureText);
+    }, welcomeMessage.length * 100); // Độ trễ dựa trên độ dài của câu
   }, []);
   return (
     <div>
       <Header />
       <div className="mt-[70px] w-full text-center">
-        <h1 className="text-[30px] text-[#22a6df]">
+        {/* <h1 className="text-[30px] text-[#22a6df]">
           <span className="inline-block">Welcome to First Cl</span>
           <Image src={cloud} alt="cloud" width={30} className="inline-block" />
           <span className="inline-block">ud Journey!</span>
-        </h1>
-        {/* <div className="flex flex-col justify-center items-center h-screen">
-          <h1 className="text-4xl font-bold opacity-0 animate-fadeIn">
-            Welcome to GitHub!
+        </h1> */}
+        <div className="flex flex-col justify-center items-center min-h-[100px]">
+          <h1 className="text-4xl font-bold transition-opacity duration-500 ease-out text-[#22a6df]">
+            {welcomeText}
           </h1>
-          {startAdventure && (
-            <h2 className="text-2xl font-semibold mt-5 opacity-0 animate-fadeInScale">
-              Let’s begin the adventure!
-            </h2>
-          )}
-        </div> */}
+          <h2 className="text-2xl font-semibold mt-5 transition-opacity duration-500 ease-out text-[#22a6df]">
+            {adventureText}
+          </h2>
+        </div>
         <div className="w-full flex justify-center mt-[10px]">
           <div
             className="p-4 cursor-pointer flex items-center justify-center flex-col w-[528px] h-[495px] lg:w-[792px] lg:h-[742px] border-[2px] rounded-[5px]transform scale-95 hover:scale-100 transition-transform duration-300 shadow-2xl"
