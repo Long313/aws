@@ -137,22 +137,34 @@ function CreateVPC({ params }: { params: PageProps }) {
             3.3 Ở mục <b>IPv4 CIDR block</b>, để mặc định là IPv4-CIDR manual
             input.
           </li>
-          <li className="flex items-center">
-            3.4 Ở mục <b>IPv4 CIDR </b> nhập địa chỉ IP của VPC, ở đây mình nhập
-            là <span ref={textRef}>10.10.0.0/16</span>
-            <Image
-              onClick={handleCoppy}
-              src={coppy_icon}
-              alt="coppy-icon"
-              width={10}
-              className="ml-[10px] inline-block cursor-pointer"
-            />
+          <li>
+            <div className="flex items-center">
+              <div>
+                3.4 Ở mục <b>&nbsp;IPv4 CIDR </b> nhập địa chỉ IP của VPC, ở đây
+                mình nhập là&nbsp;
+              </div>
+              <div className="inline-block min-w-[130px] bg-[#1c222a] relative py-[2px] px-[4px] rounded-[4px] overflow-hidden max-h-[30px]">
+                <span
+                  ref={textRef}
+                  className="text-[#abb2bf] bg-[#282c34] font-bold w-full pl-[6px]"
+                >
+                  10.10.0.0/16
+                </span>
+                <Image
+                  src={coppy_icon}
+                  alt="coppy-icon"
+                  width={20}
+                  className="invert filter absolute top-[2px] right-[2px] cursor-pointer"
+                  onClick={handleCoppy}
+                />
+              </div>
+            </div>
           </li>
           <li>
             3.5 Ở mục <b>IPv6 CIDR block</b> để mặc định là No IPv6 CIDR block.
           </li>
           <li>
-            3.5 Ở mục <b>Tenancy</b> để mặc định là Default.
+            3.6 Ở mục <b>Tenancy</b> để mặc định là Default.
           </li>
         </ul>
         <div className="flex justify-center my-[20px]">
