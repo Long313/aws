@@ -63,7 +63,7 @@ function CreateAutoScalingGroup({ params }: { params: PageProps }) {
             bài viết này, mình sẽ hướng dẫn các bạn làm sao để tạo một{" "}
             <b>Launch Template</b> bởi vì:
           </p>
-          <ul className="list-disc">
+          <ul className="list-disc ml-[20px]">
             <li>
               <b>Launch Template</b>: Hỗ trợ nhiều phiên bản EC2, cấu hình chi
               tiết hơn, và có thể cập nhật từng phần.
@@ -74,7 +74,7 @@ function CreateAutoScalingGroup({ params }: { params: PageProps }) {
             </li>
           </ul>
           <p>
-            -Bây giờ chúng ta sẽ bắt đầu tạo <b>Launch Template</b>
+            - Bây giờ chúng ta sẽ bắt đầu tạo <b>Launch Template</b>
           </p>
           <ul className="list-disc ml-[20px]">
             <li>
@@ -281,7 +281,7 @@ function CreateAutoScalingGroup({ params }: { params: PageProps }) {
             </li>
           </ul>
           <p>- Còn trong mục Network settings</p>
-          <ul>
+          <ul className="list-disc ml-[20px]">
             <li>
               Trong phần <b>Subnet</b>, chọn{" "}
               <b>Dont include in launch template</b>
@@ -334,11 +334,11 @@ function CreateAutoScalingGroup({ params }: { params: PageProps }) {
           </div>
           <p>- Trong mục Advanced Detail</p>
           <p>
-            Hãy coppy và dán đoạn lệnh này vào mục <b>User data</b>
+            &nbsp;Hãy coppy và dán đoạn lệnh này vào mục <b>User data</b>
           </p>
-          <div className="bg-[#1c222a] p-[12px] relative mb-[20px]">
+          <div className="bg-[#1c222a] p-[12px] relative mb-[20px] rounded-[4px] overflow-hidden">
             <div
-              className="text-[#abb2bf] bg-[#282c34] py-[4px] px-[8px] rounded-[4px] font-bold"
+              className="text-[#abb2bf] bg-[#282c34] py-[4px] px-[8px]"
               ref={textRef}
             >
               <p className="text-[#096842]">#!/bin/bash</p>
@@ -408,11 +408,11 @@ function CreateAutoScalingGroup({ params }: { params: PageProps }) {
           </p>
           <ul className="list-disc ml-[20px]">
             <li>
-              - Ở mục Launch template, load lại để thấy{" "}
+              Ở mục Launch template, load lại để thấy{" "}
               <b>Public template mà ta vừa tạo</b>
             </li>
             <li>
-              - Click chọn <b>Next</b>
+              Click chọn <b>Next</b>
             </li>
           </ul>
           <div className="flex justify-center my-[20px]">
@@ -612,26 +612,35 @@ function CreateAutoScalingGroup({ params }: { params: PageProps }) {
             </div>
           </div>
           <p>- Step 4: Configure group size and scaling</p>
-          <p>
-            - Ở mục <b>Group size. Phần này mình sẽ cài đặt thủ công số lượng Instance mà mình mong muốn khi tải tăng, giảm hoặc trong điều kiện bình thường. Và phần sau mình sẽ giới thiệu kỹ hơn về tạo <a href="" target="_blank">Scaling Policies</a> cho <b>ASG</b></b>
-          </p>
           <ul className="list-disc ml-[20px]">
-            <li>
-              Ở mục <b>Desired capacity type</b>. Số lượng instance mà bạn muốn
-              Auto Scaling Group duy trì trong điều kiện bình thường. Khi bạn
-              thay đổi số này, Auto Scaling Group sẽ tự động thêm hoặc giảm số
-              lượng instance để đạt tới số lượng này. Mình để là <b>1</b>
-            </li>
+          <li>
+            <b>Group size</b>: Phần này mình sẽ cài đặt thủ công số lượng
+            Instance mà mình mong muốn khi tải tăng, giảm hoặc trong điều kiện
+            bình thường. Và phần sau mình sẽ giới thiệu kỹ hơn về tạo{" "}
+            <a href="" target="_blank">
+              Scaling Policies
+            </a>{" "}
+            cho <b>ASG</b>
+          </li>
+          <li>
+            <b>Desired capacity type</b>. Số lượng instance mà bạn muốn Auto
+            Scaling Group duy trì trong điều kiện bình thường. Khi bạn thay đổi
+            số này, Auto Scaling Group sẽ tự động thêm hoặc giảm số lượng
+            instance để đạt tới số lượng này. Mình để là <b>1</b>
+          </li>
           </ul>
-          <p>
-            - Ở mục <b>Scaling</b>
-          </p>
+          <p>- Ở mục <b>Scaling:</b></p>
           <ul className="list-disc ml-[20px]">
             <li>
-              Ở mục <b>Min desired capacity</b>. Đây là số lượng instance tối thiểu mà Auto Scaling Group sẽ luôn duy trì. Nếu tải trên ứng dụng giảm, nhóm sẽ không giảm số lượng instance xuống dưới số này. Mình để là <b>1</b>.
+             Trong mục <b>Min desired capacity</b>. Đây là số lượng instance tối
+              thiểu mà Auto Scaling Group sẽ luôn duy trì. Nếu tải trên ứng dụng
+              giảm, nhóm sẽ không giảm số lượng instance xuống dưới số này. Mình
+              để là <b>1</b>.
             </li>
             <li>
-              Ở mục <b>Max desired capacity</b>. Đây là số lượng instance tối đa mà Auto Scaling Group có thể mở rộng tới. Khi nhu cầu tăng lên, nhóm sẽ không thêm instance vượt quá số này. Mình để là <b>2</b>.
+              Ở mục <b>Max desired capacity</b>. Đây là số lượng instance tối đa
+              mà Auto Scaling Group có thể mở rộng tới. Khi nhu cầu tăng lên,
+              nhóm sẽ không thêm instance vượt quá số này. Mình để là <b>2</b>.
             </li>
           </ul>
           <div className="flex justify-center my-[20px]">
@@ -672,8 +681,14 @@ function CreateAutoScalingGroup({ params }: { params: PageProps }) {
               </div>
             </div>
           </div>
-          <p>- Step 5 <b>Add notifications</b> và Step 6 <b>Add tags</b> ở đây mình k thêm gì và bấm <b>Next</b>.</p>
-          <p>- Step 7 <b>Review</b> và chỉnh sửa nếu cần, sau đó click <b>Create Auto Scaling group</b>.</p>
+          <p>
+            - Step 5 <b>Add notifications</b> và Step 6 <b>Add tags</b> ở đây
+            mình k thêm gì và bấm <b>Next</b>.
+          </p>
+          <p>
+            - Step 7 <b>Review</b> và chỉnh sửa nếu cần, sau đó click{" "}
+            <b>Create Auto Scaling group</b>.
+          </p>
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[80%]">
               <Image
@@ -711,8 +726,10 @@ function CreateAutoScalingGroup({ params }: { params: PageProps }) {
                 </div>
               </div>
             </div>
-          </div>  
-          <p>Cuối cùng đã tạo thành công <b>Auto Scaling Group</b></p> 
+          </div>
+          <p>
+            Cuối cùng đã tạo thành công <b>Auto Scaling Group</b>
+          </p>
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[80%]">
               <Image
@@ -751,7 +768,11 @@ function CreateAutoScalingGroup({ params }: { params: PageProps }) {
               </div>
             </div>
           </div>
-          <p>- Khi mình vào mục ALB thì thấy <b>Public 1 EC2</b> có id là<b>i-0ff404a557565baeb</b> đã <span className="text-[#d13212]">unhealthy</span></p>    
+          <p>
+            - Khi mình vào mục ALB thì thấy <b>Public 1 EC2</b> có id là
+            <b>i-0ff404a557565baeb</b> đã{" "}
+            <span className="text-[#d13212]">unhealthy</span>
+          </p>
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[80%]">
               <Image
@@ -790,7 +811,16 @@ function CreateAutoScalingGroup({ params }: { params: PageProps }) {
               </div>
             </div>
           </div>
-          <p>- Khi mình quay lại kiểm tra trong mục <b>Instances</b> của <b>EC2 Dasboard</b> thì thấy có một <b>EC2 Instance</b> mới được tạo ra (đánh dấu <span className="text-[#1d8102]">màu xanh lá cây</span>) và <b>Public 1 EC2</b> (đánh dấu <span className="text-[#d13212]">màu đỏ</span> - ở trạng thái <span className="text-[#d13212]">unhealthy</span>)  và không có tên. Đây chính là <b>Instance</b> tự động tạo ra do <b>Auto Scaling Group</b>.</p>    
+          <p>
+            - Và khi mình quay lại kiểm tra trong mục <b>Instances</b> của{" "}
+            <b>EC2 Dasboard</b> thì thấy có một <b>EC2 Instance</b> mới được tạo
+            ra (đánh dấu <span className="text-[#1d8102]">màu xanh lá cây</span>
+            ) và <b>Public 1 EC2</b> (đánh dấu{" "}
+            <span className="text-[#d13212]">màu đỏ</span> - ở trạng thái{" "}
+            <span className="text-[#d13212]">unhealthy</span>) và không có tên.
+            Đây chính là <b>Instance</b> tự động tạo ra do{" "}
+            <b>Auto Scaling Group</b>.
+          </p>
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[80%]">
               <Image

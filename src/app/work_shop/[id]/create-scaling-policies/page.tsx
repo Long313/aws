@@ -281,7 +281,7 @@ function CreateAutoScalingGroup({ params }: { params: PageProps }) {
             </li>
           </ul>
           <p>- Còn trong mục Network settings</p>
-          <ul>
+          <ul className="list-disc ml-[20px]">
             <li>
               Trong phần <b>Subnet</b>, chọn{" "}
               <b>Dont include in launch template</b>
@@ -336,9 +336,9 @@ function CreateAutoScalingGroup({ params }: { params: PageProps }) {
           <p>
             Hãy coppy và dán đoạn lệnh này vào mục <b>User data</b>
           </p>
-          <div className="bg-[#1c222a] p-[12px] relative mb-[20px]">
+          <div className="bg-[#1c222a] p-[12px] relative mb-[20px] rounded-[4px] overflow-hidden">
             <div
-              className="text-[#abb2bf] bg-[#282c34] py-[4px] px-[8px] rounded-[4px] font-bold"
+              className="text-[#abb2bf] bg-[#282c34] py-[4px] px-[8px]"
               ref={textRef}
             >
               <p className="text-[#096842]">#!/bin/bash</p>
@@ -408,11 +408,11 @@ function CreateAutoScalingGroup({ params }: { params: PageProps }) {
           </p>
           <ul className="list-disc ml-[20px]">
             <li>
-              - Ở mục Launch template, load lại để thấy{" "}
+              Ở mục Launch template, load lại để thấy{" "}
               <b>Public template mà ta vừa tạo</b>
             </li>
             <li>
-              - Click chọn <b>Next</b>
+              Click chọn <b>Next</b>
             </li>
           </ul>
           <div className="flex justify-center my-[20px]">

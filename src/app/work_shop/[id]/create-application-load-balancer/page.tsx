@@ -60,14 +60,16 @@ function CreateApplicationLoadBalancer({ params }: { params: PageProps }) {
           <p className="text-[#22a6df]">
             Các bước tạo một Application Load Balancer
           </p>
+          <p>
+            - Đầu tiên, trong giao diện của <b>EC2 Dashboard</b>
+          </p>
           <ul className="list-disc ml-[20px]">
-            <li>
-              - Đầu tiên, giao diện của <b>EC2 Dashboard</b>, Click chọn{" "}
-              <b>Load Balancers</b>
-            </li>
-            <li>
-              - Tiếp theo, click chọn <b>Create load balancer</b>
-            </li>
+            <p>
+              click chọn <b> Load Balancers</b>
+            </p>
+            <p>
+              Tiếp theo, click chọn <b>Create load balancer</b>
+            </p>
           </ul>
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[80%]">
@@ -641,8 +643,13 @@ function CreateApplicationLoadBalancer({ params }: { params: PageProps }) {
             </div>
           </div>
           <ul className="list-disc ml-[20px]">
-            <li>Sau đó, ở mục <b>Review target</b>sẽ xuất hiện những Instance mà mình đã chọn</li>
-            <li>Click chọn <b>Create target group</b></li>
+            <li>
+              Sau đó, ở mục <b>Review target</b>sẽ xuất hiện những Instance mà
+              mình đã chọn
+            </li>
+            <li>
+              Click chọn <b>Create target group</b>
+            </li>
           </ul>
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[80%]">
@@ -682,7 +689,10 @@ function CreateApplicationLoadBalancer({ params }: { params: PageProps }) {
               </div>
             </div>
           </div>
-          <p>- Quay trở lại mục <b>Listener and routing</b> đã xuất hiện <b>Target group vừa mới tạo</b>. Click chọn <b>TG-ALB</b></p>
+          <p>
+            - Quay trở lại mục <b>Listener and routing</b> đã xuất hiện{" "}
+            <b>Target group vừa mới tạo</b>. Click chọn <b>TG-ALB</b>
+          </p>
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[80%]">
               <Image
@@ -720,8 +730,11 @@ function CreateApplicationLoadBalancer({ params }: { params: PageProps }) {
                 </div>
               </div>
             </div>
-          </div>    
-          <p>- Tất cả các mục còn lại để mặc đinh. Click chọn <b>Create Load Balancer</b></p>
+          </div>
+          <p>
+            - Tất cả các mục còn lại để mặc đinh. Click chọn{" "}
+            <b>Create Load Balancer</b>
+          </p>
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[80%]">
               <Image
@@ -759,7 +772,7 @@ function CreateApplicationLoadBalancer({ params }: { params: PageProps }) {
                 </div>
               </div>
             </div>
-          </div>  
+          </div>
           <p>- Khi xuất hiện giao diện này, thì bạn đã tạo thành công ALB</p>
           <div className="flex justify-center my-[20px]">
             <div className="relative w-[80%]">
@@ -798,7 +811,7 @@ function CreateApplicationLoadBalancer({ params }: { params: PageProps }) {
                 </div>
               </div>
             </div>
-          </div>     
+          </div>
         </div>
       </div>
     </Layout>
