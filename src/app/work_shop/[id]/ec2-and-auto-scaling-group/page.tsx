@@ -21,7 +21,7 @@ function EC2({ params }: { params: PageProps }) {
             Cloud
           </p>
           <p>
-            - Sử dụng Amazon EC2 giúp giảm chi phí phần cứng đê bạn có thể phát
+            - Sử dụng Amazon EC2 giúp giảm chi phí phần cứng để bạn có thể phát
             triển và triển khai ứng dụng nhanh hơn. Bạn có thể sử dụng Amazon
             EC2 để khởi chạy nhiều hoặc ít máy chủ ảo tùy theo nhu cầu, cấu hình
             bảo mật và mạng cũng như quản lý lưu trữ. Bạn có thể thêm dung lượng

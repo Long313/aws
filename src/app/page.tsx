@@ -1,4 +1,6 @@
 "use client";
+import { GetServerSideProps, GetServerSidePropsContext } from "next";
+
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./globals.css";
 
@@ -10,12 +12,25 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
+export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {
+  // Fetch dữ liệu từ API hoặc cơ sở dữ liệu
+  const res = await fetch("https://api.example.com/data");
+  const data = await res.json();
+
+  // Trả về props sẽ được truyền vào component của trang
+  return {
+    props: {
+      data, // Props sẽ được truyền vào component
+    },
+  };
+}
+
 function Home() {
   const router = useRouter();
   const [welcomeText, setWelcomeText] = useState("");
   const [adventureText, setAdventureText] = useState("");
 
-  const welcomeMessage = "Welcome to First Cloud Journey!";
+  const welcomeMessage = "Welcome to First Cloud Journey";
   const adventureMessage = "Let’s begin the adventure!";
 
   // Hàm để hiển thị từng chữ cái cho chuỗi
@@ -28,7 +43,7 @@ function Home() {
   };
 
   useEffect(() => {
-    // Hiển thị thông điệp "Welcome to GitHub!" trước
+    // Hiển thị "Welcome to GitHub!" trước
     displayText(welcomeMessage, setWelcomeText);
 
     // Hiển thị "Let’s begin the adventure!" sau khi câu đầu hoàn tất
