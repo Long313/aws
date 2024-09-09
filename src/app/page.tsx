@@ -1,5 +1,5 @@
 "use client";
-import { GetServerSideProps, GetServerSidePropsContext } from "next";
+// import { GetServerSideProps, GetServerSidePropsContext } from "next";
 
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./globals.css";
@@ -11,19 +11,19 @@ import cloud from "../images/cloud.png";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import { getPost, getViewOrLikePost, increaseLikePost } from "@/service/api";
+import { URL_API_VIEWS_POST } from "@/constant";
 
-export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {
-  // Fetch dữ liệu từ API hoặc cơ sở dữ liệu
-  const res = await fetch("https://api.example.com/data");
-  const data = await res.json();
+// export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {
+//   const res = await fetch("https://api.example.com/data");
+//   const data = await res.json();
 
-  // Trả về props sẽ được truyền vào component của trang
-  return {
-    props: {
-      data, // Props sẽ được truyền vào component
-    },
-  };
-}
+//   return {
+//     props: {
+//       data,
+//     },
+//   };
+// }
 
 function Home() {
   const router = useRouter();
@@ -51,6 +51,27 @@ function Home() {
       displayText(adventureMessage, setAdventureText);
     }, welcomeMessage.length * 100); // Độ trễ dựa trên độ dài của câu
   }, []);
+  // const handleIncreaseView = async () => {
+  //   const post = await getViewOrLikePost(URL_API_VIEWS_POST, )
+  // }
+  // const increaseView = (url, id) => {
+
+  // }
+
+  const handleIncreaseView = async () => {
+    // const res = await increaseLikePost(
+    //   URL_API_VIEWS_POST,
+    //   "66de4a54addab3c0d0d3ffd3"
+    // );
+    // console.log("res", res);
+    const res = await likePost(URL_API_VIEWS_POST, "66de4a54addab3c0d0d3ffd3");
+    return res;
+  };
+  const likePost = async (url: string, id: string) => {
+    const data = await increaseLikePost(url, id);
+    console.log("data123", data);
+    return data;
+  };
   return (
     <div>
       <Header />
@@ -71,7 +92,10 @@ function Home() {
         <div className="w-full flex justify-center mt-[10px]">
           <div
             className="p-4 cursor-pointer flex items-center justify-center flex-col w-[528px] h-[495px] lg:w-[792px] lg:h-[742px] border-[2px] rounded-[5px]transform scale-95 hover:scale-100 transition-transform duration-300 shadow-2xl"
-            onClick={() => router.push("/work_shop/1/introduce")}
+            onClick={() => {
+              handleIncreaseView();
+              router.push("/work_shop/1/introduce");
+            }}
           >
             <h2 className="mt-[10px] font-bold opacity-80">
               Workshop 1 - High Availability Architecture
