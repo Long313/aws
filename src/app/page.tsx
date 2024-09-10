@@ -7,12 +7,17 @@ import "./globals.css";
 import Header from "@/components/Header/page";
 import work_shop from "../images/work_shop.drawio.png";
 import eye_icon from "../images/eye_icon.png";
-import cloud from "../images/cloud.png";
+import heart_icon from "../images/heart_icon.png";
+import heart_white_icon from "../images/heart_white_icon.png";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { getPost, getViewOrLikePost, increaseLikePost } from "@/service/api";
-import { URL_API_VIEWS_POST } from "@/constant";
+import { getPost, increaseLikeOrViewPost } from "@/service/api";
+import {
+  URL_API_LIKES_POST,
+  URL_API_POST,
+  URL_API_VIEWS_POST,
+} from "@/constant";
 
 // export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {
 //   const res = await fetch("https://api.example.com/data");
@@ -29,6 +34,9 @@ function Home() {
   const router = useRouter();
   const [welcomeText, setWelcomeText] = useState("");
   const [adventureText, setAdventureText] = useState("");
+  const [viewPostFirst, setViewPostFirst] = useState(1);
+  const [likePostFirst, setLikePostFirst] = useState(1);
+  const [isLike, setIsLike] = useState(false);
 
   const welcomeMessage = "Welcome to First Cloud Journey";
   const adventureMessage = "Let’s begin the adventure!";
@@ -51,26 +59,40 @@ function Home() {
       displayText(adventureMessage, setAdventureText);
     }, welcomeMessage.length * 100); // Độ trễ dựa trên độ dài của câu
   }, []);
-  // const handleIncreaseView = async () => {
-  //   const post = await getViewOrLikePost(URL_API_VIEWS_POST, )
-  // }
-  // const increaseView = (url, id) => {
-
-  // }
 
   const handleIncreaseView = async () => {
-    // const res = await increaseLikePost(
-    //   URL_API_VIEWS_POST,
-    //   "66de4a54addab3c0d0d3ffd3"
-    // );
-    // console.log("res", res);
-    const res = await likePost(URL_API_VIEWS_POST, "66de4a54addab3c0d0d3ffd3");
+    const res = await viewPost(URL_API_VIEWS_POST, "66de4a54addab3c0d0d3ffd3");
+    return res;
+  };
+  const viewPost = async (url: string, id: string) => {
+    const data = await increaseLikeOrViewPost(url, id);
+    return data;
+  };
+  const handleIncreaseLike = async (e: any) => {
+    e.stopPropagation();
+    const res = await likePost(URL_API_LIKES_POST, "66de4a54addab3c0d0d3ffd3");
     return res;
   };
   const likePost = async (url: string, id: string) => {
-    const data = await increaseLikePost(url, id);
-    console.log("data123", data);
+    const data = await increaseLikeOrViewPost(url, id);
+    setLikePostFirst((pre) => pre + 1);
+    setIsLike(true);
     return data;
+  };
+
+  //handleIncreaseLike
+  useEffect(() => {
+    const handleGetPost = async (url: string, id: string) => {
+      const res = await handleGetLike(url, id);
+      setViewPostFirst(res.data.views);
+      setLikePostFirst(res.data.likes);
+    };
+    handleGetPost(URL_API_POST, "66de4a54addab3c0d0d3ffd3");
+  }, []);
+
+  const handleGetLike = async (url: string, id: string) => {
+    const res = await getPost(url, id);
+    return res.data;
   };
   return (
     <div>
@@ -117,8 +139,18 @@ function Home() {
                   width={20}
                   className="mr-[2px]"
                 />
-                <span className="">: 3</span>
+                <span className="">: {viewPostFirst}</span>
                 <span className="ml-[4px]">views</span>
+              </div>
+              <div className="flex">
+                <Image
+                  src={isLike ? heart_icon : heart_white_icon}
+                  alt="eye-icon"
+                  width={20}
+                  className="mr-[2px]"
+                  onClick={(e) => handleIncreaseLike(e)}
+                />
+                <span className="">: {likePostFirst}</span>
               </div>
               <p className="text-[#22a6df] opacity-50 hover:opacity-100 font-medium">
                 View more &#8594;

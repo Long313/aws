@@ -1,18 +1,5 @@
 import api from "../utils/api";
 
-export const getPost = (url: string, id: string) => {
-  return api({
-    headers: {
-      // Authorization: `Bearer ${token}`,
-      "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "*",
-      // userID: `${sectionID}`,
-    },
-    method: "GET",
-    url: `/${url}/${id}`,
-  });
-};
-
 export const getViewOrLikePost = (url: string, id: string) => {
   return api({
     headers: {
@@ -26,7 +13,7 @@ export const getViewOrLikePost = (url: string, id: string) => {
   });
 };
 
-export const increaseLikePost = (url: string, id: any) => {
+export const increaseLikeOrViewPost = (url: string, id: any) => {
   console.log(url, api);
   return api({
     headers: {
@@ -40,5 +27,19 @@ export const increaseLikePost = (url: string, id: any) => {
     // data: {
     //   ...params,
     // },
+  });
+};
+
+
+export const getPost = (url: string, id: string) => {
+  return api({
+    headers: {
+      // Authorization: `Bearer ${token}`,
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
+      // userID: `${sectionID}`,
+    },
+    method: "GET",
+    url: `${url}/${id}`,
   });
 };
