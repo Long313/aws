@@ -1,4 +1,4 @@
-import SideBar from "../SideBar/sidebar";
+import SideBar from "../SideBar/page";
 
 function Layout({ children, id }: { children: any; id: any }) {
   return (

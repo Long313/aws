@@ -9,10 +9,15 @@ import work_shop from "../images/work_shop.drawio.png";
 import eye_icon from "../images/eye_icon.png";
 import heart_icon from "../images/heart_icon.png";
 import heart_white_icon from "../images/heart_white_icon.png";
+import nestjs_logo from "../images/nestjs.svg";
+import ec2 from "../images/ec2.png";
+import add_icon from "../images/add_icon.png";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { getPost, increaseLikeOrViewPost } from "@/service/api";
+import useBearStore from '../app/store/store';
+
 import {
   URL_API_LIKES_POST,
   URL_API_POST,
@@ -31,6 +36,8 @@ import {
 // }
 
 function Home() {
+  const {mode} = useBearStore();
+
   const router = useRouter();
   const [welcomeText, setWelcomeText] = useState("");
   const [adventureText, setAdventureText] = useState("");
@@ -94,10 +101,14 @@ function Home() {
     const res = await getPost(url, id);
     return res.data;
   };
+  const [isMode, setIsMode] = useState<boolean>(mode);
+  useEffect(() => {
+    setIsMode(mode)
+  },[mode])
   return (
-    <div>
+    <div>s
       <Header />
-      <div className="mt-[70px] w-full text-center">
+      <div className={`mt-[70px] w-full text-center ${isMode ? 'bg-[#000]': 'bg-[#fff]'}`}>
         {/* <h1 className="text-[30px] text-[#22a6df]">
           <span className="inline-block">Welcome to First Cl</span>
           <Image src={cloud} alt="cloud" width={30} className="inline-block" />
@@ -111,50 +122,117 @@ function Home() {
             {adventureText}
           </h2>
         </div>
-        <div className="w-full flex justify-center mt-[10px]">
-          <div
-            className="p-4 cursor-pointer flex items-center justify-center flex-col w-[528px] h-[495px] lg:w-[792px] lg:h-[742px] border-[2px] rounded-[5px]transform scale-95 hover:scale-100 transition-transform duration-300 shadow-2xl"
-            onClick={() => {
-              handleIncreaseView();
-              router.push("/work_shop/1/introduce");
-            }}
-          >
-            <h2 className="mt-[10px] font-bold opacity-80">
-              Workshop 1 - High Availability Architecture
-            </h2>
-            <Image
-              src={work_shop}
-              alt="work_shop_1"
-              className="w-[90%] h-[90%] cursor-pointer p-[10px]"
-            />
-            <div className="flex justify-between items-center w-full px-[46px] mt-[20px]">
-              <div>
-                <span className="text-[#22a6df]">Author:</span>
-                <span className="ml-[6px] italic font-bold">Long Tran</span>
+        <div className="flex items-center justify-between mx-auto">
+          <div className="w-1/2 flex justify-center mt-[10px]">
+            <div
+              className="p-4 cursor-pointer flex items-center justify-center flex-col lg:w-[792px] lg:h-[742px] border-[2px] rounded-[5px]transform scale-95 hover:scale-100 transition-transform duration-300 shadow-2xl"
+              onClick={() => {
+                handleIncreaseView();
+                router.push("/work_shop/1/introduce");
+              }}
+            >
+              <h2 className="mt-[10px] font-bold opacity-80">
+                Workshop 1 - High Availability Architecture
+              </h2>
+              <Image
+                src={work_shop}
+                alt="work_shop_1"
+                className="w-[90%] h-[90%] cursor-pointer p-[10px]"
+              />
+              <div className="flex justify-between items-center w-full px-[46px] mt-[20px]">
+                <div>
+                  <span className="text-[#22a6df]">Author:</span>
+                  <span className="ml-[6px] italic font-bold">Long Tran</span>
+                </div>
+                <div className="flex">
+                  <Image
+                    src={eye_icon}
+                    alt="eye-icon"
+                    width={20}
+                    className="mr-[2px]"
+                  />
+                  <span className="">: {viewPostFirst}</span>
+                  <span className="ml-[4px]">views</span>
+                </div>
+                <div className="flex">
+                  <Image
+                    src={isLike ? heart_icon : heart_white_icon}
+                    alt="eye-icon"
+                    width={20}
+                    className="mr-[2px]"
+                    onClick={(e) => handleIncreaseLike(e)}
+                  />
+                  <span className="">: {likePostFirst}</span>
+                </div>
+                <p className="text-[#22a6df] opacity-50 hover:opacity-100 font-medium">
+                  View more &#8594;
+                </p>
               </div>
-              <div className="flex">
+            </div>
+          </div>
+          <div className="w-1/2 flex justify-center mt-[10px]">
+            <div
+              className="p-4 h-full cursor-pointer flex items-center justify-center flex-col lg:w-[792px] lg:h-[742px] border-[2px] rounded-[5px]transform scale-95 hover:scale-100 transition-transform duration-300 shadow-2xl"
+              onClick={() => {
+                handleIncreaseView();
+                router.push("/work_shop/2/introduce");
+              }}
+            >
+              <h2 className="mt-[10px] font-bold opacity-80">
+                Workshop 2 - Deploy NestJS project by EC2 Instance
+              </h2>
+              <div className="rounded-[4px] flex-1 flex items-center justify-center border-[2px] border-[#ccc] w-[90%] h-[60%] my-[100px]">
+                <div className="flex flex-col items-center">
+                  <Image
+                    src={nestjs_logo}
+                    alt="logo-nestjs"
+                    className="inline-block max-w-[100px]"
+                  />
+                  <p>NestJS</p>
+                </div>
                 <Image
-                  src={eye_icon}
-                  alt="eye-icon"
-                  width={20}
-                  className="mr-[2px]"
+                  src={add_icon}
+                  alt="add-icon"
+                  className="inline-block max-w-[50px] mx-[50px]"
                 />
-                <span className="">: {viewPostFirst}</span>
-                <span className="ml-[4px]">views</span>
+                <div className="flex flex-col items-center">
+                  <Image
+                    src={ec2}
+                    alt="logo-ec2"
+                    className="inline-block max-w-[100px] rounded-[4px]"
+                  />
+                  <p>EC2 Intance</p>
+                </div>
               </div>
-              <div className="flex">
-                <Image
-                  src={isLike ? heart_icon : heart_white_icon}
-                  alt="eye-icon"
-                  width={20}
-                  className="mr-[2px]"
-                  onClick={(e) => handleIncreaseLike(e)}
-                />
-                <span className="">: {likePostFirst}</span>
+              <div className="flex justify-between items-center w-full px-[46px] mt-[20px]">
+                <div>
+                  <span className="text-[#22a6df]">Author:</span>
+                  <span className="ml-[6px] italic font-bold">Long Tran</span>
+                </div>
+                <div className="flex">
+                  <Image
+                    src={eye_icon}
+                    alt="eye-icon"
+                    width={20}
+                    className="mr-[2px]"
+                  />
+                  <span className="">: {viewPostFirst}</span>
+                  <span className="ml-[4px]">views</span>
+                </div>
+                <div className="flex">
+                  <Image
+                    src={isLike ? heart_icon : heart_white_icon}
+                    alt="eye-icon"
+                    width={20}
+                    className="mr-[2px]"
+                    onClick={(e) => handleIncreaseLike(e)}
+                  />
+                  <span className="">: {likePostFirst}</span>
+                </div>
+                <p className="text-[#22a6df] opacity-50 hover:opacity-100 font-medium">
+                  View more &#8594;
+                </p>
               </div>
-              <p className="text-[#22a6df] opacity-50 hover:opacity-100 font-medium">
-                View more &#8594;
-              </p>
             </div>
           </div>
         </div>

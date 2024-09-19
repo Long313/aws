@@ -17,7 +17,7 @@ function Blog() {
             <Image
               src={work_shop}
               alt="work_shop_1"
-              className="w-[90%] h-[90%] cursor-pointer  p-[10px]"/>
+              className="w-[90%] h-[90%] cursor-pointer p-[10px]"/>
           </div>
         </div>
       </div>

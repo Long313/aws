@@ -5,6 +5,7 @@ import logo from "../../images/logo.svg";
 import seachIcon from "../../images/search_icon.png";
 import { ChangeEvent, useState } from "react";
 import Link from "next/link";
+import DayNightToggler from "../DayNightToggler/page";
 
 function Header() {
   const router = useRouter();
@@ -49,6 +50,9 @@ function Header() {
         </span>
         <span className="inline-block ml-[10px]">Contact</span>
         <span className="inline-block ml-[10px]">Signin</span>
+        <div className="">
+          <DayNightToggler/>
+        </div>
       </div>
     </div>
   );
