@@ -34,7 +34,7 @@ const DayNightToggler: React.FC<any> = () => {
           </div>
           <div className="scenary relative flex items-center">
             {isNight ? (
-              <div className="moon absolute w-full h-full flex justify-center items-center">
+              <div className="moon absolute w-[50px] h-[50px] flex justify-center items-center">
                   <Image
                     src={moon_icon}
                     alt="moon_icon"
@@ -42,11 +42,11 @@ const DayNightToggler: React.FC<any> = () => {
                   />
               </div>
             ) : (
-              <div className="sun absolute w-full h-full flex justify-center items-center">
+              <div className="sun absolute w-[50px] h-[50px] flex justify-center items-center">
                 <Image
                   src={sun_icon}
                   alt="sun_icon"
-                  className="inline-block h-[60%] w-[60%]"
+                  className="inline-block h-[50%] w-[50%]"
                 />
               </div>
             )}
