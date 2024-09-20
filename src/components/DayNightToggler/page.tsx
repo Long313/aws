@@ -4,21 +4,22 @@ import Image from "next/image";
 import sun_icon from "../../images/sun_icon.png";
 import moon_icon from "../../images/moon_icon.png";
 import useBearStore from '../../app/store/store';
+import useStore from "../../app/store/store";
 
 const DayNightToggler: React.FC<any> = () => {
   // State để lưu trữ trạng thái bật/tắt (ngày/đêm)
   const [isNight, setIsNight] = useState(false);
-  const {setMode} = useBearStore();
+  const changeNode = useStore((state) => state.setMode)
 
 
   // Hàm để xử lý khi checkbox được thay đổi
   const handleToggle = () => {
     setIsNight(!isNight);
-    setMode(!isNight);
+    changeNode(!isNight);
   };
 
   return (
-    <div className={`container ${isNight ? "night" : "day"}`}>
+    <div className={`mx-[20px] container ${isNight ? "night" : "day"}`}>
       <div className="btn">
         <input
           type="checkbox"

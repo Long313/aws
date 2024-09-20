@@ -16,7 +16,7 @@ function Header() {
     setSearchText(e.target.value);
   };
   return (
-    <div className="z-10 fixed px-[20px] top-0 right-0 left-0 h-[50px] bg-[#283e5b] text-white flex justify-between items-center">
+    <div className="z-10 fixed px-[20px] top-0 right-0 left-0 h-[70px] bg-[#283e5b] text-white flex justify-between items-center">
       <div className="w-1/3">
         <Link href="/">
           <Image
@@ -32,7 +32,7 @@ function Header() {
           src={seachIcon}
           alt="search_icon"
           width={20}
-          className="absolute top-[15px] left-[15px] filter invert"
+          className="absolute top-[50%] translate-y-[-50%] left-[15px] filter invert"
         />
         <input
           value={searchText}

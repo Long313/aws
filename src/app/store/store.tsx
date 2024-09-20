@@ -11,14 +11,14 @@ interface BearState {
     mode: boolean;
   }
 
-const useBearStore = create<BearState>((set) => ({
+const useStore = create<BearState>((set) => ({
   id: 0,
   menuId: 0,
   mode: false,
   setId: () => set((state : any) => ({ id: state })),
   setMenuId: () => set((state : any) => ({ menuId: state })),
   clearId: () => set({ id: 0 }),
-  setMode: () => set((state: any) => ({mode: state}))
+  setMode: (state: boolean) => set({ mode : state }),
 }))
 
-export default useBearStore;
+export default useStore;

@@ -16,13 +16,12 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { getPost, increaseLikeOrViewPost } from "@/service/api";
-import useBearStore from '../app/store/store';
-
 import {
   URL_API_LIKES_POST,
   URL_API_POST,
   URL_API_VIEWS_POST,
 } from "@/constant";
+import useStore from "../app/store/store";
 
 // export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {
 //   const res = await fetch("https://api.example.com/data");
@@ -36,7 +35,7 @@ import {
 // }
 
 function Home() {
-  const {mode} = useBearStore();
+  const mode = useStore((state) => state.mode)
 
   const router = useRouter();
   const [welcomeText, setWelcomeText] = useState("");
@@ -103,12 +102,13 @@ function Home() {
   };
   const [isMode, setIsMode] = useState<boolean>(mode);
   useEffect(() => {
+    console.log("mode", mode)
     setIsMode(mode)
   },[mode])
   return (
-    <div>s
+    <div>
       <Header />
-      <div className={`mt-[70px] w-full text-center ${isMode ? 'bg-[#000]': 'bg-[#fff]'}`}>
+      <div className={`pt-[20px] mt-[70px] w-full text-center ${isMode ? 'bg-[#000] text-white': 'bg-[#fff] text-black'}`}>
         {/* <h1 className="text-[30px] text-[#22a6df]">
           <span className="inline-block">Welcome to First Cl</span>
           <Image src={cloud} alt="cloud" width={30} className="inline-block" />
