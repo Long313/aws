@@ -38,7 +38,7 @@ const DayNightToggler: React.FC<any> = () => {
                   <Image
                     src={moon_icon}
                     alt="moon_icon"
-                    className="inline-block h-[60%] w-[60%]"
+                    className="inline-block h-[50%] w-[50%]"
                   />
               </div>
             ) : (
@@ -46,7 +46,7 @@ const DayNightToggler: React.FC<any> = () => {
                 <Image
                   src={sun_icon}
                   alt="sun_icon"
-                  className="inline-block h-[70%] w-[70%]"
+                  className="inline-block h-[60%] w-[60%]"
                 />
               </div>
             )}
