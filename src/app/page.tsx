@@ -159,7 +159,7 @@ function Home() {
                     src={isLike ? heart_icon : heart_white_icon}
                     alt="eye-icon"
                     width={20}
-                    className="mr-[2px]"
+                    className={`mr-[2px] ${isMode ? 'filter invert': ''}`}
                     onClick={(e) => handleIncreaseLike(e)}
                   />
                   <span className="">: {likePostFirst}</span>
@@ -224,7 +224,7 @@ function Home() {
                     src={isLike ? heart_icon : heart_white_icon}
                     alt="eye-icon"
                     width={20}
-                    className="mr-[2px]"
+                    className={`mr-[2px] ${isMode ? 'filter invert': ''}`}
                     onClick={(e) => handleIncreaseLike(e)}
                   />
                   <span className="">: {likePostFirst}</span>
