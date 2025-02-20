@@ -1,5 +1,5 @@
-export default function handler(req : any, res : any) {
-    res.status(200).send({
+export async function GET() {
+    return Response.json({ message: {
         "articles": {},
         "current_user_id": null,
         "profile_search": {},
@@ -6019,6 +6019,5 @@ export default function handler(req : any, res : any) {
             "page_size": 30,
             "dedup": true
         }
-    });
+    } });
   }
-  
