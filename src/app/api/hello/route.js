@@ -1,5 +1,5 @@
 export async function GET() {
-    return Response.json({ message: {
+    return Response.json({
         data: [
             {
                 id: 1,
@@ -42,5 +42,5 @@ export async function GET() {
                 image: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd"
             },
         ]
-    } });
+    } );
   }
