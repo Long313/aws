@@ -87,19 +87,19 @@ function Home() {
   };
 
   //handleIncreaseLike
-  useEffect(() => {
-    const handleGetPost = async (url: string, id: string) => {
-      const res = await handleGetLike(url, id);
-      setViewPostFirst(res.data.views);
-      setLikePostFirst(res.data.likes);
-    };
-    handleGetPost(URL_API_POST, "66de4a54addab3c0d0d3ffd3");
-  }, []);
+  // useEffect(() => {
+  //   const handleGetPost = async (url: string, id: string) => {
+  //     const res = await handleGetLike(url, id);
+  //     setViewPostFirst(res.data.views);
+  //     setLikePostFirst(res.data.likes);
+  //   };
+  //   handleGetPost(URL_API_POST, "66de4a54addab3c0d0d3ffd3");
+  // }, []);
 
-  const handleGetLike = async (url: string, id: string) => {
-    const res = await getPost(url, id);
-    return res.data;
-  };
+  // const handleGetLike = async (url: string, id: string) => {
+  //   const res = await getPost(url, id);
+  //   return res.data;
+  // };
   const [isMode, setIsMode] = useState<boolean>(mode);
   useEffect(() => {
     console.log("mode", mode)
