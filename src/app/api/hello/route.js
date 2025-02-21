@@ -23,7 +23,13 @@ export async function GET() {
                 ticketPrice: 10,
                 host: "Vietnam Private Capital Agency (VPCA)",
                 followers: 29,
-                image: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd"
+                image: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd",
+                client: {
+                    avatar: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd",
+                    name: "Nguyen Van A",
+                    age: 29,
+                    address: "District 7, Ho Chi Minh city"
+                }
             },
             {
                 id: 2,
@@ -35,8 +41,13 @@ export async function GET() {
                 ticketPrice: 0,
                 host: "Vietnam Private Capital Agency (VPCA)",
                 followers: 29,
-                image: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd"
-            },
+                image: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd",
+                client: {
+                    avatar: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd",
+                    name: "Nguyen Van A",
+                    age: 29,
+                    address: "District 7, Ho Chi Minh city"
+                }            },
             {
                 id: 3,
                 type: "appointment",
@@ -47,8 +58,13 @@ export async function GET() {
                 ticketPrice: 20,
                 host: "Vietnam Private Capital Agency (VPCA)",
                 followers: 29,
-                image: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd"
-            },
+                image: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd",
+                client: {
+                    avatar: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd",
+                    name: "Nguyen Van A",
+                    age: 29,
+                    address: "District 7, Ho Chi Minh city"
+                }            },
             {
                 id: 4,
                 type: "event",
@@ -59,8 +75,13 @@ export async function GET() {
                 ticketPrice: 50,
                 host: "Vietnam Private Capital Agency (VPCA)",
                 followers: 29,
-                image: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd"
-            },
+                image: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd",
+                client: {
+                    avatar: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd",
+                    name: "Nguyen Van A",
+                    age: 29,
+                    address: "District 7, Ho Chi Minh city"
+                }            },
             {
                 id: 5,
                 type: "event",
@@ -71,7 +92,13 @@ export async function GET() {
                 ticketPrice: 16,
                 host: "River Church",
                 followers: 56,
-                image: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd"
+                image: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd",
+                client: {
+                    avatar: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd",
+                    name: "Nguyen Van A",
+                    age: 29,
+                    address: "District 7, Ho Chi Minh city"
+                }
             },
             {
                 id: 6,
@@ -83,7 +110,13 @@ export async function GET() {
                 ticketPrice: 3405.8,
                 host: "Uglobal Immigration Magazine/EB5 Investors Magazine",
                 followers: 1000,
-                image: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd"
+                image: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd",
+                client: {
+                    avatar: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd",
+                    name: "Nguyen Van A",
+                    age: 29,
+                    address: "District 7, Ho Chi Minh city"
+                }
             },
             {
                 id: 7,
@@ -95,7 +128,13 @@ export async function GET() {
                 ticketPrice: 0,
                 host: "Vietnam Private Capital Agency (VPCA)",
                 followers: 29,
-                image: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd"
+                image: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd",
+                client: {
+                    avatar: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd",
+                    name: "Nguyen Van A",
+                    age: 29,
+                    address: "District 7, Ho Chi Minh city"
+                }
             },
         ]
     }), {
