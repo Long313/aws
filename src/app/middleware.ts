@@ -11,5 +11,5 @@ export function middleware(req: Request) {
 }
 
 export const config = {
-    matcher: "/api/:path*" // Áp dụng middleware cho tất cả API routes
+    matcher: "/api/:path*"
 };
