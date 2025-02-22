@@ -24,7 +24,7 @@ export async function GET() {
                 host: "Vietnam Private Capital Agency (VPCA)",
                 followers: 29,
                 description: "Dig deep into God's Word to grow in faith and knowledge. Embrace the journey as we bloom into who He calls us to be.",
-                image: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd",
+               image: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F937385493%2F1929007668353%2F1%2Foriginal.20250116-152548?w=940&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C1600%2C800&s=b75e5f0660e4bc0cdc9e25bcdd1d4a20",
                 client: {
                     avatar: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd",
                     name: "Nguyen Van A",
@@ -62,7 +62,7 @@ export async function GET() {
                 host: "Uglobal Immigration Magazine/EB5 Investors Magazine",
                 followers: 100,
                 description: "Dig deep into God's Word to grow in faith and knowledge. Embrace the journey as we bloom into who He calls us to be.",
-                image: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd",
+               image: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F937385493%2F1929007668353%2F1%2Foriginal.20250116-152548?w=940&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C1600%2C800&s=b75e5f0660e4bc0cdc9e25bcdd1d4a20",
                 client: {
                     avatar: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd",
                     name: "Nguyen Van A",
@@ -81,7 +81,7 @@ export async function GET() {
                 host: "Vietnam Private Capital Agency (VPCA)",
                 followers: 29,
                 description: "Dig deep into God's Word to grow in faith and knowledge. Embrace the journey as we bloom into who He calls us to be.",
-                image: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd",
+               image: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F937385493%2F1929007668353%2F1%2Foriginal.20250116-152548?w=940&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C1600%2C800&s=b75e5f0660e4bc0cdc9e25bcdd1d4a20",
                 client: {
                     avatar: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd",
                     name: "Nguyen Van A",
@@ -100,7 +100,7 @@ export async function GET() {
                 host: "Vietnam Private Capital Agency (VPCA)",
                 followers: 29,
                 description: "Dig deep into God's Word to grow in faith and knowledge. Embrace the journey as we bloom into who He calls us to be.",
-                image: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd",
+               image: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F937385493%2F1929007668353%2F1%2Foriginal.20250116-152548?w=940&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C1600%2C800&s=b75e5f0660e4bc0cdc9e25bcdd1d4a20",
                 client: {
                     avatar: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd",
                     name: "Nguyen Van A",
@@ -119,7 +119,7 @@ export async function GET() {
                 host: "Vietnam Private Capital Agency (VPCA)",
                 followers: 29,
                 description: "Dig deep into God's Word to grow in faith and knowledge. Embrace the journey as we bloom into who He calls us to be.",
-                image: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd",
+               image: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F937385493%2F1929007668353%2F1%2Foriginal.20250116-152548?w=940&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C1600%2C800&s=b75e5f0660e4bc0cdc9e25bcdd1d4a20",
                 client: {
                     avatar: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd",
                     name: "Nguyen Van A",
@@ -138,7 +138,7 @@ export async function GET() {
                 host: "Vietnam Private Capital Agency (VPCA)",
                 followers: 29,
                 description: "Dig deep into God's Word to grow in faith and knowledge. Embrace the journey as we bloom into who He calls us to be.",
-                image: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd",
+               image: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F937385493%2F1929007668353%2F1%2Foriginal.20250116-152548?w=940&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C1600%2C800&s=b75e5f0660e4bc0cdc9e25bcdd1d4a20",
                 client: {
                     avatar: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd",
                     name: "Nguyen Van A",
@@ -157,7 +157,7 @@ export async function GET() {
                 host: "Vietnam Private Capital Agency (VPCA)",
                 followers: 29,
                 description: "Dig deep into God's Word to grow in faith and knowledge. Embrace the journey as we bloom into who He calls us to be.",
-                image: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd",
+               image: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F937385493%2F1929007668353%2F1%2Foriginal.20250116-152548?w=940&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C1600%2C800&s=b75e5f0660e4bc0cdc9e25bcdd1d4a20",
                 client: {
                     avatar: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd",
                     name: "Nguyen Van A",
@@ -195,7 +195,7 @@ export async function GET() {
                 host: "Uglobal Immigration Magazine/EB5 Investors Magazine",
                 followers: 100,
                 description: "Dig deep into God's Word to grow in faith and knowledge. Embrace the journey as we bloom into who He calls us to be.",
-                image: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd",
+               image: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F937385493%2F1929007668353%2F1%2Foriginal.20250116-152548?w=940&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C1600%2C800&s=b75e5f0660e4bc0cdc9e25bcdd1d4a20",
                 client: {
                     avatar: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd",
                     name: "Nguyen Van A",
@@ -214,7 +214,7 @@ export async function GET() {
                 host: "Vietnam Private Capital Agency (VPCA)",
                 followers: 29,
                 description: "Dig deep into God's Word to grow in faith and knowledge. Embrace the journey as we bloom into who He calls us to be.",
-                image: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd",
+               image: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F937385493%2F1929007668353%2F1%2Foriginal.20250116-152548?w=940&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C1600%2C800&s=b75e5f0660e4bc0cdc9e25bcdd1d4a20",
                 client: {
                     avatar: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd",
                     name: "Nguyen Van A",
@@ -233,7 +233,7 @@ export async function GET() {
                 host: "Vietnam Private Capital Agency (VPCA)",
                 followers: 29,
                 description: "Dig deep into God's Word to grow in faith and knowledge. Embrace the journey as we bloom into who He calls us to be.",
-                image: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd",
+               image: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F937385493%2F1929007668353%2F1%2Foriginal.20250116-152548?w=940&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C1600%2C800&s=b75e5f0660e4bc0cdc9e25bcdd1d4a20",
                 client: {
                     avatar: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd",
                     name: "Nguyen Van A",
@@ -252,7 +252,7 @@ export async function GET() {
                 host: "Vietnam Private Capital Agency (VPCA)",
                 followers: 29,
                 description: "Dig deep into God's Word to grow in faith and knowledge. Embrace the journey as we bloom into who He calls us to be.",
-                image: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd",
+               image: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F937385493%2F1929007668353%2F1%2Foriginal.20250116-152548?w=940&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C1600%2C800&s=b75e5f0660e4bc0cdc9e25bcdd1d4a20",
                 client: {
                     avatar: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd",
                     name: "Nguyen Van A",
