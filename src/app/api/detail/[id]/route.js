@@ -1,6 +1,6 @@
 export async function OPTIONS() {
     return new Response(null, {
-        status: 204, 
+        status: 204,
         headers: {
             "Access-Control-Allow-Origin": "*",
             "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
@@ -14,7 +14,7 @@ export async function GET(req, { params }) {
 
     // Dữ liệu mẫu
     const data = [
-            
+
         {
             id: 1,
             type: "appointment",
@@ -32,7 +32,8 @@ export async function GET(req, { params }) {
                 name: "Nguyen Van A",
                 age: 29,
                 address: "District 7, Ho Chi Minh city"
-            }            },
+            }
+        },
         {
             id: 2,
             type: "event",
@@ -94,8 +95,8 @@ export async function GET(req, { params }) {
             id: 5,
             type: "appointment",
             name: "First Session with Alex Stan",
-            from: "2025-02-22T09:30:35Z",
-            to: "2025-02-23T10:30:35Z",
+            from: "2025-02-25T09:30:35Z",
+            to: "2025-02-25T10:30:35Z",
             location: "Park Hyatt Saigon",
             ticketPrice: 10,
             host: "Vietnam Private Capital Agency (VPCA)",
@@ -126,25 +127,27 @@ export async function GET(req, { params }) {
                 name: "Nguyen Van A",
                 age: 29,
                 address: "District 7, Ho Chi Minh city"
-            }            },
-        // {
-        //     id: 7,
-        //     type: "appointment",
-        //     name: "First Session with Alex Stan",
-        //     from: "2025-02-24T2:30:35Z",
-        //     to: "2025-02-24T3:30:35Z",
-        //     location: "Park Hyatt Saigon",
-        //     ticketPrice: 20,
-        //     host: "Vietnam Private Capital Agency (VPCA)",
-        //     followers: 29,
-        //description: "Dig deep into God's Word to grow in faith and knowledge. Embrace the journey as we bloom into who He calls us to be.",
-        //     image: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd",
-        //     client: {
-        //         avatar: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd",
-        //         name: "Nguyen Van A",
-        //         age: 29,
-        //         address: "District 7, Ho Chi Minh city"
-        //     }            },
+            }
+        },
+        {
+            id: 7,
+            type: "appointment",
+            name: "First Session with Alex Stan",
+            from: "2025-02-22T2:30:35Z",
+            to: "2025-02-22T3:30:35Z",
+            location: "Park Hyatt Saigon",
+            ticketPrice: 20,
+            host: "Vietnam Private Capital Agency (VPCA)",
+            followers: 29,
+            description: "Dig deep into God's Word to grow in faith and knowledge. Embrace the journey as we bloom into who He calls us to be.",
+            image: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd",
+            client: {
+                avatar: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd",
+                name: "Nguyen Van A",
+                age: 29,
+                address: "District 7, Ho Chi Minh city"
+            }
+        },
     ]
 
     // Tìm item theo id
