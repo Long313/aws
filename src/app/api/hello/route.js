@@ -16,7 +16,7 @@ export async function GET() {
             
             {
                 id: 1,
-                type: "event",
+                type: "appointment",
                 name: "LUNCH & LEARN",
                 from: "2025-02-22T09:30:35Z",
                 to: "2025-02-23T11:00:35Z",
@@ -51,7 +51,7 @@ export async function GET() {
             },
             {
                 id: 3,
-                type: "event",
+                type: "appointment",
                 name: "2025 EB-5 & Global Immigration Expo Vietnam",
                 from: "2025-02-22T09:30:35Z",
                 to: "2025-02-23T11:00:35Z",
