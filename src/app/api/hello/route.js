@@ -108,7 +108,7 @@ export async function GET() {
                 type: "event",
                 name: "Webinar: How to cope with trauma in profressional life",
                 from: "2025-02-22T09:30:35Z",
-                to: "2025-02-23T11:00:35Z",
+                to: "2025-02-22T11:00:35Z",
                 location: "Park Hyatt Saigon",
                 ticketPrice: 0,
                 host: "Vietnam Private Capital Agency (VPCA)",
