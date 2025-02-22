@@ -120,23 +120,23 @@ export async function GET() {
                     age: 29,
                     address: "District 7, Ho Chi Minh city"
                 }            },
-            {
-                id: 7,
-                type: "appointment",
-                name: "First Session with Alex Stan",
-                from: "2025-02-24T2:30:35Z",
-                to: "2025-02-24T3:30:35Z",
-                location: "Park Hyatt Saigon",
-                ticketPrice: 20,
-                host: "Vietnam Private Capital Agency (VPCA)",
-                followers: 29,
-                image: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd",
-                client: {
-                    avatar: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd",
-                    name: "Nguyen Van A",
-                    age: 29,
-                    address: "District 7, Ho Chi Minh city"
-                }            },
+            // {
+            //     id: 7,
+            //     type: "appointment",
+            //     name: "First Session with Alex Stan",
+            //     from: "2025-02-24T2:30:35Z",
+            //     to: "2025-02-24T3:30:35Z",
+            //     location: "Park Hyatt Saigon",
+            //     ticketPrice: 20,
+            //     host: "Vietnam Private Capital Agency (VPCA)",
+            //     followers: 29,
+            //     image: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd",
+            //     client: {
+            //         avatar: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F918826313%2F188149727845%2F1%2Foriginal.20241217-123211?w=400&auto=format%2Ccompress&q=75&sharp=10&s=38c457d0fbd2274456bf4688975ff7cd",
+            //         name: "Nguyen Van A",
+            //         age: 29,
+            //         address: "District 7, Ho Chi Minh city"
+            //     }            },
         ]
     }), {
         status: 200,
