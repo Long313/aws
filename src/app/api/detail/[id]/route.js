@@ -38,7 +38,7 @@ export async function GET(req, { params }) {
             type: "event",
             name: "She Is Women's Conference 2025 - BLOOM",
             from: "2025-02-22T09:30:35Z",
-            to: "2025-02-23T11:00:35Z",
+            to: "2025-02-22T10:30:35Z",
             location: "River Church",
             ticketPrice: 16,
             host: "River Church",
