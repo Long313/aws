@@ -18,7 +18,7 @@ export async function GET() {
                 type: "appointment",
                 title: "LUNCH & LEARN",
                 from: "2025-03-9T09:30:35Z",
-                to: "2025-02-9T11:00:35Z",
+                to: "2025-03-9T11:00:35Z",
                 location: "Park Hyatt Saigon",
                 ticketPrice: 50,
                 host: "Vietnam Private Capital Agency (VPCA)",
